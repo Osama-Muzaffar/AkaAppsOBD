@@ -1,0 +1,55 @@
+<resources>
+    <!-- Application theme. -->
+<!--    <style name="AppTheme" parent="@android:style/Theme.DeviceDefault.Light.DarkActionBar" >-->
+<!--        <item name="android:activatedBackgroundIndicator">@drawable/activated_background</item>-->
+<!--    </style>-->
+    <style name="AppTheme.Dark" parent="@android:style/Theme.DeviceDefault" >
+        <item name="android:activatedBackgroundIndicator">@drawable/activated_background</item>
+        <item name="android:statusBarColor">@color/main_purple</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/main_purple</item>
+        <item name="android:statusBarColor">@color/main_purple</item>
+    </style>
+
+    <style name="AdsTheme" >
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/ads_icon</item>
+        <item name="android:paddingLeft">3dp</item>
+        <item name="android:paddingRight">6dp</item>
+        <item name="android:paddingBottom">1dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">15px</item>
+        <item name="android:minHeight">15px</item>
+        <item name="android:text">Ad</item>
+    </style>
+
+    <declare-styleable name="kdgaugeview">
+        <attr name="maxSpeed" format="float"/>
+        <attr name="minSpeed" format="float"/>
+        <attr name="speed" format="float"/>
+        <attr name="speed_limit" format="float"/>
+        <attr name="animationTime" format="integer"/>
+        <attr name="unitOfMeasurement" format="string"/>
+        <attr name="speedTextSize" format="dimension"/>
+        <attr name="unitOfMeasurementTextSize" format="dimension"/>
+        <attr name="speedLimitTextSize" format="dimension"/>
+        <attr name="speedDialRingWidth" format="dimension"/>
+        <attr name="speedDialRingInnerPadding" format="dimension"/>
+        <attr name="dialActiveColor" format="color"/>
+        <attr name="dialInactiveColor" format="color"/>
+        <attr name="dialSpeedColor" format="color"/>
+        <attr name="dialSpeedAlertColor" format="color"/>
+        <attr name="subDivisionCircleColor" format="color"/>
+        <attr name="divisionCircleColor" format="color"/>
+        <attr name="speedTextColor" format="color"/>
+        <attr name="unitOfMeasurementTextColor" format="color"/>
+        <attr name="speedLimitTextColor" format="color"/>
+    </declare-styleable>
+</resources>

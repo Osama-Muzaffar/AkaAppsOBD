@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  AndrOBD -->
+    <string name="app_name" translatable="false">Car Doctor</string>
+    <string name="privacy_link" translatable="false">http://privacypolicyrangersaround.blogspot.com/2018/05/privacy-policy.html</string>
+    <string name="terms_link" translatable="false">https://zawajulshariaprivacypolicy.blogspot.com/2024/08/terms-of-use.html</string>
+
+    <string name="welcome_to">환영합니다</string>
+    <string name="let_s_go">시작하겠습니다</string>
+    <string name="scan_diagnose_and_fix_issues">스캔, 진단 및 문제 수정</string>
+    <string name="car_doctor">차량 의사</string>
+    <string name="bluetooth_pairing">블루투스 페어링</string>
+
+    <string-array name="speedTestRangeValues">
+        <item>0</item>
+        <item>100</item>
+        <item>200</item>
+        <item>300</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>5000</item>
+    </string-array>
+
+    <string-array name="elmcomm_states" translatable="false">
+        <item>@string/UNDEFINED</item>
+        <item>@string/INITIALIZING</item>
+        <item>@string/INITIALIZED</item>
+        <item>@string/ECU_DETECT</item>
+        <item>@string/ECU_DETECTED</item>
+        <item>@string/CONNECTING</item>
+        <item>@string/CONNECTED</item>
+        <item>@string/NODATA</item>
+        <item>@string/STOPPED</item>
+        <item>@string/DISCONNECTED</item>
+        <item>@string/BUSERROR</item>
+        <item>@string/DATAERROR</item>
+        <item>@string/RXERROR</item>
+        <item>@string/ERROR</item>
+    </string-array>
+
+    <string-array name="measure_options" translatable="false">
+        <item>@string/metric</item>
+        <item>@string/imperial</item>
+    </string-array>
+    <string-array name="measure_option_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string name="title_pref_bluetooth" translatable="false">블루투스</string>
+    <string name="title_pref_gps" translatable="false">GPS</string>
+    <string name="status_obd_no_support">지원하지 않음</string>
+    <string name="pref_bluetooth_title">블루투스 활성화</string>
+    <string name="pref_bluetooth_summaryOff">블루투스를 켜세요</string>
+    <string name="pref_bluetooth_summaryOn">블루투스를 끄세요</string>
+    <string name="pref_bluetooth_list_devices_summary">페어링된 블루투스 장치 목록.</string>
+    <string name="pref_bluetooth_list_devices_title">블루투스 장치</string>
+    <string name="pref_gps_category_title">GPS 활성화</string>
+    <string name="pref_gps_category_summaryOff">GPS를 켜세요</string>
+    <string name="pref_gps_category_summaryOn">GPS를 끄세요</string>
+    <string name="pref_gps_update_period_title">초 단위 업데이트 주기</string>
+    <string name="pref_gps_update_period_summary">새 위치를 조회하는 시간 간격(초 단위)</string>
+    <string name="pref_gps_distance_period_title">미터 단위 업데이트 주기</string>
+    <string name="pref_gps_distance_period_summary">위치 업데이트 간의 최소 거리(미터 단위)</string>
+    <string name="default_dirname_full_logging">OBDReaderLogs</string>
+    <string name="text_noerrors">오류가 발견되지 않았습니다!</string>
+    <string name="pref_gps_category" translatable="false">gps_category</string>
+    <string name="base64key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq/BikXyTp4nSCT74OEPQXnOSJw6Sa4OozMB0vmQQBGsx4r/KGQ9J0V26ti5ObtTSUeyLWaytebpuxpv++kf8P9GDeLc+QvniNfXjFH6QEQJ+sz1tSZVJir3StfWbRKqwzG39vEb4mqPNh8VpMFI5MWoNXJFi8Bcxv/ad94Uz8jUiolrwCR6oWNCU5wrkZGUZAi0ToWbGOlN7FZ55ACJ5T3J2le25ydtpbRvRkoTMFwF30seuGn/C3ghvQTNVAe7Oh3QMJ/DcWjhxD090NaKVBdhtJPn5R2as5At7/a1jb+FUNbzrDBGcFnx5WJ3oEXoFZ1QX6KzA71z5ezT2kD7fvwIDAQAB</string>
+    <string name="Purchase_OK">확인</string>
+    <string name="Purchase_ERROR">오류</string>
+    <string name="Purchase_PENDING">구매가 대기 중입니다. 거래를 완료해 주세요</string>
+    <string name="Purchase_INVALID">오류 : 유효하지 않은 구매</string>
+    <string name="Purchase_UNKNOWN">구매 상태 불명</string>
+    <string name="Premium_User_Msg">축하합니다! 프리미엄 사용자입니다.</string>
+    <string name="Purchase_OK_Dialog_Msg">구매 성공!</string>
+    <string name="Purchase_OK_Dialog_Msg_Detail">이제 앱이 재시작되고 광고가 제거됩니다.</string>
+    <string name="exit_dialog_message">이 앱이 유용하다고 생각되면 평가해 주시거나 예를 눌러 종료하세요.</string>
+    <string name="dialog_loading_title">로딩 중…</string>
+    <string name="dialog_loading_body">응용 프로그램을 로딩 중입니다. 잠시 기다려 주세요…</string>
+    <string name="text_bluetooth_nodevice">선택된 블루투스 장치가 없습니다</string>
+    <string name="text_bluetooth_error_connecting">블루투스 장치에 연결할 수 없습니다!</string>
+    <string name="text_obd_command_failure">OBD 명령 실패!</string>
+    <string name="text_dtc_no_data">저장된 DTC가 없습니다</string>
+    <string name="bluetooth">블루투스</string>
+    <string name="paired_devices">페어링된 장치</string>
+    <string name="available_devices">사용 가능한 장치</string>
+    <string name="turn_on_bluetooth_to_see_devices">장치를 보려면 블루투스를 켜세요</string>
+    <string name="bluetooth_is_off">블루투스가 꺼져 있습니다</string>
+    <string name="refresh">새로 고침</string>
+    <string name="code_details">코드 세부 사항</string>
+    <string name="code">코드:</string>
+    <string name="solution">해결책:</string>
+    <string name="cause">원인:</string>
+    <string name="symptoms">증상:</string>
+    <string name="fault_codes">고장 코드</string>
+    <string name="search">검색</string>
+    <string name="obd_data">OBD 데이터</string>
+    <string name="no_data_found">데이터를 찾을 수 없습니다</string>
+    <string name="please_wait">잠시만 기다려 주세요.....</string>
+    <string name="go_to_premimum">프리미엄으로 가기</string>
+    <string name="lifetime">평생</string>
+    <string name="unlimited_clear_mil">무제한 MIL 지우기</string>
+    <string name="unlimited_car_diagnose">무제한 차량 진단</string>
+    <string name="unlimited_pro_features">무제한 프로 기능</string>
+    <string name="cancel_subscription_at_least_24_hours_before_renewal">갱신 최소 24시간 전에 구독 취소</string>
+    <string name="get_this_package">이 패키지 받기</string>
+    <string name="restore_purchases">구매 복원</string>
+    <string name="subscription_policy">구독 정책</string>
+    <string name="billing_begins_when_you_opt_for_a_subscription_user_can_cancel_subscription_within_24_hours_of_purchase_monthly_subscription_will_automatically_renews_until_user_cancel_it_user_can_cancel_any_time_in_google_account">구독을 선택하면 청구가 시작됩니다. 사용자는 구매 후 24시간 이내에 구독을 취소할 수 있습니다. 월간 구독은 사용자가 취소할 때까지 자동으로 갱신됩니다. 사용자는 Google 계정에서 언제든지 구독을 취소할 수 있습니다.</string>
+    <string name="privacy_policy">개인정보 보호정책</string>
+    <string name="terms_of_use">이용약관</string>
+    <string name="real_time">실시간</string>
+    <string name="colent">냉각수 온도</string>
+    <string name="air_intake_c">공기 흡입 \'C\'</string>
+    <string name="engine_load">엔진 하중</string>
+    <string name="abs_load">ABS 하중</string>
+    <string name="throttle">스로틀</string>
+    <string name="fuel_pressure">연료 압력</string>
+    <string name="mass_air_flow_g_s">질량 공기 흐름 \'g/s\'</string>
+    <string name="air_fuel_ratio">공기/연료 비율</string>
+    <string name="barometric_pressure_psi">기압 \'psi\'</string>
+    <string name="troubles">문제....</string>
+    <string name="clear">지우기</string>
+    <string name="no_fault_found">결함이 발견되지 않았습니다</string>
+    <string name="setting">설정</string>
+    <string name="adapter_type">어댑터 유형</string>
+    <string name="connect_via_bluetooth">블루투스를 통해 연결</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="connect_via_wi_fi">Wi-Fi를 통해 연결</string>
+    <string name="theme">테마</string>
+    <string name="light_mode">라이트 모드</string>
+    <string name="switch_to_light_mode">라이트 모드로 전환</string>
+    <string name="dark_mode">다크 모드</string>
+    <string name="switch_to_dark_mode">다크 모드로 전환</string>
+    <string name="connectivity">연결성</string>
+    <string name="share">공유</string>
+    <string name="share_with_friends">친구와 공유</string>
+    <string name="rate">평가</string>
+    <string name="share_your_valuable_feedback">귀하의 소중한 피드백을 공유해 주세요</string>
+    <string name="more">더 보기</string>
+    <string name="see_more_apps">다른 앱 보기</string>
+    <string name="car_doctor_scanning_diagnosing_treatment">차량 의사 - 스캔|진단|치료</string>
+    <string name="scanning">스캔 중</string>
+    <string name="disconnect">연결 끊기</string>
+    <string name="connect">연결</string>
+    <string name="disconnected">연결 끊김</string>
+    <string name="connecting">연결 중.....</string>
+    <string name="saved_data">데이터 저장</string>
+    <string name="connected_to">연결됨</string>
+    <string name="unabletoconnect">연결할 수 없습니다</string>
+    <string name="UNDEFINED">정의되지 않음</string>
+    <string name="INITIALIZING">초기화 중…</string>
+    <string name="INITIALIZED">초기화됨</string>
+    <string name="ECU_DETECT">ECU 탐색 중…</string>
+    <string name="ECU_DETECTED">ECU 감지됨</string>
+    <string name="CONNECTING">연결 중…</string>
+    <string name="CONNECTED">연결됨</string>
+    <string name="NODATA">데이터 없음</string>
+    <string name="STOPPED">중지됨</string>
+    <string name="DISCONNECTED">연결 끊김</string>
+    <string name="BUSERROR">BUS 오류</string>
+    <string name="DATAERROR">DATA 오류</string>
+    <string name="RXERROR">RX 오류</string>
+    <string name="ERROR">오류</string>
+    <string name="obd_error">OBD 프로토콜 오류</string>
+    <string name="copied_to_clipboard">클립보드에 복사됨</string>
+    <string name="select_ecu_addr">ECU 주소 선택 …</string>
+    <string name="none_found">장치가 발견되지 않았습니다</string>
+    <string name="metric">미터법</string>
+    <string name="imperial">영국식</string>
+    <string name="demo_stopped">DEMO 모드 중지됨</string>
+    <string name="demo_started">DEMO 모드 시작됨</string>
+    <string name="demo">데모…</string>
+    <string name="title_connected_to">연결됨 %s</string>
+    <string name="obd_clearcodes">고장 코드 지우기</string>
+    <string name="obd_clear_info">이 작업은 MIL을 리셋하고 모든 배출 관련 진단 정보를 지웁니다:
+ - 진단 트러블 코드
+ - 프리즈 프레임 데이터
+ - 산소 센서 테스트 데이터
+ - 시스템 모니터링 테스트 상태
+ - 온보드 모니터링 테스트 결과
+ - MIL 활성화 동안 주행 거리
+ - DTC가 지워진 이후의 온도 수치
+ - DTC가 지워진 이후의 주행 거리
+ - MIL 활성화 동안 엔진 작동 시간
+ - DTC가 지워진 이후의 시간
+
+제조사 특정 지우기/리셋 작업이 발생할 수 있습니다.
+데이터 손실로 인해 ECU가 자체 재조정 중 잠시 차량의 성능이 저하될 수 있습니다.</string>
+    <string name="obd_test_confirm">OBD 테스트 제어 요청됨.
+
+요청된 OBD 테스트 제어는 다음과 같은 결과를 생성할 수 있습니다:
+ - 차량 움직임
+ - 배기 가스
+ - 높은 배기 온도
+ - 큰 엔진 소음
+ - 연료 증기
+ - 등등
+
+안전한 테스트 환경에서 본인의 위험을 감수하고 이 테스트 제어를 수행할 것을 확인해 주세요!</string>
+    <string name="obd_test_progress">OBD 테스트 제어 진행 중.\n차량 반응을 확인해 주세요.</string>
+    <string name="none_paired">연결된 장치 없음</string>
+
+    <string name="connectionlost">장치 연결이 끊겼습니다</string>
+    <string name="english">영어</string>
+    <string name="afrikaans_afrikaans">아프리칸스 (Afrikaans)</string>
+    <string name="arabic">아랍어 (عربي)</string>
+    <string name="chinese">중국어 (中国人)</string>
+    <string name="czech_e_tina">체코어 (čeština)</string>
+    <string name="danish_dansk">덴마크어 (dansk)</string>
+    <string name="dutch_nederlands">네덜란드어 (Nederlands)</string>
+    <string name="french_fran_ais">프랑스어 (Français)</string>
+    <string name="german_deutsch">독일어 (Deutsch)</string>
+    <string name="greek">그리스어 (ελληνικά)</string>
+    <string name="hindi">힌디어 (हिंदी)</string>
+    <string name="indonesian_indonesia">인도네시아어 (Indonesia)</string>
+    <string name="italian_italiano">이탈리아어 (Italiano)</string>
+    <string name="japanese">일본어 (日本語)</string>
+    <string name="korean">한국어 (한국인)</string>
+    <string name="malay_melayu">말레이어 (Melayu)</string>
+    <string name="norwegian_norsk">노르웨이어 (norsk)</string>
+    <string name="russian">러시아어 (Русский)</string>
+    <string name="portugues_portugu_s">포르투갈어 (Português)</string>
+    <string name="persian">페르시아어 (فارسی)</string>
+    <string name="spanish_espa_ol">스페인어 (Español)</string>
+    <string name="thai">태국어 (แบบไทย)</string>
+    <string name="turkish_t_rk_e">터키어 (Türkçe)</string>
+    <string name="urdu">우르두어 (اردو)</string>
+    <string name="vietnamese_ti_ng_vi_t">베트남어 (Tiếng Việt)</string>
+    <string name="languages">언어</string>
+    <string name="language">언어</string>
+    <string name="faults">오류</string>
+    <string name="help">도움말</string>
+    <string name="realtime">실시간</string>
+    <string name="all_sensors">모든 센서</string>
+
+</resources>

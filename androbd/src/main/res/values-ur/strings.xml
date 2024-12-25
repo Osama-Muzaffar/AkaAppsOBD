@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  AndrOBD -->
+    <string name="app_name" translatable="false">Car Doctor</string>
+    <string name="privacy_link" translatable="false">http://privacypolicyrangersaround.blogspot.com/2018/05/privacy-policy.html</string>
+    <string name="terms_link" translatable="false">https://zawajulshariaprivacypolicy.blogspot.com/2024/08/terms-of-use.html</string>
+
+    <string name="welcome_to">خوش آمدید</string>
+    <string name="let_s_go">چلیں</string>
+    <string name="scan_diagnose_and_fix_issues">اسکین کریں، تشخیص کریں اور مسائل حل کریں</string>
+    <string name="car_doctor">کار ڈاکٹر</string>
+    <string name="bluetooth_pairing">بلوٹوتھ جوڑی</string>
+
+    <string-array name="speedTestRangeValues">
+        <item>0</item>
+        <item>100</item>
+        <item>200</item>
+        <item>300</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>5000</item>
+    </string-array>
+
+    <string-array name="elmcomm_states" translatable="false">
+        <item>@string/UNDEFINED</item>
+        <item>@string/INITIALIZING</item>
+        <item>@string/INITIALIZED</item>
+        <item>@string/ECU_DETECT</item>
+        <item>@string/ECU_DETECTED</item>
+        <item>@string/CONNECTING</item>
+        <item>@string/CONNECTED</item>
+        <item>@string/NODATA</item>
+        <item>@string/STOPPED</item>
+        <item>@string/DISCONNECTED</item>
+        <item>@string/BUSERROR</item>
+        <item>@string/DATAERROR</item>
+        <item>@string/RXERROR</item>
+        <item>@string/ERROR</item>
+    </string-array>
+
+    <string-array name="measure_options" translatable="false">
+        <item>@string/metric</item>
+        <item>@string/imperial</item>
+    </string-array>
+    <string-array name="measure_option_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string name="title_pref_bluetooth" translatable="false">بلوٹوتھ</string>
+    <string name="title_pref_gps" translatable="false">جی پی ایس</string>
+    <string name="status_obd_no_support">نا</string>
+    <string name="pref_bluetooth_title">بلوٹوتھ کو فعال کریں</string>
+    <string name="pref_bluetooth_summaryOff">بلوٹوتھ آن کریں</string>
+    <string name="pref_bluetooth_summaryOn">بلوٹوتھ بند کریں</string>
+    <string name="pref_bluetooth_list_devices_summary">جوڑے گئے بلوٹوتھ ڈیوائسز کی فہرست</string>
+    <string name="pref_bluetooth_list_devices_title">بلوٹوتھ ڈیوائسز</string>
+    <string name="pref_gps_category_title">جی پی ایس کو فعال کریں</string>
+    <string name="pref_gps_category_summaryOff">جی پی ایس آن کریں</string>
+    <string name="pref_gps_category_summaryOn">جی پی ایس بند کریں</string>
+    <string name="pref_gps_update_period_title">اپ ڈیٹ کا دورانیہ سیکنڈ میں</string>
+    <string name="pref_gps_update_period_summary">نئی پوزیشن پوچھنے کے درمیان وقت کا دورانیہ سیکنڈ میں</string>
+    <string name="pref_gps_distance_period_title">اپ ڈیٹ کا دورانیہ میٹرز میں</string>
+    <string name="pref_gps_distance_period_summary">مقام کی اپ ڈیٹس کے درمیان کم سے کم فاصلہ، میٹرز میں</string>
+    <string name="default_dirname_full_logging">OBDReaderLogs</string>
+    <string name="text_noerrors">کوئی خطا نہیں ملی!</string>
+    <string name="pref_gps_category" translatable="false">gps_category</string>
+    <string name="base64key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq/BikXyTp4nSCT74OEPQXnOSJw6Sa4OozMB0vmQQBGsx4r/KGQ9J0V26ti5ObtTSUeyLWaytebpuxpv++kf8P9GDeLc+QvniNfXjFH6QEQJ+sz1tSZVJir3StfWbRKqwzG39vEb4mqPNh8VpMFI5MWoNXJFi8Bcxv/ad94Uz8jUiolrwCR6oWNCU5wrkZGUZAi0ToWbGOlN7FZ55ACJ5T3J2le25ydtpbRvRkoTMFwF30seuGn/C3ghvQTNVAe7Oh3QMJ/DcWjhxD090NaKVBdhtJPn5R2as5At7/a1jb+FUNbzrDBGcFnx5WJ3oEXoFZ1QX6KzA71z5ezT2kD7fvwIDAQAB</string>
+    <string name="Purchase_OK">اوکے</string>
+    <string name="Purchase_ERROR">خرابی</string>
+    <string name="Purchase_PENDING">خریداری زیر التواء ہے۔ براہ کرم لین دین مکمل کریں</string>
+    <string name="Purchase_INVALID">خرابی: نامعتبر خریداری</string>
+    <string name="Purchase_UNKNOWN">خریداری کی حالت نامعلوم</string>
+    <string name="Premium_User_Msg">مبارک ہو! آپ ایک پریمیم صارف ہیں۔</string>
+    <string name="Purchase_OK_Dialog_Msg">خریداری کامیاب!</string>
+    <string name="Purchase_OK_Dialog_Msg_Detail">اب ایپ دوبارہ شروع ہوگی اور آپ اشتہارات سے چھٹکارا حاصل کرلیں گے۔</string>
+    <string name="exit_dialog_message">اگر آپ کو یہ ایپ مفید لگے تو براہ کرم ہمیں درجہ دیں یا باہر نکلنے کے لیے ہاں دبائیں۔</string>
+    <string name="dialog_loading_title">لوڈ ہو رہا ہے…</string>
+    <string name="dialog_loading_body">ایپلیکیشن ویو لوڈ ہو رہا ہے، براہ کرم انتظار کریں…</string>
+    <string name="text_bluetooth_nodevice">کوئی بلوٹوتھ ڈیوائس منتخب نہیں</string>
+    <string name="text_bluetooth_error_connecting">بلوٹوتھ ڈیوائس سے منسلک نہیں ہو سکتا!</string>
+    <string name="text_obd_command_failure">OBD کمانڈ میں ناکامی!</string>
+    <string name="text_dtc_no_data">کوئی DTC محفوظ نہیں</string>
+    <string name="bluetooth">بلوٹوتھ</string>
+    <string name="paired_devices">جوڑے گئے ڈیوائسز</string>
+    <string name="available_devices">دستیاب ڈیوائسز</string>
+    <string name="turn_on_bluetooth_to_see_devices">ڈیوائسز دیکھنے کے لیے بلوٹوتھ آن کریں</string>
+    <string name="bluetooth_is_off">بلوٹوتھ بند ہے</string>
+    <string name="refresh">تازہ کریں</string>
+    <string name="code_details">کوڈ کی تفصیلات</string>
+    <string name="code">کوڈ:</string>
+    <string name="solution">حل:</string>
+    <string name="cause">سبب:</string>
+    <string name="symptoms">علامات:</string>
+    <string name="fault_codes">خطاء کوڈز</string>
+    <string name="search">تلاش</string>
+    <string name="obd_data">OBD ڈیٹا</string>
+    <string name="no_data_found">کوئی ڈیٹا نہیں ملا</string>
+    <string name="please_wait">براہ کرم انتظار کریں.....</string>
+    <string name="go_to_premimum">پریمیم پر جائیں</string>
+    <string name="lifetime">زندگی بھر</string>
+    <string name="unlimited_clear_mil">لامحدود MIL صاف کریں</string>
+    <string name="unlimited_car_diagnose">لامحدود گاڑی کی تشخیص</string>
+    <string name="unlimited_pro_features">لامحدود پرو خصوصیات</string>
+    <string name="cancel_subscription_at_least_24_hours_before_renewal">تجدید سے کم از کم 24 گھنٹے پہلے سبسکرپشن منسوخ کریں</string>
+    <string name="get_this_package">یہ پیکیج حاصل کریں</string>
+    <string name="restore_purchases">خریداری کی بحالی</string>
+    <string name="subscription_policy">سبسکرپشن پالیسی</string>
+    <string name="billing_begins_when_you_opt_for_a_subscription_user_can_cancel_subscription_within_24_hours_of_purchase_monthly_subscription_will_automatically_renews_until_user_cancel_it_user_can_cancel_any_time_in_google_account">بلنگ اس وقت شروع ہوتی ہے جب آپ سبسکرپشن کا انتخاب کرتے ہیں، صارف خریداری کے 24 گھنٹوں کے اندر سبسکرپشن منسوخ کر سکتا ہے، ماہانہ سبسکرپشن خودبخود تجدید ہوتی رہے گی جب تک صارف اسے منسوخ نہ کرے۔ صارف گوگل اکاؤنٹ میں کسی بھی وقت منسوخ کر سکتا ہے۔</string>
+    <string name="privacy_policy">پرائیویسی پالیسی</string>
+    <string name="terms_of_use">استعمال کی شرائط</string>
+    <string name="real_time">حقیقی وقت</string>
+    <string name="colent">کولنٹ</string>
+    <string name="air_intake_c">ایئر انٹیک \'C\'</string>
+    <string name="engine_load">انجن کا بوجھ</string>
+    <string name="abs_load">ABS بوجھ</string>
+    <string name="throttle">تھروٹل</string>
+    <string name="fuel_pressure">ایندھن کا دباؤ</string>
+    <string name="mass_air_flow_g_s">ماس ایئر فلو \'گ/س\'</string>
+    <string name="air_fuel_ratio">ایئر/فیول تناسب</string>
+    <string name="barometric_pressure_psi">بارومیٹرک پریشر \'psi\'</string>
+    <string name="troubles">مسائل....</string>
+    <string name="clear">صاف کریں</string>
+    <string name="no_fault_found">کوئی fault نہیں ملا</string>
+    <string name="setting">سیٹنگ</string>
+    <string name="adapter_type">ایڈاپٹر کی قسم</string>
+    <string name="connect_via_bluetooth">بلوٹوتھ کے ذریعے جڑیں</string>
+    <string name="wi_fi">وائی فائی</string>
+    <string name="connect_via_wi_fi">وائی فائی کے ذریعے جڑیں</string>
+    <string name="theme">تھیم</string>
+    <string name="light_mode">لائٹ موڈ</string>
+    <string name="switch_to_light_mode">لائٹ موڈ پر سوئچ کریں</string>
+    <string name="dark_mode">ڈارک موڈ</string>
+    <string name="switch_to_dark_mode">ڈارک موڈ پر سوئچ کریں</string>
+    <string name="connectivity">کنیکٹیویٹی</string>
+    <string name="share">شیئر کریں</string>
+    <string name="share_with_friends">دوستوں کے ساتھ شیئر کریں</string>
+    <string name="rate">ریٹ کریں</string>
+    <string name="share_your_valuable_feedback">اپنے قیمتی تبصرے شیئر کریں</string>
+    <string name="more">مزید</string>
+    <string name="see_more_apps">مزید ایپس دیکھیں</string>
+    <string name="car_doctor_scanning_diagnosing_treatment">کار ڈاکٹر - اسکیننگ|تشخیص|علاج</string>
+    <string name="scanning">اسکیننگ</string>
+    <string name="disconnect">منقطع کریں</string>
+    <string name="connect">جڑیں</string>
+    <string name="disconnected">منقطع</string>
+    <string name="connecting">جڑ رہا ہے.....</string>
+    <string name="saved_data">ڈیٹا محفوظ کریں</string>
+    <string name="connected_to">جڑا ہوا</string>
+    <string name="unabletoconnect">جڑنے میں ناکام</string>
+    <string name="UNDEFINED">غیر معین</string>
+    <string name="INITIALIZING">ابتدائی ترتیب...</string>
+    <string name="INITIALIZED">ترتیب دی گئی</string>
+    <string name="ECU_DETECT">ECU کی تلاش...</string>
+    <string name="ECU_DETECTED">ECU دریافت ہوا</string>
+    <string name="CONNECTING">جڑ رہا ہے...</string>
+    <string name="CONNECTED">جڑا ہوا</string>
+    <string name="NODATA">کوئی ڈیٹا نہیں</string>
+    <string name="STOPPED">رکا ہوا</string>
+    <string name="DISCONNECTED">منقطع</string>
+    <string name="BUSERROR">BUS خرابی</string>
+    <string name="DATAERROR">ڈیٹا خرابی</string>
+    <string name="RXERROR">RX خرابی</string>
+    <string name="ERROR">خرابی</string>
+    <string name="obd_error">OBD پروٹوکول خرابی</string>
+    <string name="copied_to_clipboard">کلپ بورڈ میں کاپی کیا گیا</string>
+    <string name="select_ecu_addr">ECU کا پتہ منتخب کریں...</string>
+    <string name="none_found">کوئی ڈیوائسز نہیں ملی</string>
+    <string name="metric">میٹرک</string>
+    <string name="imperial">امپیریل</string>
+    <string name="demo_stopped">DEMO موڈ بند ہوگیا</string>
+    <string name="demo_started">DEMO موڈ شروع ہوا</string>
+    <string name="demo">ڈیمو…</string>
+    <string name="title_connected_to">جڑا ہوا %s</string>
+    <string name="obd_clearcodes">فالٹ کوڈز صاف کریں</string>
+    <string name="obd_clear_info">
+یہ MIL کو دوبارہ سیٹ کرے گا اور تمام اخراج سے متعلقہ تشخیصی معلومات صاف کرے گا، بشمول:
+ - تشخیصی خرابی کے کوڈز
+ - فریز فریم ڈیٹا
+ - آکسیجن سینسر ٹیسٹ ڈیٹا
+ - سسٹم مانیٹرنگ ٹیسٹس کی حیثیت
+ - آن بورڈ مانیٹرنگ ٹیسٹ کے نتائج
+ - MIL کی سرگرمی کے دوران سفر کردہ فاصلہ
+ - DTCs صاف کرنے کے بعد کے گرم اپس کی تعداد
+ - DTCs صاف کرنے کے بعد سفر کردہ فاصلہ
+ - MIL کی سرگرمی کے دوران انجن کے چلنے کا وقت
+ - DTCs صاف کرنے کے بعد کا وقت
+
+دیگر تیار کنندہ مخصوص صفائی/ری سیٹ کرنے کے اقدامات ہو سکتے ہیں۔
+ڈیٹا کے نقصان سے گاڑی کچھ وقت کے لیے خراب چل سکتی ہے جب ECU خود کو دوبارہ کیلیبریٹ کرے گا۔
+</string>
+    <string name="obd_test_confirm">OBD ٹیسٹ کنٹرول کی درخواست کی گئی۔
+درخواست کردہ OBD ٹیسٹ کنٹرول پیدا کر سکتا ہے:
+ - گاڑی کی حرکت
+ - اخراج کا دھواں
+ - اعلی اخراج درجہ حرارت
+ - زور دار انجن کی آواز
+ - ایندھن کی بھاپ
+ - وغیرہ۔
+
+براہ کرم تصدیق کریں کہ اس ٹیسٹ کنٹرول کو اپنے خطرے پر محفوظ ٹیسٹ ماحول میں انجام دیں!</string>
+    <string name="obd_test_progress">OBD ٹیسٹ کنٹرول جاری ہے۔\nبراہ کرم گاڑی کے ردعمل کو چیک کریں۔</string>
+    <string name="none_paired">کوئی ڈیوائسز جوڑی نہیں گئی</string>
+
+    <string name="connectionlost">ڈیوائس کی کنکشن منقطع ہو گئی</string>
+    <string name="english">انگریزی</string>
+    <string name="afrikaans_afrikaans">افریکانس (Afrikaans)</string>
+    <string name="arabic">عربی (عربي)</string>
+    <string name="chinese">چینی (中国人)</string>
+    <string name="czech_e_tina">چیک (čeština)</string>
+    <string name="danish_dansk">ڈینش (dansk)</string>
+    <string name="dutch_nederlands">ڈچ (Nederlands)</string>
+    <string name="french_fran_ais">فرانسیسی (Français)</string>
+    <string name="german_deutsch">جرمن (Deutsch)</string>
+    <string name="greek">یونانی (ελληνικά)</string>
+    <string name="hindi">ہندی (हिंदी)</string>
+    <string name="indonesian_indonesia">انڈونیشین (Indonesia)</string>
+    <string name="italian_italiano">اٹالین (Italiano)</string>
+    <string name="japanese">جاپانی (日本語)</string>
+    <string name="korean">کوریائی (한국인)</string>
+    <string name="malay_melayu">ملائی (Melayu)</string>
+    <string name="norwegian_norsk">ناروے (norsk)</string>
+    <string name="russian">روسی (Русский)</string>
+    <string name="portugues_portugu_s">پرتگالی (Português)</string>
+    <string name="persian">فارسی (فارسی)</string>
+    <string name="spanish_espa_ol">ہسپانوی (Español)</string>
+    <string name="thai">تھائی (แบบไทย)</string>
+    <string name="turkish_t_rk_e">ترکی (Türkçe)</string>
+    <string name="urdu">اردو (اردو)</string>
+    <string name="vietnamese_ti_ng_vi_t">ویتنامی (Tiếng Việt)</string>
+    <string name="languages">زبانیں</string>
+    <string name="language">زبان</string>
+    <string name="faults">غلطیاں</string>
+    <string name="help">مدد</string>
+    <string name="realtime">حقیقی وقت</string>
+    <string name="all_sensors">تمام سینسر</string>
+
+</resources>

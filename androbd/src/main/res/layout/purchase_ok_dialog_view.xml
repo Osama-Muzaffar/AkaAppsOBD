@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/main_bg"
+        android:padding="20dp"
+        >
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/ic_verified_dialogview"
+            android:layout_margin="12dp"/>
+        <TextView
+            android:id="@+id/tv_cancel_discovery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/purchase_ok_msg_color"
+            android:text="@string/Purchase_OK_Dialog_Msg"/>
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:textColor="@color/white"
+            android:text="@string/Purchase_OK_Dialog_Msg_Detail"/>
+        <Button
+            android:id="@+id/dialogView_purchaseOKBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/purchase_ok_msg_color"
+            android:text="Conitinue"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/ad_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_container_native"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card_ads"
+            app:shimmer_auto_start="true"
+
+            app:shimmer_base_color="@color/grey">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ad_unit_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="vertical">
+                <!--
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="8dp">
+
+                                <ImageView
+                                    android:id="@+id/ad_app_icon"
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginTop="3dp"
+                                    android:adjustViewBounds="true" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/ad_headline"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+                                        android:text="@string/appbar_scrolling_view_behavior"
+                                        android:textSize="14sp" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/ad_advertiser"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:gravity="bottom"
+                                            android:lines="1"
+
+                                            android:text="Title"
+                                            android:textSize="8dp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/ad_body"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:maxLines="3"
+                                android:text="Sample ad text"
+                                android:textSize="10dp" />
+
+                            <Button
+                                android:id="@+id/ad_call_to_action"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:layout_margin="8dp"
+                                android:background="@drawable/ads_bg_lib"
+                                android:gravity="center"
+                                android:text="Call to action"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <TextView style="@style/AdsTheme" />-->
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout"
+                    android:layout_width="120sp"
+                    android:layout_height="120sp"
+                    android:background="@color/txt_grey"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.gms.ads.nativead.MediaView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <ImageView
+                        android:id="@+id/ad_app_icon"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="0sp"
+                    android:orientation="vertical"
+                    android:layout_marginStart="10sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/relativeLayout"
+                    app:layout_constraintTop_toTopOf="@+id/relativeLayout">
+
+                    <TextView style="@style/AdsTheme"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="10sp"/>
+
+
+                    <TextView
+                        android:id="@+id/ad_headline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:background="@color/txt_grey"
+                        android:layout_marginTop="10sp"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/ad_body"
+                        android:layout_width="70sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:maxLines="3"
+                        android:background="@color/txt_grey"
+                        android:textSize="10dp" />
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/ad_call_to_action"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginVertical="4sp"
+                    android:layout_marginHorizontal="8dp"
+                    android:backgroundTint="@color/txt_grey"
+                    android:background="@drawable/ads_bg_lib"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_adplaceholder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card_ads"
+            android:orientation="vertical"
+            android:visibility="gone" />
+    </LinearLayout>
+</merge>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  AndrOBD -->
+    <string name="app_name" translatable="false">Car Doctor</string>
+    <string name="privacy_link" translatable="false">http://privacypolicyrangersaround.blogspot.com/2018/05/privacy-policy.html</string>
+    <string name="terms_link" translatable="false">https://zawajulshariaprivacypolicy.blogspot.com/2024/08/terms-of-use.html</string>
+
+    <string name="welcome_to">ようこそ</string>
+    <string name="let_s_go">行こう</string>
+    <string name="scan_diagnose_and_fix_issues">スキャン、診断、問題修正</string>
+    <string name="car_doctor">カー ドクター</string>
+    <string name="bluetooth_pairing">Bluetoothのペアリング</string>
+
+    <string-array name="speedTestRangeValues">
+        <item>0</item>
+        <item>100</item>
+        <item>200</item>
+        <item>300</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>5000</item>
+    </string-array>
+
+    <string-array name="elmcomm_states" translatable="false">
+        <item>@string/UNDEFINED</item>
+        <item>@string/INITIALIZING</item>
+        <item>@string/INITIALIZED</item>
+        <item>@string/ECU_DETECT</item>
+        <item>@string/ECU_DETECTED</item>
+        <item>@string/CONNECTING</item>
+        <item>@string/CONNECTED</item>
+        <item>@string/NODATA</item>
+        <item>@string/STOPPED</item>
+        <item>@string/DISCONNECTED</item>
+        <item>@string/BUSERROR</item>
+        <item>@string/DATAERROR</item>
+        <item>@string/RXERROR</item>
+        <item>@string/ERROR</item>
+    </string-array>
+
+    <string-array name="measure_options" translatable="false">
+        <item>@string/metric</item>
+        <item>@string/imperial</item>
+    </string-array>
+    <string-array name="measure_option_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string name="title_pref_bluetooth" translatable="false">Bluetooth</string>
+    <string name="title_pref_gps" translatable="false">GPS</string>
+    <string name="status_obd_no_support">サポートなし</string>
+    <string name="pref_bluetooth_title">Bluetoothを有効にする</string>
+    <string name="pref_bluetooth_summaryOff">Bluetoothをオンにする</string>
+    <string name="pref_bluetooth_summaryOn">Bluetoothをオフにする</string>
+    <string name="pref_bluetooth_list_devices_summary">ペアリングされたBluetoothデバイスの一覧。</string>
+    <string name="pref_bluetooth_list_devices_title">Bluetoothデバイス</string>
+    <string name="pref_gps_category_title">GPSを有効にする</string>
+    <string name="pref_gps_category_summaryOff">GPSをオンにする</string>
+    <string name="pref_gps_category_summaryOn">GPSをオフにする</string>
+    <string name="pref_gps_update_period_title">更新期間（秒）</string>
+    <string name="pref_gps_update_period_summary">新しい位置を取得する間隔（秒）</string>
+    <string name="pref_gps_distance_period_title">更新距離（メートル）</string>
+    <string name="pref_gps_distance_period_summary">位置更新の最小距離（メートル）</string>
+    <string name="default_dirname_full_logging">OBDReaderLogs</string>
+    <string name="text_noerrors">エラーは見つかりませんでした!</string>
+    <string name="pref_gps_category" translatable="false">gps_category</string>
+    <string name="base64key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq/BikXyTp4nSCT74OEPQXnOSJw6Sa4OozMB0vmQQBGsx4r/KGQ9J0V26ti5ObtTSUeyLWaytebpuxpv++kf8P9GDeLc+QvniNfXjFH6QEQJ+sz1tSZVJir3StfWbRKqwzG39vEb4mqPNh8VpMFI5MWoNXJFi8Bcxv/ad94Uz8jUiolrwCR6oWNCU5wrkZGUZAi0ToWbGOlN7FZ55ACJ5T3J2le25ydtpbRvRkoTMFwF30seuGn/C3ghvQTNVAe7Oh3QMJ/DcWjhxD090NaKVBdhtJPn5R2as5At7/a1jb+FUNbzrDBGcFnx5WJ3oEXoFZ1QX6KzA71z5ezT2kD7fvwIDAQAB</string>
+    <string name="Purchase_OK">成功</string>
+    <string name="Purchase_ERROR">エラー</string>
+    <string name="Purchase_PENDING">購入処理中です。取引を完了してください</string>
+    <string name="Purchase_INVALID">エラー : 無効な購入</string>
+    <string name="Purchase_UNKNOWN">購入状況不明</string>
+    <string name="Premium_User_Msg">おめでとうございます！プレミアムユーザーです。</string>
+    <string name="Purchase_OK_Dialog_Msg">購入成功!</string>
+    <string name="Purchase_OK_Dialog_Msg_Detail">アプリが再起動し、広告が表示されなくなります。</string>
+    <string name="exit_dialog_message">このアプリが役立つと思ったら評価してください。または、はいを押して終了します。</string>
+    <string name="dialog_loading_title">読み込み中…</string>
+    <string name="dialog_loading_body">アプリのビューを読み込んでいます。しばらくお待ちください…</string>
+    <string name="text_bluetooth_nodevice">Bluetoothデバイスが選択されていません</string>
+    <string name="text_bluetooth_error_connecting">Bluetoothデバイスに接続できません!</string>
+    <string name="text_obd_command_failure">OBDコマンドの失敗!</string>
+    <string name="text_dtc_no_data">DTCが保存されていません</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="paired_devices">ペアリングされたデバイス</string>
+    <string name="available_devices">利用可能なデバイス</string>
+    <string name="turn_on_bluetooth_to_see_devices">デバイスを表示するにはBluetoothをオンにしてください</string>
+    <string name="bluetooth_is_off">Bluetoothがオフです</string>
+    <string name="refresh">更新</string>
+    <string name="code_details">コードの詳細</string>
+    <string name="code">コード:</string>
+    <string name="solution">解決策:</string>
+    <string name="cause">原因:</string>
+    <string name="symptoms">症状:</string>
+    <string name="fault_codes">故障コード</string>
+    <string name="search">検索</string>
+    <string name="obd_data">OBDデータ</string>
+    <string name="no_data_found">データが見つかりませんでした</string>
+    <string name="please_wait">お待ちください.....</string>
+    <string name="go_to_premimum">プレミアムに進む</string>
+    <string name="lifetime">生涯</string>
+    <string name="unlimited_clear_mil">無制限のMILクリア</string>
+    <string name="unlimited_car_diagnose">無制限の車両診断</string>
+    <string name="unlimited_pro_features">無制限のプロ機能</string>
+    <string name="cancel_subscription_at_least_24_hours_before_renewal">更新の24時間前までにサブスクリプションをキャンセルしてください</string>
+    <string name="get_this_package">このパッケージを取得</string>
+    <string name="restore_purchases">購入を復元</string>
+    <string name="subscription_policy">サブスクリプションポリシー</string>
+    <string name="billing_begins_when_you_opt_for_a_subscription_user_can_cancel_subscription_within_24_hours_of_purchase_monthly_subscription_will_automatically_renews_until_user_cancel_it_user_can_cancel_any_time_in_google_account">サブスクリプションを選択すると請求が開始されます。ユーザーは購入から24時間以内にサブスクリプションをキャンセルできます。月額サブスクリプションは、自動的に更新され、ユーザーがキャンセルするまで続きます。ユーザーはGoogleアカウントでいつでもキャンセルできます。</string>
+    <string name="privacy_policy">プライバシーポリシー</string>
+    <string name="terms_of_use">利用規約</string>
+    <string name="real_time">リアルタイム</string>
+    <string name="colent">コレント</string>
+    <string name="air_intake_c">エアインテーク「C」</string>
+    <string name="engine_load">エンジン負荷</string>
+    <string name="abs_load">ABS負荷</string>
+    <string name="throttle">スロットル</string>
+    <string name="fuel_pressure">燃料圧力</string>
+    <string name="mass_air_flow_g_s">質量空気流量「g/s」</string>
+    <string name="air_fuel_ratio">空気/燃料比</string>
+    <string name="barometric_pressure_psi">気圧「psi」</string>
+    <string name="troubles">トラブル....</string>
+    <string name="clear">クリア</string>
+    <string name="no_fault_found">故障は見つかりませんでした</string>
+    <string name="setting">設定</string>
+    <string name="adapter_type">アダプタータイプ</string>
+    <string name="connect_via_bluetooth">Bluetooth経由で接続</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="connect_via_wi_fi">Wi-Fi経由で接続</string>
+    <string name="theme">テーマ</string>
+    <string name="light_mode">ライトモード</string>
+    <string name="switch_to_light_mode">ライトモードに切り替え</string>
+    <string name="dark_mode">ダークモード</string>
+    <string name="switch_to_dark_mode">ダークモードに切り替え</string>
+    <string name="connectivity">接続性</string>
+    <string name="share">共有</string>
+    <string name="share_with_friends">友達と共有</string>
+    <string name="rate">評価</string>
+    <string name="share_your_valuable_feedback">貴重なフィードバックを共有してください</string>
+    <string name="more">もっと見る</string>
+    <string name="see_more_apps">他のアプリを見る</string>
+    <string name="car_doctor_scanning_diagnosing_treatment">カー ドクター - スキャン|診断|治療</string>
+    <string name="scanning">スキャン中</string>
+    <string name="disconnect">切断</string>
+    <string name="connect">接続</string>
+    <string name="disconnected">切断されました</string>
+    <string name="connecting">接続中.....</string>
+    <string name="saved_data">データを保存</string>
+    <string name="connected_to">接続先</string>
+    <string name="unabletoconnect">接続できません</string>
+    <string name="UNDEFINED">未定義</string>
+    <string name="INITIALIZING">初期化中…</string>
+    <string name="INITIALIZED">初期化完了</string>
+    <string name="ECU_DETECT">ECU検出中…</string>
+    <string name="ECU_DETECTED">ECU検出済み</string>
+    <string name="CONNECTING">接続中…</string>
+    <string name="CONNECTED">接続済み</string>
+    <string name="NODATA">データなし</string>
+    <string name="STOPPED">停止しました</string>
+    <string name="DISCONNECTED">切断されました</string>
+    <string name="BUSERROR">BUSエラー</string>
+    <string name="DATAERROR">DATAエラー</string>
+    <string name="RXERROR">RXエラー</string>
+    <string name="ERROR">エラー</string>
+    <string name="obd_error">OBDプロトコルエラー</string>
+    <string name="copied_to_clipboard">クリップボードにコピーしました</string>
+    <string name="select_ecu_addr">ECUアドレスを選択 …</string>
+    <string name="none_found">デバイスが見つかりませんでした</string>
+    <string name="metric">メートル法</string>
+    <string name="imperial">インペリアル</string>
+    <string name="demo_stopped">デモモード停止</string>
+    <string name="demo_started">デモモード開始</string>
+    <string name="demo">デモ…</string>
+    <string name="title_connected_to">接続先 %s</string>
+    <string name="obd_clearcodes">故障コードのクリア</string>
+    <string name="obd_clear_info">
+これによりMILがリセットされ、すべての排出関連診断情報がクリアされます。\n
+ - 診断トラブルコード\n
+ - フリーズフレームデータ\n
+ - 酸素センサーのテストデータ\n
+ - システム監視テストのステータス\n
+ - 車載監視テストの結果\n
+ - MILが有効な状態での走行距離\n
+ - DTCがクリアされてからの暖機回数\n
+ - DTCがクリアされてからの走行距離\n
+ - MILが有効な状態でのエンジン稼働時間\n
+ - DTCがクリアされてからの時間\n\n
+他のメーカー特有のクリア/リセットアクションが発生する場合があります。\n
+データの喪失により、ECUが再キャリブレーション中に車両が一時的に不調になる可能性があります。
+</string>
+    <string name="obd_test_confirm">OBDテストコントロールの要求。\n\n
+要求されたOBDテストコントロールは次のような状況を生成する可能性があります:\n
+ - 車両の動き\n
+ - 排気ガスの煙\n
+ - 高い排気温度\n
+ - 大きなエンジンノイズ\n
+ - 燃料蒸気\n
+ - その他\n\n
+このテストコントロールを安全なテスト環境で自己責任で実行することを確認してください!
+</string>
+    <string name="obd_test_progress">OBDテストコントロール進行中。\n
+        車両の反応を確認してください。</string>
+    <string name="none_paired">デバイスがペアリングされていません</string>
+
+    <string name="connectionlost">デバイスの接続が失われました</string>
+    <string name="english">英語</string>
+    <string name="afrikaans_afrikaans">アフリカーンス語 (Afrikaans)</string>
+    <string name="arabic">アラビア語 (عربي)</string>
+    <string name="chinese">中国語 (中国人)</string>
+    <string name="czech_e_tina">チェコ語 (čeština)</string>
+    <string name="danish_dansk">デンマーク語 (dansk)</string>
+    <string name="dutch_nederlands">オランダ語 (Nederlands)</string>
+    <string name="french_fran_ais">フランス語 (Français)</string>
+    <string name="german_deutsch">ドイツ語 (Deutsch)</string>
+    <string name="greek">ギリシャ語 (ελληνικά)</string>
+    <string name="hindi">ヒンディー語 (हिंदी)</string>
+    <string name="indonesian_indonesia">インドネシア語 (Indonesia)</string>
+    <string name="italian_italiano">イタリア語 (Italiano)</string>
+    <string name="japanese">日本語 (日本語)</string>
+    <string name="korean">韓国語 (한국인)</string>
+    <string name="malay_melayu">マレー語 (Melayu)</string>
+    <string name="norwegian_norsk">ノルウェー語 (norsk)</string>
+    <string name="russian">ロシア語 (Русский)</string>
+    <string name="portugues_portugu_s">ポルトガル語 (Português)</string>
+    <string name="persian">ペルシャ語 (فارسی)</string>
+    <string name="spanish_espa_ol">スペイン語 (Español)</string>
+    <string name="thai">タイ語 (แบบไทย)</string>
+    <string name="turkish_t_rk_e">トルコ語 (Türkçe)</string>
+    <string name="urdu">ウルドゥー語 (اردو)</string>
+    <string name="vietnamese_ti_ng_vi_t">ベトナム語 (Tiếng Việt)</string>
+    <string name="languages">言語</string>
+    <string name="language">言語</string>
+    <string name="faults">エラー</string>
+    <string name="help">ヘルプ</string>
+    <string name="realtime">リアルタイム</string>
+    <string name="all_sensors">すべてのセンサー</string>
+</resources>

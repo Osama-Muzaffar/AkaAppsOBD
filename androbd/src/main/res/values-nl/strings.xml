@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  AndrOBD -->
+    <string name="app_name" translatable="false">Car Doctor</string>
+    <string name="privacy_link" translatable="false">http://privacypolicyrangersaround.blogspot.com/2018/05/privacy-policy.html</string>
+    <string name="terms_link" translatable="false">https://zawajulshariaprivacypolicy.blogspot.com/2024/08/terms-of-use.html</string>
+
+    <string name="welcome_to">WELKOM BIJ</string>
+    <string name="let_s_go">Laten we gaan</string>
+    <string name="scan_diagnose_and_fix_issues">Scannen, Diagnostiseren en Problemen Oplossen</string>
+    <string name="car_doctor">Auto Dokter</string>
+    <string name="bluetooth_pairing">Bluetooth Koppelen</string>
+
+    <string-array name="speedTestRangeValues">
+        <item>0</item>
+        <item>100</item>
+        <item>200</item>
+        <item>300</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>5000</item>
+    </string-array>
+
+    <string-array name="elmcomm_states" translatable="false">
+        <item>@string/UNDEFINED</item>
+        <item>@string/INITIALIZING</item>
+        <item>@string/INITIALIZED</item>
+        <item>@string/ECU_DETECT</item>
+        <item>@string/ECU_DETECTED</item>
+        <item>@string/CONNECTING</item>
+        <item>@string/CONNECTED</item>
+        <item>@string/NODATA</item>
+        <item>@string/STOPPED</item>
+        <item>@string/DISCONNECTED</item>
+        <item>@string/BUSERROR</item>
+        <item>@string/DATAERROR</item>
+        <item>@string/RXERROR</item>
+        <item>@string/ERROR</item>
+    </string-array>
+
+    <string-array name="measure_options" translatable="false">
+        <item>@string/metric</item>
+        <item>@string/imperial</item>
+    </string-array>
+    <string-array name="measure_option_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string name="title_pref_bluetooth" translatable="false">Bluetooth</string>
+    <string name="title_pref_gps" translatable="false">GPS</string>
+    <string name="status_obd_no_support">NA</string>
+    <string name="pref_bluetooth_title">Bluetooth Inschakelen</string>
+    <string name="pref_bluetooth_summaryOff">Bluetooth inschakelen</string>
+    <string name="pref_bluetooth_summaryOn">Bluetooth uitschakelen</string>
+    <string name="pref_bluetooth_list_devices_summary">Lijst van gekoppelde Bluetooth-apparaten.</string>
+    <string name="pref_bluetooth_list_devices_title">Bluetooth Apparaten</string>
+    <string name="pref_gps_category_title">GPS Inschakelen</string>
+    <string name="pref_gps_category_summaryOff">GPS inschakelen</string>
+    <string name="pref_gps_category_summaryOn">GPS uitschakelen</string>
+    <string name="pref_gps_update_period_title">Updateperiode in Seconden</string>
+    <string name="pref_gps_update_period_summary">De lengte van de tijd tussen het opvragen van een nieuwe positie in seconden</string>
+    <string name="pref_gps_distance_period_title">Updateperiode in Meters</string>
+    <string name="pref_gps_distance_period_summary">Minimale afstand tussen locatie-updates, in meters</string>
+    <string name="default_dirname_full_logging">OBDReaderLogs</string>
+    <string name="text_noerrors">Er zijn geen fouten gevonden!</string>
+    <string name="pref_gps_category" translatable="false">gps_category</string>
+    <string name="base64key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq/BikXyTp4nSCT74OEPQXnOSJw6Sa4OozMB0vmQQBGsx4r/KGQ9J0V26ti5ObtTSUeyLWaytebpuxpv++kf8P9GDeLc+QvniNfXjFH6QEQJ+sz1tSZVJir3StfWbRKqwzG39vEb4mqPNh8VpMFI5MWoNXJFi8Bcxv/ad94Uz8jUiolrwCR6oWNCU5wrkZGUZAi0ToWbGOlN7FZ55ACJ5T3J2le25ydtpbRvRkoTMFwF30seuGn/C3ghvQTNVAe7Oh3QMJ/DcWjhxD090NaKVBdhtJPn5R2as5At7/a1jb+FUNbzrDBGcFnx5WJ3oEXoFZ1QX6KzA71z5ezT2kD7fvwIDAQAB</string>
+    <string name="Purchase_OK">OK</string>
+    <string name="Purchase_ERROR">FOUT</string>
+    <string name="Purchase_PENDING">Aankoop is in behandeling. Voltooi de transactie</string>
+    <string name="Purchase_INVALID">Fout: Ongeldige aankoop</string>
+    <string name="Purchase_UNKNOWN">Aankoopstatus onbekend</string>
+    <string name="Premium_User_Msg">Gefeliciteerd! Je bent een premium gebruiker.</string>
+    <string name="Purchase_OK_Dialog_Msg">Aankoop succesvol!</string>
+    <string name="Purchase_OK_Dialog_Msg_Detail">De app zal nu herstarten en je zult geen advertenties meer zien.</string>
+    <string name="exit_dialog_message">Beoordeel ons als je deze app nuttig vindt of druk op Ja om af te sluiten.</string>
+    <string name="dialog_loading_title">Laden…</string>
+    <string name="dialog_loading_body">Applicatieweergave laden, even geduld…</string>
+    <string name="text_bluetooth_nodevice">Geen Bluetooth-apparaat geselecteerd</string>
+    <string name="text_bluetooth_error_connecting">Kan geen verbinding maken met Bluetooth-apparaat!</string>
+    <string name="text_obd_command_failure">OBD-commando fout!</string>
+    <string name="text_dtc_no_data">Geen DTC opgeslagen</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="paired_devices">Gekoppelde Apparaten</string>
+    <string name="available_devices">Beschikbare Apparaten</string>
+    <string name="turn_on_bluetooth_to_see_devices">Zet Bluetooth aan om apparaten te zien</string>
+    <string name="bluetooth_is_off">Bluetooth is uit</string>
+    <string name="refresh">Vernieuwen</string>
+    <string name="code_details">Code Details</string>
+    <string name="code">Code:</string>
+    <string name="solution">Oplossing:</string>
+    <string name="cause">Oorzaak:</string>
+    <string name="symptoms">Symptomen:</string>
+    <string name="fault_codes">Foutcodes</string>
+    <string name="search">Zoeken</string>
+    <string name="obd_data">OBD Gegevens</string>
+    <string name="no_data_found">Geen gegevens gevonden</string>
+    <string name="please_wait">Even geduld.....</string>
+    <string name="go_to_premimum">Ga naar Premium</string>
+    <string name="lifetime">Levenslang</string>
+    <string name="unlimited_clear_mil">Onbeperkt MIL Wissen</string>
+    <string name="unlimited_car_diagnose">Onbeperkte Auto Diagnose</string>
+    <string name="unlimited_pro_features">Onbeperkte Pro-functies</string>
+    <string name="cancel_subscription_at_least_24_hours_before_renewal">Annuleer abonnement ten minste 24 uur voor vernieuwing</string>
+    <string name="get_this_package">Krijg dit pakket</string>
+    <string name="restore_purchases">Aankopen herstellen</string>
+    <string name="subscription_policy">Abonnementsbeleid</string>
+    <string name="billing_begins_when_you_opt_for_a_subscription_user_can_cancel_subscription_within_24_hours_of_purchase_monthly_subscription_will_automatically_renews_until_user_cancel_it_user_can_cancel_any_time_in_google_account">Facturering begint wanneer je kiest voor een abonnement. De gebruiker kan het abonnement binnen 24 uur na aankoop annuleren. Het maandabonnement wordt automatisch vernieuwd totdat de gebruiker het annuleert. De gebruiker kan op elk moment annuleren in het Google-account.</string>
+    <string name="privacy_policy">Privacybeleid</string>
+    <string name="terms_of_use">Gebruiksvoorwaarden</string>
+    <string name="real_time">Realtijd</string>
+    <string name="colent">Colent</string>
+    <string name="air_intake_c">Luchtinlaat \'C\'</string>
+    <string name="engine_load">Motorbelasting</string>
+    <string name="abs_load">ABS-belasting</string>
+    <string name="throttle">Gaspedaal</string>
+    <string name="fuel_pressure">Brandstofdruk</string>
+    <string name="mass_air_flow_g_s">Massa Luchtstroom \'g/s\'</string>
+    <string name="air_fuel_ratio">Lucht/Brandstofverhouding</string>
+    <string name="barometric_pressure_psi">Barometrische Druk \'psi\'</string>
+    <string name="troubles">problemen....</string>
+    <string name="clear">Wissen</string>
+    <string name="no_fault_found">Geen fout gevonden</string>
+    <string name="setting">Instelling</string>
+    <string name="adapter_type">Adaptertype</string>
+    <string name="connect_via_bluetooth">Verbind via Bluetooth</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="connect_via_wi_fi">Verbind via Wi-Fi</string>
+    <string name="theme">Thema</string>
+    <string name="light_mode">Lichtmodus</string>
+    <string name="switch_to_light_mode">Overschakelen naar lichtmodus</string>
+    <string name="dark_mode">Donkere modus</string>
+    <string name="switch_to_dark_mode">Overschakelen naar donkere modus</string>
+    <string name="connectivity">Connectiviteit</string>
+    <string name="share">Delen</string>
+    <string name="share_with_friends">Deel met vrienden</string>
+    <string name="rate">Beoordeel</string>
+    <string name="share_your_valuable_feedback">Deel je waardevolle feedback</string>
+    <string name="more">Meer</string>
+    <string name="see_more_apps">Bekijk meer apps</string>
+    <string name="car_doctor_scanning_diagnosing_treatment">Auto Dokter - Scannen|Diagnostiseren|Behandeling</string>
+    <string name="scanning">Scannen</string>
+    <string name="disconnect">Verbreken</string>
+    <string name="connect">Verbinden</string>
+    <string name="disconnected">Verbroken</string>
+    <string name="connecting">Verbinden…..</string>
+    <string name="saved_data">Gegevens opslaan</string>
+    <string name="connected_to">Verbonden met</string>
+    <string name="unabletoconnect">Kan geen verbinding maken</string>
+    <string name="UNDEFINED">Ongedefinieerd</string>
+    <string name="INITIALIZING">Initialiseren…</string>
+    <string name="INITIALIZED">Geïnitialiseerd</string>
+    <string name="ECU_DETECT">ECU detecteren…</string>
+    <string name="ECU_DETECTED">ECU gedetecteerd</string>
+    <string name="CONNECTING">Verbinden…</string>
+    <string name="CONNECTED">Verbonden</string>
+    <string name="NODATA">Geen gegevens</string>
+    <string name="STOPPED">Gestopt</string>
+    <string name="DISCONNECTED">Verbroken</string>
+    <string name="BUSERROR">BUS-fout</string>
+    <string name="DATAERROR">DATA-fout</string>
+    <string name="RXERROR">RX-fout</string>
+    <string name="ERROR">Fout</string>
+    <string name="obd_error">OBD-protocolfout</string>
+    <string name="copied_to_clipboard">Gekopieerd naar klembord</string>
+    <string name="select_ecu_addr">Selecteer ECU-adres …</string>
+    <string name="none_found">Geen apparaten gevonden</string>
+    <string name="metric">metrisch</string>
+    <string name="imperial">imperiaal</string>
+    <string name="demo_stopped">DEMO-modus gestopt</string>
+    <string name="demo_started">DEMO-modus gestart</string>
+    <string name="demo">Demo…</string>
+    <string name="title_connected_to">Verbonden %s</string>
+    <string name="obd_clearcodes">Foutcodes wissen</string>
+    <string name="obd_clear_info">
+Dit zal de MIL resetten en alle emissie-gerelateerde diagnostische\n
+informatie wissen, inclusief:\n
+ - Diagnostische foutcodes\n
+ - Freeze frame gegevens\n
+ - Oxygen sensor testgegevens\n
+ - Status van systeemmonitoringstests\n
+ - On-board monitoring testresultaten\n
+ - Afstand afgelegd terwijl MIL geactiveerd was\n
+ - Aantal opwarmbeurten sinds DTC’s gewist zijn\n
+ - Afstand afgelegd sinds DTC’s gewist zijn\n
+ - Motorlooptijd terwijl MIL geactiveerd was\n
+ - Tijd sinds DTC’s gewist zijn\n\n
+Andere specifieke acties voor wissen/resetten van de fabrikant kunnen optreden.\n
+Verlies van gegevens kan ervoor zorgen dat het voertuig korte tijd slecht presteert terwijl de ECU zichzelf opnieuw kalibreert.
+</string>
+    <string name="obd_test_confirm">OBD-testcontrole aangevraagd.\n\n
+        De aangevraagde OBD-testcontrole kan het volgende genereren:\n
+        - Voertuigsbeweging\n
+        - Uitlaatrook\n
+        - Hoge uitlaattemperatuur\n
+        - Hard motorgeluid\n
+        - Brandstofdamp\n
+        - enz.\n\n
+        Bevestig om deze testcontrole op eigen risico uit te voeren in een veilige testomgeving!
+    </string>
+    <string name="obd_test_progress">OBD-testcontrole in uitvoering.\n
+        Controleer de reactie van het voertuig.</string>
+    <string name="none_paired">Geen apparaten gekoppeld</string>
+
+    <string name="connectionlost">Verbinding met apparaat verloren</string>
+    <string name="english">Engels</string>
+    <string name="afrikaans_afrikaans">Afrikaans (Afrikaans)</string>
+    <string name="arabic">Arabisch (عربي)</string>
+    <string name="chinese">Chinees (中国人)</string>
+    <string name="czech_e_tina">Tsjechisch (čeština)</string>
+    <string name="danish_dansk">Deens (dansk)</string>
+    <string name="dutch_nederlands">Nederlands (Nederlands)</string>
+    <string name="french_fran_ais">Frans (Français)</string>
+    <string name="german_deutsch">Duits (Deutsch)</string>
+    <string name="greek">Grieks (ελληνικά)</string>
+    <string name="hindi">Hindi (हिंदी)</string>
+    <string name="indonesian_indonesia">Indonesisch (Indonesia)</string>
+    <string name="italian_italiano">Italiaans (Italiano)</string>
+    <string name="japanese">Japans (日本語)</string>
+    <string name="korean">Koreaans (한국인)</string>
+    <string name="malay_melayu">Maleis (Melayu)</string>
+    <string name="norwegian_norsk">Noors (norsk)</string>
+    <string name="russian">Russisch (Русский)</string>
+    <string name="portugues_portugu_s">Portugees (Português)</string>
+    <string name="persian">Perzisch (فارسی)</string>
+    <string name="spanish_espa_ol">Spaans (Español)</string>
+    <string name="thai">Thai (แบบไทย)</string>
+    <string name="turkish_t_rk_e">Turks (Türkçe)</string>
+    <string name="urdu">Urdu (اردو)</string>
+    <string name="vietnamese_ti_ng_vi_t">Vietnamees (Tiếng Việt)</string>
+    <string name="languages">Talen</string>
+    <string name="language">Taal</string>
+    <string name="faults">Fouten</string>
+    <string name="help">Help</string>
+    <string name="realtime">Reële tijd</string>
+    <string name="all_sensors">Alle sensoren</string>
+
+</resources>

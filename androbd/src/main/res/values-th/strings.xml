@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  AndrOBD -->
+    <string name="app_name" translatable="false">Car Doctor</string>
+    <string name="privacy_link" translatable="false">http://privacypolicyrangersaround.blogspot.com/2018/05/privacy-policy.html</string>
+    <string name="terms_link" translatable="false">https://zawajulshariaprivacypolicy.blogspot.com/2024/08/terms-of-use.html</string>
+
+    <string name="welcome_to">ยินดีต้อนรับสู่</string>
+    <string name="let_s_go">ไปกันเถอะ</string>
+    <string name="scan_diagnose_and_fix_issues">สแกน, วิเคราะห์ และแก้ไขปัญหา</string>
+    <string name="car_doctor">หมอรถ</string>
+    <string name="bluetooth_pairing">การจับคู่บลูทูธ</string>
+
+    <string-array name="speedTestRangeValues">
+        <item>0</item>
+        <item>100</item>
+        <item>200</item>
+        <item>300</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>5000</item>
+    </string-array>
+
+    <string-array name="elmcomm_states" translatable="false">
+        <item>@string/UNDEFINED</item>
+        <item>@string/INITIALIZING</item>
+        <item>@string/INITIALIZED</item>
+        <item>@string/ECU_DETECT</item>
+        <item>@string/ECU_DETECTED</item>
+        <item>@string/CONNECTING</item>
+        <item>@string/CONNECTED</item>
+        <item>@string/NODATA</item>
+        <item>@string/STOPPED</item>
+        <item>@string/DISCONNECTED</item>
+        <item>@string/BUSERROR</item>
+        <item>@string/DATAERROR</item>
+        <item>@string/RXERROR</item>
+        <item>@string/ERROR</item>
+    </string-array>
+
+    <string-array name="measure_options" translatable="false">
+        <item>@string/metric</item>
+        <item>@string/imperial</item>
+    </string-array>
+    <string-array name="measure_option_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string name="title_pref_bluetooth" translatable="false">บลูทูธ</string>
+    <string name="title_pref_gps" translatable="false">GPS</string>
+    <string name="status_obd_no_support">ไม่รองรับ</string>
+    <string name="pref_bluetooth_title">เปิดบลูทูธ</string>
+    <string name="pref_bluetooth_summaryOff">เปิดบลูทูธ</string>
+    <string name="pref_bluetooth_summaryOn">ปิดบลูทูธ</string>
+    <string name="pref_bluetooth_list_devices_summary">รายการอุปกรณ์บลูทูธที่จับคู่แล้ว</string>
+    <string name="pref_bluetooth_list_devices_title">อุปกรณ์บลูทูธ</string>
+    <string name="pref_gps_category_title">เปิด GPS</string>
+    <string name="pref_gps_category_summaryOff">เปิด GPS</string>
+    <string name="pref_gps_category_summaryOn">ปิด GPS</string>
+    <string name="pref_gps_update_period_title">ช่วงเวลาอัพเดทเป็นวินาที</string>
+    <string name="pref_gps_update_period_summary">ระยะเวลาระหว่างการสอบถามตำแหน่งใหม่เป็นวินาที</string>
+    <string name="pref_gps_distance_period_title">ช่วงเวลาอัพเดทเป็นเมตร</string>
+    <string name="pref_gps_distance_period_summary">ระยะทางขั้นต่ำระหว่างการอัพเดทตำแหน่ง, เป็นเมตร</string>
+    <string name="default_dirname_full_logging">OBDReaderLogs</string>
+    <string name="text_noerrors">ไม่พบข้อผิดพลาด!</string>
+    <string name="pref_gps_category" translatable="false">gps_category</string>
+    <string name="base64key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq/BikXyTp4nSCT74OEPQXnOSJw6Sa4OozMB0vmQQBGsx4r/KGQ9J0V26ti5ObtTSUeyLWaytebpuxpv++kf8P9GDeLc+QvniNfXjFH6QEQJ+sz1tSZVJir3StfWbRKqwzG39vEb4mqPNh8VpMFI5MWoNXJFi8Bcxv/ad94Uz8jUiolrwCR6oWNCU5wrkZGUZAi0ToWbGOlN7FZ55ACJ5T3J2le25ydtpbRvRkoTMFwF30seuGn/C3ghvQTNVAe7Oh3QMJ/DcWjhxD090NaKVBdhtJPn5R2as5At7/a1jb+FUNbzrDBGcFnx5WJ3oEXoFZ1QX6KzA71z5ezT2kD7fvwIDAQAB</string>
+    <string name="Purchase_OK">ตกลง</string>
+    <string name="Purchase_ERROR">ข้อผิดพลาด</string>
+    <string name="Purchase_PENDING">การซื้ออยู่ระหว่างดำเนินการ กรุณาทำการซื้อให้เสร็จสมบูรณ์</string>
+    <string name="Purchase_INVALID">ข้อผิดพลาด: การซื้อไม่ถูกต้อง</string>
+    <string name="Purchase_UNKNOWN">สถานะการซื้อไม่รู้จัก</string>
+    <string name="Premium_User_Msg">ขอแสดงความยินดี! คุณเป็นผู้ใช้พรีเมียม.</string>
+    <string name="Purchase_OK_Dialog_Msg">การซื้อสำเร็จ!</string>
+    <string name="Purchase_OK_Dialog_Msg_Detail">แอพจะรีสตาร์ทและคุณจะไม่เห็นโฆษณาอีกต่อไป.</string>
+    <string name="exit_dialog_message">กรุณาให้คะแนนเรา หากคุณพบว่าแอพนี้มีประโยชน์หรือกดใช่เพื่อออก</string>
+    <string name="dialog_loading_title">กำลังโหลด…</string>
+    <string name="dialog_loading_body">กำลังโหลดมุมมองแอพพลิเคชั่น, กรุณารอสักครู่…</string>
+    <string name="text_bluetooth_nodevice">ไม่มีอุปกรณ์บลูทูธที่เลือก</string>
+    <string name="text_bluetooth_error_connecting">ไม่สามารถเชื่อมต่อกับอุปกรณ์บลูทูธ!</string>
+    <string name="text_obd_command_failure">คำสั่ง OBD ล้มเหลว!</string>
+    <string name="text_dtc_no_data">ไม่มี DTC ที่เก็บไว้</string>
+    <string name="bluetooth">บลูทูธ</string>
+    <string name="paired_devices">อุปกรณ์ที่จับคู่แล้ว</string>
+    <string name="available_devices">อุปกรณ์ที่พร้อมใช้งาน</string>
+    <string name="turn_on_bluetooth_to_see_devices">เปิดบลูทูธเพื่อดูอุปกรณ์</string>
+    <string name="bluetooth_is_off">บลูทูธปิดอยู่</string>
+    <string name="refresh">รีเฟรช</string>
+    <string name="code_details">รายละเอียดรหัส</string>
+    <string name="code">รหัส:</string>
+    <string name="solution">วิธีแก้ไข:</string>
+    <string name="cause">สาเหตุ:</string>
+    <string name="symptoms">อาการ:</string>
+    <string name="fault_codes">รหัสข้อผิดพลาด</string>
+    <string name="search">ค้นหา</string>
+    <string name="obd_data">ข้อมูล OBD</string>
+    <string name="no_data_found">ไม่พบข้อมูล</string>
+    <string name="please_wait">กรุณารอสักครู่.....</string>
+    <string name="go_to_premimum">ไปที่พรีเมียม</string>
+    <string name="lifetime">ตลอดชีพ</string>
+    <string name="unlimited_clear_mil">ล้าง MIL ได้ไม่จำกัด</string>
+    <string name="unlimited_car_diagnose">วินิจฉัยรถยนต์ได้ไม่จำกัด</string>
+    <string name="unlimited_pro_features">คุณสมบัติระดับพรีเมียมไม่จำกัด</string>
+    <string name="cancel_subscription_at_least_24_hours_before_renewal">ยกเลิกการสมัครสมาชิกอย่างน้อย 24 ชั่วโมงก่อนการต่ออายุ</string>
+    <string name="get_this_package">รับแพ็กเกจนี้</string>
+    <string name="restore_purchases">กู้คืนการซื้อ</string>
+    <string name="subscription_policy">นโยบายการสมัครสมาชิก</string>
+    <string name="billing_begins_when_you_opt_for_a_subscription_user_can_cancel_subscription_within_24_hours_of_purchase_monthly_subscription_will_automatically_renews_until_user_cancel_it_user_can_cancel_any_time_in_google_account">การเรียกเก็บเงินเริ่มเมื่อคุณเลือกสมัครสมาชิก ผู้ใช้สามารถยกเลิกการสมัครสมาชิกภายใน 24 ชั่วโมงหลังการซื้อ การสมัครสมาชิกแบบรายเดือนจะต่ออายุโดยอัตโนมัติจนกว่าผู้ใช้จะยกเลิก ผู้ใช้สามารถยกเลิกได้ทุกเมื่อในบัญชี Google</string>
+    <string name="privacy_policy">นโยบายความเป็นส่วนตัว</string>
+    <string name="terms_of_use">ข้อกำหนดในการใช้</string>
+    <string name="real_time">เรียลไทม์</string>
+    <string name="colent">Colent</string>
+    <string name="air_intake_c">การดูดอากาศ \'C\'</string>
+    <string name="engine_load">โหลดเครื่องยนต์</string>
+    <string name="abs_load">โหลด ABS</string>
+    <string name="throttle">ปีกผีเสื้อ</string>
+    <string name="fuel_pressure">ความดันเชื้อเพลิง</string>
+    <string name="mass_air_flow_g_s">การไหลของอากาศ \'g/s\'</string>
+    <string name="air_fuel_ratio">อัตราส่วนอากาศ/เชื้อเพลิง</string>
+    <string name="barometric_pressure_psi">ความดันบรรยากาศ \'psi\'</string>
+    <string name="troubles">ปัญหา....</string>
+    <string name="clear">ล้าง</string>
+    <string name="no_fault_found">ไม่พบข้อผิดพลาด</string>
+    <string name="setting">การตั้งค่า</string>
+    <string name="adapter_type">ประเภทอะแดปเตอร์</string>
+    <string name="connect_via_bluetooth">เชื่อมต่อผ่านบลูทูธ</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="connect_via_wi_fi">เชื่อมต่อผ่าน Wi-Fi</string>
+    <string name="theme">ธีม</string>
+    <string name="light_mode">โหมดสว่าง</string>
+    <string name="switch_to_light_mode">เปลี่ยนเป็นโหมดสว่าง</string>
+    <string name="dark_mode">โหมดมืด</string>
+    <string name="switch_to_dark_mode">เปลี่ยนเป็นโหมดมืด</string>
+    <string name="connectivity">การเชื่อมต่อ</string>
+    <string name="share">แชร์</string>
+    <string name="share_with_friends">แชร์กับเพื่อน</string>
+    <string name="rate">ให้คะแนน</string>
+    <string name="share_your_valuable_feedback">แชร์ความคิดเห็นอันมีค่า</string>
+    <string name="more">เพิ่มเติม</string>
+    <string name="see_more_apps">ดูแอปเพิ่มเติม</string>
+    <string name="car_doctor_scanning_diagnosing_treatment">หมอรถ - สแกน|วินิจฉัย|การรักษา</string>
+    <string name="scanning">กำลังสแกน</string>
+    <string name="disconnect">ตัดการเชื่อมต่อ</string>
+    <string name="connect">เชื่อมต่อ</string>
+    <string name="disconnected">ตัดการเชื่อมต่อแล้ว</string>
+    <string name="connecting">กำลังเชื่อมต่อ.....</string>
+    <string name="saved_data">บันทึกข้อมูล</string>
+    <string name="connected_to">เชื่อมต่อกับ</string>
+    <string name="unabletoconnect">ไม่สามารถเชื่อมต่อได้</string>
+    <string name="UNDEFINED">ไม่ระบุ</string>
+    <string name="INITIALIZING">กำลังเริ่มต้น…</string>
+    <string name="INITIALIZED">เริ่มต้นแล้ว</string>
+    <string name="ECU_DETECT">ตรวจจับ ECU…</string>
+    <string name="ECU_DETECTED">ตรวจพบ ECU</string>
+    <string name="CONNECTING">กำลังเชื่อมต่อ…</string>
+    <string name="CONNECTED">เชื่อมต่อแล้ว</string>
+    <string name="NODATA">ไม่มีข้อมูล</string>
+    <string name="STOPPED">หยุด</string>
+    <string name="DISCONNECTED">ตัดการเชื่อมต่อ</string>
+    <string name="BUSERROR">ข้อผิดพลาด BUS</string>
+    <string name="DATAERROR">ข้อผิดพลาด DATA</string>
+    <string name="RXERROR">ข้อผิดพลาด RX</string>
+    <string name="ERROR">ข้อผิดพลาด</string>
+    <string name="obd_error">ข้อผิดพลาดโปรโตคอล OBD</string>
+    <string name="copied_to_clipboard">คัดลอกไปที่คลิปบอร์ด</string>
+    <string name="select_ecu_addr">เลือกที่อยู่ ECU …</string>
+    <string name="none_found">ไม่พบอุปกรณ์</string>
+    <string name="metric">เมตริก</string>
+    <string name="imperial">อิมพีเรียล</string>
+    <string name="demo_stopped">โหมด DEMO หยุดแล้ว</string>
+    <string name="demo_started">โหมด DEMO เริ่มแล้ว</string>
+    <string name="demo">เดโม…</string>
+    <string name="title_connected_to">เชื่อมต่อกับ %s</string>
+    <string name="obd_clearcodes">ล้างรหัสข้อผิดพลาด</string>
+    <string name="obd_clear_info">
+การดำเนินการนี้จะรีเซ็ต MIL และล้างข้อมูลการวินิจฉัยที่เกี่ยวข้องกับการปล่อยมลพิษทั้งหมด รวมถึง:\n
+ - รหัสข้อผิดพลาดการวินิจฉัย\n
+ - ข้อมูลเฟรมที่ถูกแช่แข็ง\n
+ - ข้อมูลการทดสอบเซ็นเซอร์ออกซิเจน\n
+ - สถานะการทดสอบการตรวจสอบระบบ\n
+ - ผลการทดสอบการตรวจสอบในตัว\n
+ - ระยะทางที่เดินทางขณะ MIL ถูกเปิดใช้งาน\n
+ - จำนวนการเริ่มเครื่องยนต์ใหม่ตั้งแต่การล้าง DTC\n
+ - ระยะทางที่เดินทางตั้งแต่การล้าง DTC\n
+ - เวลาในการทำงานของเครื่องยนต์ขณะ MIL ถูกเปิดใช้งาน\n
+ - เวลาตั้งแต่การล้าง DTC\n\n
+การล้างหรือการรีเซ็ตที่เฉพาะเจาะจงของผู้ผลิตอื่น ๆ อาจเกิดขึ้น\n
+การสูญเสียข้อมูลอาจทำให้รถยนต์ทำงานได้ไม่ดีชั่วขณะหนึ่งขณะ ECU ปรับการตั้งค่าใหม่
+</string>
+    <string name="obd_test_confirm">การควบคุมการทดสอบ OBD ถูกขอ\n\n
+การควบคุมการทดสอบ OBD ที่ร้องขออาจก่อให้เกิด:\n
+ - การเคลื่อนไหวของรถยนต์\n
+ - ควันจากไอเสีย\n
+ - อุณหภูมิไอเสียสูง\n
+ - เสียงเครื่องยนต์ดัง\n
+ - ไอระเหยของเชื้อเพลิง\n
+ - เป็นต้น\n\n
+โปรดยืนยันเพื่อทำการทดสอบนี้โดยรับความเสี่ยงของคุณเองในสภาพแวดล้อมการทดสอบที่ปลอดภัยเท่านั้น!
+</string>
+    <string name="obd_test_progress">กำลังดำเนินการควบคุมการทดสอบ OBD\n
+        โปรดตรวจสอบปฏิกิริยาของรถยนต์.</string>
+    <string name="none_paired">ไม่มีอุปกรณ์ที่จับคู่</string>
+
+    <string name="connectionlost">การเชื่อมต่ออุปกรณ์ขาดหายไป</string>
+    <string name="english">อังกฤษ</string>
+    <string name="afrikaans_afrikaans">แอฟริคานส์ (Afrikaans)</string>
+    <string name="arabic">อาหรับ (عربي)</string>
+    <string name="chinese">จีน (中国人)</string>
+    <string name="czech_e_tina">เช็ก (čeština)</string>
+    <string name="danish_dansk">เดนมาร์ก (dansk)</string>
+    <string name="dutch_nederlands">ดัตช์ (Nederlands)</string>
+    <string name="french_fran_ais">ฝรั่งเศส (Français)</string>
+    <string name="german_deutsch">เยอรมัน (Deutsch)</string>
+    <string name="greek">กรีก (ελληνικά)</string>
+    <string name="hindi">ฮินดี (हिंदी)</string>
+    <string name="indonesian_indonesia">อินโดนีเซีย (Indonesia)</string>
+    <string name="italian_italiano">อิตาลี (Italiano)</string>
+    <string name="japanese">ญี่ปุ่น (日本語)</string>
+    <string name="korean">เกาหลี (한국인)</string>
+    <string name="malay_melayu">มาเลย์ (Melayu)</string>
+    <string name="norwegian_norsk">นอร์เวย์ (norsk)</string>
+    <string name="russian">รัสเซีย (Русский)</string>
+    <string name="portugues_portugu_s">โปรตุเกส (Português)</string>
+    <string name="persian">เปอร์เซีย (فارسی)</string>
+    <string name="spanish_espa_ol">สเปน (Español)</string>
+    <string name="thai">ไทย (แบบไทย)</string>
+    <string name="turkish_t_rk_e">ตุรกี (Türkçe)</string>
+    <string name="urdu">อูรดู (اردو)</string>
+    <string name="vietnamese_ti_ng_vi_t">เวียดนาม (Tiếng Việt)</string>
+    <string name="languages">ภาษา</string>
+    <string name="language">ภาษา</string>
+    <string name="faults">ข้อผิดพลาด</string>
+    <string name="help">ช่วยเหลือ</string>
+    <string name="realtime">เวลาจริง</string>
+    <string name="all_sensors">เซ็นเซอร์ทั้งหมด</string>
+</resources>

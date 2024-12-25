@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  AndrOBD -->
+    <string name="app_name" translatable="false">Car Doctor</string>
+    <string name="privacy_link" translatable="false">http://privacypolicyrangersaround.blogspot.com/2018/05/privacy-policy.html</string>
+    <string name="terms_link" translatable="false">https://zawajulshariaprivacypolicy.blogspot.com/2024/08/terms-of-use.html</string>
+
+    <string name="welcome_to">مرحبًا بك في</string>
+    <string name="let_s_go">لنذهب</string>
+    <string name="scan_diagnose_and_fix_issues">فحص، تشخيص وإصلاح المشكلات</string>
+    <string name="car_doctor">طبيب السيارة</string>
+    <string name="bluetooth_pairing">إقران البلوتوث</string>
+
+    <string-array name="speedTestRangeValues">
+        <item>0</item>
+        <item>100</item>
+        <item>200</item>
+        <item>300</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>5000</item>
+    </string-array>
+
+    <string-array name="elmcomm_states" translatable="false">
+        <item>@string/UNDEFINED</item>
+        <item>@string/INITIALIZING</item>
+        <item>@string/INITIALIZED</item>
+        <item>@string/ECU_DETECT</item>
+        <item>@string/ECU_DETECTED</item>
+        <item>@string/CONNECTING</item>
+        <item>@string/CONNECTED</item>
+        <item>@string/NODATA</item>
+        <item>@string/STOPPED</item>
+        <item>@string/DISCONNECTED</item>
+        <item>@string/BUSERROR</item>
+        <item>@string/DATAERROR</item>
+        <item>@string/RXERROR</item>
+        <item>@string/ERROR</item>
+    </string-array>
+
+    <string-array name="measure_options" translatable="false">
+        <item>@string/metric</item>
+        <item>@string/imperial</item>
+    </string-array>
+    <string-array name="measure_option_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string name="title_pref_bluetooth" translatable="false">بلوتوث</string>
+    <string name="title_pref_gps" translatable="false">GPS</string>
+    <string name="status_obd_no_support">غير متوفر</string>
+    <string name="pref_bluetooth_title">تفعيل البلوتوث</string>
+    <string name="pref_bluetooth_summaryOff">قم بتشغيل البلوتوث</string>
+    <string name="pref_bluetooth_summaryOn">قم بإيقاف البلوتوث</string>
+    <string name="pref_bluetooth_list_devices_summary">قائمة الأجهزة المقترنة بالبلوتوث.</string>
+    <string name="pref_bluetooth_list_devices_title">أجهزة البلوتوث</string>
+    <string name="pref_gps_category_title">تفعيل GPS</string>
+    <string name="pref_gps_category_summaryOff">قم بتشغيل GPS</string>
+    <string name="pref_gps_category_summaryOn">قم بإيقاف GPS</string>
+    <string name="pref_gps_update_period_title">فترة التحديث بالثواني</string>
+    <string name="pref_gps_update_period_summary">مدة الوقت بين استعلامات الموقع الجديدة بالثواني</string>
+    <string name="pref_gps_distance_period_title">فترة التحديث بالأمتار</string>
+    <string name="pref_gps_distance_period_summary">الحد الأدنى من المسافة بين تحديثات الموقع، بالأمتار</string>
+    <string name="default_dirname_full_logging">سجلات قارئ OBD</string>
+    <string name="text_noerrors">لم يتم العثور على أخطاء!</string>
+    <string name="pref_gps_category" translatable="false">فئة GPS</string>
+    <string name="base64key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq/BikXyTp4nSCT74OEPQXnOSJw6Sa4OozMB0vmQQBGsx4r/KGQ9J0V26ti5ObtTSUeyLWaytebpuxpv++kf8P9GDeLc+QvniNfXjFH6QEQJ+sz1tSZVJir3StfWbRKqwzG39vEb4mqPNh8VpMFI5MWoNXJFi8Bcxv/ad94Uz8jUiolrwCR6oWNCU5wrkZGUZAi0ToWbGOlN7FZ55ACJ5T3J2le25ydtpbRvRkoTMFwF30seuGn/C3ghvQTNVAe7Oh3QMJ/DcWjhxD090NaKVBdhtJPn5R2as5At7/a1jb+FUNbzrDBGcFnx5WJ3oEXoFZ1QX6KzA71z5ezT2kD7fvwIDAQAB</string>
+    <string name="Purchase_OK">تم</string>
+    <string name="Purchase_ERROR">خطأ</string>
+    <string name="Purchase_PENDING">الشراء معلق. يرجى إكمال المعاملة</string>
+    <string name="Purchase_INVALID">خطأ: عملية شراء غير صالحة</string>
+    <string name="Purchase_UNKNOWN">حالة الشراء غير معروفة</string>
+    <string name="Premium_User_Msg">تهانينا! أنت مستخدم مميز.</string>
+    <string name="Purchase_OK_Dialog_Msg">تمت عملية الشراء بنجاح!</string>
+    <string name="Purchase_OK_Dialog_Msg_Detail">الآن ستعيد التطبيق التشغيل وسيتم إزالة الإعلانات.</string>
+    <string name="exit_dialog_message">يرجى تقييمنا إذا وجدت هذا التطبيق مفيدًا أو اضغط نعم للخروج.</string>
+    <string name="dialog_loading_title">جارٍ التحميل…</string>
+    <string name="dialog_loading_body">جارٍ تحميل عرض التطبيق، يرجى الانتظار…</string>
+    <string name="text_bluetooth_nodevice">لم يتم اختيار جهاز بلوتوث</string>
+    <string name="text_bluetooth_error_connecting">تعذر الاتصال بجهاز البلوتوث!</string>
+    <string name="text_obd_command_failure">فشل في أمر OBD!</string>
+    <string name="text_dtc_no_data">لا توجد بيانات DTC مخزنة</string>
+    <string name="bluetooth">بلوتوث</string>
+    <string name="paired_devices">الأجهزة المقترنة</string>
+    <string name="available_devices">الأجهزة المتاحة</string>
+    <string name="turn_on_bluetooth_to_see_devices">قم بتشغيل البلوتوث لرؤية الأجهزة</string>
+    <string name="bluetooth_is_off">البلوتوث مغلق</string>
+    <string name="refresh">تحديث</string>
+    <string name="code_details">تفاصيل الكود</string>
+    <string name="code">الكود:</string>
+    <string name="solution">الحل:</string>
+    <string name="cause">السبب:</string>
+    <string name="symptoms">الأعراض:</string>
+    <string name="fault_codes">رموز الأخطاء</string>
+    <string name="search">بحث</string>
+    <string name="obd_data">بيانات OBD</string>
+    <string name="no_data_found">لم يتم العثور على بيانات</string>
+    <string name="please_wait">يرجى الانتظار.....</string>
+    <string name="go_to_premimum">انتقل إلى النسخة المميزة</string>
+    <string name="lifetime">مدى الحياة</string>
+    <string name="unlimited_clear_mil">مسح MIL غير محدود</string>
+    <string name="unlimited_car_diagnose">تشخيص السيارة غير محدود</string>
+    <string name="unlimited_pro_features">ميزات احترافية غير محدودة</string>
+    <string name="cancel_subscription_at_least_24_hours_before_renewal">إلغاء الاشتراك قبل 24 ساعة على الأقل من التجديد</string>
+    <string name="get_this_package">احصل على هذه الحزمة</string>
+    <string name="restore_purchases">استعادة المشتريات</string>
+    <string name="subscription_policy">سياسة الاشتراك</string>
+    <string name="billing_begins_when_you_opt_for_a_subscription_user_can_cancel_subscription_within_24_hours_of_purchase_monthly_subscription_will_automatically_renews_until_user_cancel_it_user_can_cancel_any_time_in_google_account">تبدأ الفوترة عند اختيارك للاشتراك، يمكن للمستخدم إلغاء الاشتراك خلال 24 ساعة من الشراء، وسيتم تجديد الاشتراك الشهري تلقائيًا حتى يقوم المستخدم بإلغائه. يمكن للمستخدم إلغاء الاشتراك في أي وقت من حساب Google.</string>
+    <string name="privacy_policy">سياسة الخصوصية</string>
+    <string name="terms_of_use">شروط الاستخدام</string>
+    <string name="real_time">في الوقت الحقيقي</string>
+    <string name="colent">البرودة</string>
+    <string name="air_intake_c">مدخول الهواء C</string>
+    <string name="engine_load">تحميل المحرك</string>
+    <string name="abs_load">تحميل ABS</string>
+    <string name="throttle">دعسة الوقود</string>
+    <string name="fuel_pressure">ضغط الوقود</string>
+    <string name="mass_air_flow_g_s">تدفق الهواء جم/ث</string>
+    <string name="air_fuel_ratio">نسبة الهواء إلى الوقود</string>
+    <string name="barometric_pressure_psi">الضغط الجوي psi</string>
+    <string name="troubles">مشاكل....</string>
+    <string name="clear">مسح</string>
+    <string name="no_fault_found">لم يتم العثور على أخطاء</string>
+    <string name="setting">الإعدادات</string>
+    <string name="adapter_type">نوع المحول</string>
+    <string name="connect_via_bluetooth">اتصل عبر البلوتوث</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="connect_via_wi_fi">اتصل عبر Wi-Fi</string>
+    <string name="theme">السمة</string>
+    <string name="light_mode">الوضع الفاتح</string>
+    <string name="switch_to_light_mode">التبديل إلى الوضع الفاتح</string>
+    <string name="dark_mode">الوضع الداكن</string>
+    <string name="switch_to_dark_mode">التبديل إلى الوضع الداكن</string>
+    <string name="connectivity">الاتصال</string>
+    <string name="share">مشاركة</string>
+    <string name="share_with_friends">مشاركة مع الأصدقاء</string>
+    <string name="rate">تقييم</string>
+    <string name="share_your_valuable_feedback">شارك ملاحظاتك القيمة</string>
+    <string name="more">المزيد</string>
+    <string name="see_more_apps">عرض المزيد من التطبيقات</string>
+    <string name="car_doctor_scanning_diagnosing_treatment">طبيب السيارة - الفحص|التشخيص|العلاج</string>
+    <string name="scanning">جارٍ الفحص</string>
+    <string name="disconnect">قطع الاتصال</string>
+    <string name="connect">اتصال</string>
+    <string name="disconnected">تم قطع الاتصال</string>
+    <string name="connecting">جارٍ الاتصال.....</string>
+    <string name="saved_data">حفظ البيانات</string>
+    <string name="connected_to">متصل بـ</string>
+    <string name="unabletoconnect">تعذر الاتصال</string>
+    <string name="UNDEFINED">غير محدد</string>
+    <string name="INITIALIZING">جارٍ التهيئة…</string>
+    <string name="INITIALIZED">تمت التهيئة</string>
+    <string name="ECU_DETECT">اكتشاف ECU…</string>
+    <string name="ECU_DETECTED">تم اكتشاف ECU</string>
+    <string name="CONNECTING">جارٍ الاتصال…</string>
+    <string name="CONNECTED">متصل</string>
+    <string name="NODATA">لا توجد بيانات</string>
+    <string name="STOPPED">توقف</string>
+    <string name="DISCONNECTED">تم قطع الاتصال</string>
+    <string name="BUSERROR">خطأ في الحافلة</string>
+    <string name="DATAERROR">خطأ في البيانات</string>
+    <string name="RXERROR">خطأ في RX</string>
+    <string name="ERROR">خطأ</string>
+    <string name="obd_error">خطأ في بروتوكول OBD</string>
+    <string name="copied_to_clipboard">تم النسخ إلى الحافظة</string>
+    <string name="select_ecu_addr">حدد عنوان ECU …</string>
+    <string name="none_found">لم يتم العثور على أجهزة</string>
+    <string name="metric">مترى</string>
+    <string name="imperial">إمبريالي</string>
+    <string name="demo_stopped">توقف وضع العرض التوضيحي</string>
+    <string name="demo_started">بدأ وضع العرض التوضيحي</string>
+    <string name="demo">عرض توضيحي…</string>
+    <string name="title_connected_to">متصل بـ %s</string>
+    <string name="obd_clearcodes">مسح رموز الأخطاء</string>
+    <string name="obd_clear_info">
+   سوف يقوم هذا بإعادة ضبط MIL ومسح جميع معلومات التشخيص المتعلقة بالانبعاثات، بما في ذلك:\n
+ - رموز المشاكل التشخيصية\n
+ - بيانات الإطار المجمد\n
+ - بيانات اختبار حساس الأكسجين\n
+ - حالة اختبارات مراقبة النظام\n
+ - نتائج اختبارات المراقبة على متن الطائرة\n
+ - المسافة المقطوعة أثناء تفعيل MIL\n
+ - عدد مرات الإحماء منذ مسح DTCs\n
+ - المسافة المقطوعة منذ مسح DTCs\n
+ - وقت تشغيل المحرك أثناء تفعيل MIL\n
+ - الوقت منذ مسح DTCs\n\n
+قد تحدث أيضًا إجراءات مسح/إعادة تعيين خاصة بالشركة المصنعة.\n
+قد يتسبب فقدان البيانات في تشغيل السيارة بشكل سيئ لفترة قصيرة من الوقت بينما يعيد ECU معايرته.</string>
+
+    <string name="obd_test_confirm">تم طلب التحكم في اختبار OBD.\n\n
+        قد يؤدي التحكم في اختبار OBD المطلوب إلى:\n
+        - حركة السيارة\n
+        - دخان العادم\n
+        - درجة حرارة عالية للعادم\n
+        - ضوضاء عالية من المحرك\n
+        - بخار الوقود\n
+        - إلخ.\n\n
+        يرجى التأكيد لإجراء هذا الاختبار على مسؤوليتك الخاصة فقط في بيئة اختبار آمنة!</string>
+
+    <string name="obd_test_progress">جاري تنفيذ اختبار OBD.\n
+        يرجى مراقبة رد فعل السيارة.</string>
+
+    <string name="none_paired">لم يتم إقران أي أجهزة</string>
+
+    <string name="connectionlost">فقدان اتصال الجهاز</string>
+
+    <string name="english">الإنجليزية</string>
+    <string name="afrikaans_afrikaans">الأفريكانية (Afrikaans)</string>
+    <string name="arabic">العربية (عربي)</string>
+    <string name="chinese">الصينية (中国人)</string>
+    <string name="czech_e_tina">التشيكية (čeština)</string>
+    <string name="danish_dansk">الدانمركية (dansk)</string>
+    <string name="dutch_nederlands">الهولندية (Nederlands)</string>
+    <string name="french_fran_ais">الفرنسية (Français)</string>
+    <string name="german_deutsch">الألمانية (Deutsch)</string>
+    <string name="greek">اليونانية (ελληνικά)</string>
+    <string name="hindi">الهندية (हिंदी)</string>
+    <string name="indonesian_indonesia">الإندونيسية (Indonesia)</string>
+    <string name="italian_italiano">الإيطالية (Italiano)</string>
+    <string name="japanese">اليابانية (日本語)</string>
+    <string name="korean">الكورية (한국인)</string>
+    <string name="malay_melayu">الملايو (Melayu)</string>
+    <string name="norwegian_norsk">النرويجية (norsk)</string>
+    <string name="russian">الروسية (Русский)</string>
+    <string name="portugues_portugu_s">البرتغالية (Português)</string>
+    <string name="persian">الفارسية (فارسی)</string>
+    <string name="spanish_espa_ol">الإسبانية (Español)</string>
+    <string name="thai">التايلاندية (แบบไทย)</string>
+    <string name="turkish_t_rk_e">التركية (Türkçe)</string>
+    <string name="urdu">الأردية (اردو)</string>
+    <string name="vietnamese_ti_ng_vi_t">الفيتنامية (Tiếng Việt)</string>
+    <string name="languages">اللغات</string>
+    <string name="language">اللغة</string>
+    <string name="faults">أخطاء</string>
+    <string name="help">مساعدة</string>
+    <string name="realtime">في الوقت الحقيقي</string>
+    <string name="all_sensors">جميع الحساسات</string>
+</resources>

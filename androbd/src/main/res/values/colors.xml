@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="unchange_black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="inapp_yellow">#FFB743</color>
+
+    <color name="row_activated">#80808080</color>
+
+<!--    <color name="main_purple">#6A6FD6 </color>-->
+<!--    <color name="main_purple">#FF4A00 </color>-->
+<!--    <color name="main_purple">#F45206 </color>-->
+    <color name="main_purple">#00FF00 </color>
+<!--    <color name="main_purple">#00FF00 </color>-->
+    <color name="search_bg">#24263E </color>
+    <color name="grey">#14171D </color>
+    <color name="txt_grey">#DBDEE4</color>
+
+    <color name="button">#0B90A5</color>
+    <color name="orangeRed">#FF4500</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="Red">#FF1100</color>
+    <color name="purchase_ok_msg_color">#43A047</color>
+
+
+    <color name="lightTransparent">#16000000</color>
+    <color name="colorWhite">#ffffffff</color>
+    <color name="dn_card_background">#F1F1F1</color>
+    <color name="dn_card_stroke">#F1F1F1</color>
+    <color name="dn_shimmer_base_color">#ccc</color>
+</resources>

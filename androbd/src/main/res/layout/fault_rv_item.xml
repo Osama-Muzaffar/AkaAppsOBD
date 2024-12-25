@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/stroke_rectangle"
+    android:layout_margin="5sp"
+    android:id="@+id/mainrelative"
+    android:padding="10sp">
+
+    <TextView
+        android:id="@+id/titletxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_centerInParent="true"
+        android:textSize="16sp"/>
+
+</RelativeLayout>

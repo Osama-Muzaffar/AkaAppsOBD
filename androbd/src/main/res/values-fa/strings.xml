@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  AndrOBD -->
+    <string name="app_name" translatable="false">Car Doctor</string>
+    <string name="privacy_link" translatable="false">http://privacypolicyrangersaround.blogspot.com/2018/05/privacy-policy.html</string>
+    <string name="terms_link" translatable="false">https://zawajulshariaprivacypolicy.blogspot.com/2024/08/terms-of-use.html</string>
+
+    <string name="welcome_to">خوش آمدید به</string>
+    <string name="let_s_go">برویم</string>
+    <string name="scan_diagnose_and_fix_issues">اسکن، تشخیص و رفع مشکلات</string>
+    <string name="car_doctor">دکتر خودرو</string>
+    <string name="bluetooth_pairing">جفت‌سازی بلوتوث</string>
+
+    <string-array name="speedTestRangeValues">
+        <item>0</item>
+        <item>100</item>
+        <item>200</item>
+        <item>300</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>5000</item>
+    </string-array>
+
+    <string-array name="elmcomm_states" translatable="false">
+        <item>@string/UNDEFINED</item>
+        <item>@string/INITIALIZING</item>
+        <item>@string/INITIALIZED</item>
+        <item>@string/ECU_DETECT</item>
+        <item>@string/ECU_DETECTED</item>
+        <item>@string/CONNECTING</item>
+        <item>@string/CONNECTED</item>
+        <item>@string/NODATA</item>
+        <item>@string/STOPPED</item>
+        <item>@string/DISCONNECTED</item>
+        <item>@string/BUSERROR</item>
+        <item>@string/DATAERROR</item>
+        <item>@string/RXERROR</item>
+        <item>@string/ERROR</item>
+    </string-array>
+
+    <string-array name="measure_options" translatable="false">
+        <item>@string/metric</item>
+        <item>@string/imperial</item>
+    </string-array>
+    <string-array name="measure_option_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string name="title_pref_bluetooth" translatable="false">بلوتوث</string>
+    <string name="title_pref_gps" translatable="false">GPS</string>
+    <string name="status_obd_no_support">NA</string>
+    <string name="pref_bluetooth_title">فعال‌سازی بلوتوث</string>
+    <string name="pref_bluetooth_summaryOff">بلوتوث را روشن کنید</string>
+    <string name="pref_bluetooth_summaryOn">بلوتوث را خاموش کنید</string>
+    <string name="pref_bluetooth_list_devices_summary">فهرست دستگاه‌های جفت‌شده بلوتوث.</string>
+    <string name="pref_bluetooth_list_devices_title">دستگاه‌های بلوتوث</string>
+    <string name="pref_gps_category_title">فعال‌سازی GPS</string>
+    <string name="pref_gps_category_summaryOff">GPS را روشن کنید</string>
+    <string name="pref_gps_category_summaryOn">GPS را خاموش کنید</string>
+    <string name="pref_gps_update_period_title">دوره بروزرسانی به ثانیه</string>
+    <string name="pref_gps_update_period_summary">مدت زمان بین پرسش موقعیت جدید به ثانیه</string>
+    <string name="pref_gps_distance_period_title">دوره بروزرسانی به متر</string>
+    <string name="pref_gps_distance_period_summary">حداقل فاصله بین بروزرسانی‌های موقعیت، به متر</string>
+    <string name="default_dirname_full_logging">OBDReaderLogs</string>
+    <string name="text_noerrors">هیچ خطایی یافت نشد!</string>
+    <string name="pref_gps_category" translatable="false">gps_category</string>
+    <string name="base64key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq/BikXyTp4nSCT74OEPQXnOSJw6Sa4OozMB0vmQQBGsx4r/KGQ9J0V26ti5ObtTSUeyLWaytebpuxpv++kf8P9GDeLc+QvniNfXjFH6QEQJ+sz1tSZVJir3StfWbRKqwzG39vEb4mqPNh8VpMFI5MWoNXJFi8Bcxv/ad94Uz8jUiolrwCR6oWNCU5wrkZGUZAi0ToWbGOlN7FZ55ACJ5T3J2le25ydtpbRvRkoTMFwF30seuGn/C3ghvQTNVAe7Oh3QMJ/DcWjhxD090NaKVBdhtJPn5R2as5At7/a1jb+FUNbzrDBGcFnx5WJ3oEXoFZ1QX6KzA71z5ezT2kD7fvwIDAQAB</string>
+    <string name="Purchase_OK">تایید</string>
+    <string name="Purchase_ERROR">خطا</string>
+    <string name="Purchase_PENDING">خرید در حال انتظار است. لطفاً تراکنش را کامل کنید</string>
+    <string name="Purchase_INVALID">خطا: خرید نامعتبر</string>
+    <string name="Purchase_UNKNOWN">وضعیت خرید ناشناخته</string>
+    <string name="Premium_User_Msg">تبریک! شما کاربر پریمیوم هستید.</string>
+    <string name="Purchase_OK_Dialog_Msg">خرید موفقیت‌آمیز!</string>
+    <string name="Purchase_OK_Dialog_Msg_Detail">اکنون برنامه دوباره راه‌اندازی خواهد شد و تبلیغات از بین خواهد رفت.</string>
+    <string name="exit_dialog_message">لطفاً اگر این برنامه را مفید می‌دانید به ما امتیاز دهید یا برای خروج بله را فشار دهید.</string>
+    <string name="dialog_loading_title">در حال بارگذاری…</string>
+    <string name="dialog_loading_body">در حال بارگذاری نمای برنامه، لطفاً صبر کنید…</string>
+    <string name="text_bluetooth_nodevice">هیچ دستگاه بلوتوثی انتخاب نشده است</string>
+    <string name="text_bluetooth_error_connecting">اتصال به دستگاه بلوتوث ممکن نیست!</string>
+    <string name="text_obd_command_failure">خطا در فرمان OBD!</string>
+    <string name="text_dtc_no_data">هیچ DTC ذخیره نشده است</string>
+    <string name="bluetooth">بلوتوث</string>
+    <string name="paired_devices">دستگاه‌های جفت‌شده</string>
+    <string name="available_devices">دستگاه‌های در دسترس</string>
+    <string name="turn_on_bluetooth_to_see_devices">بلوتوث را روشن کنید تا دستگاه‌ها را ببینید</string>
+    <string name="bluetooth_is_off">بلوتوث خاموش است</string>
+    <string name="refresh">بارگذاری مجدد</string>
+    <string name="code_details">جزئیات کد</string>
+    <string name="code">کد:</string>
+    <string name="solution">راه‌حل:</string>
+    <string name="cause">علت:</string>
+    <string name="symptoms">علائم:</string>
+    <string name="fault_codes">کدهای خطا</string>
+    <string name="search">جستجو</string>
+    <string name="obd_data">داده‌های OBD</string>
+    <string name="no_data_found">داده‌ای یافت نشد</string>
+    <string name="please_wait">لطفاً صبر کنید.....</string>
+    <string name="go_to_premimum">به پریمیوم بروید</string>
+    <string name="lifetime">دائم</string>
+    <string name="unlimited_clear_mil">پاکسازی نامحدود MIL</string>
+    <string name="unlimited_car_diagnose">تشخیص نامحدود خودرو</string>
+    <string name="unlimited_pro_features">ویژگی‌های پرو نامحدود</string>
+    <string name="cancel_subscription_at_least_24_hours_before_renewal">لغو اشتراک حداقل 24 ساعت قبل از تمدید</string>
+    <string name="get_this_package">این بسته را دریافت کنید</string>
+    <string name="restore_purchases">بازیابی خریدها</string>
+    <string name="subscription_policy">سیاست اشتراک</string>
+    <string name="billing_begins_when_you_opt_for_a_subscription_user_can_cancel_subscription_within_24_hours_of_purchase_monthly_subscription_will_automatically_renews_until_user_cancel_it_user_can_cancel_any_time_in_google_account">صورتحساب از زمانی که شما برای اشتراک انتخاب می‌کنید آغاز می‌شود. کاربر می‌تواند اشتراک را در مدت 24 ساعت از خرید لغو کند. اشتراک ماهانه به‌طور خودکار تمدید خواهد شد تا زمانی که کاربر آن را لغو کند. کاربر می‌تواند هر زمان از طریق حساب گوگل خود آن را لغو کند.</string>
+    <string name="privacy_policy">سیاست حفظ حریم خصوصی</string>
+    <string name="terms_of_use">شرایط استفاده</string>
+    <string name="real_time">زمان واقعی</string>
+    <string name="colent">Colent</string>
+    <string name="air_intake_c">ورودی هوا C</string>
+    <string name="engine_load">بار موتور</string>
+    <string name="abs_load">بار ABS</string>
+    <string name="throttle">پدال گاز</string>
+    <string name="fuel_pressure">فشار سوخت</string>
+    <string name="mass_air_flow_g_s">جریان هوای جرمی g/s</string>
+    <string name="air_fuel_ratio">نسبت هوا به سوخت</string>
+    <string name="barometric_pressure_psi">فشار بارومتریک psi</string>
+    <string name="troubles">مشکلات....</string>
+    <string name="clear">پاک کردن</string>
+    <string name="no_fault_found">هیچ خطایی یافت نشد</string>
+    <string name="setting">تنظیمات</string>
+    <string name="adapter_type">نوع آداپتور</string>
+    <string name="connect_via_bluetooth">اتصال از طریق بلوتوث</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="connect_via_wi_fi">اتصال از طریق Wi-Fi</string>
+    <string name="theme">تم</string>
+    <string name="light_mode">حالت روشن</string>
+    <string name="switch_to_light_mode">تغییر به حالت روشن</string>
+    <string name="dark_mode">حالت تاریک</string>
+    <string name="switch_to_dark_mode">تغییر به حالت تاریک</string>
+    <string name="connectivity">اتصال</string>
+    <string name="share">اشتراک‌گذاری</string>
+    <string name="share_with_friends">با دوستان به اشتراک بگذارید</string>
+    <string name="rate">امتیاز دهید</string>
+    <string name="share_your_valuable_feedback">بازخورد ارزشمند خود را به اشتراک بگذارید</string>
+    <string name="more">بیشتر</string>
+    <string name="see_more_apps">مشاهده برنامه‌های بیشتر</string>
+    <string name="car_doctor_scanning_diagnosing_treatment">دکتر خودرو - اسکن|تشخیص|درمان</string>
+    <string name="scanning">در حال اسکن</string>
+    <string name="disconnect">قطع اتصال</string>
+    <string name="connect">اتصال</string>
+    <string name="disconnected">قطع شده</string>
+    <string name="connecting">در حال اتصال.....</string>
+    <string name="saved_data">ذخیره داده‌ها</string>
+    <string name="connected_to">متصل به</string>
+    <string name="unabletoconnect">قادر به اتصال نیست</string>
+    <string name="UNDEFINED">نامشخص</string>
+    <string name="INITIALIZING">در حال اولیه‌سازی…</string>
+    <string name="INITIALIZED">آغاز شده</string>
+    <string name="ECU_DETECT">تشخیص ECU…</string>
+    <string name="ECU_DETECTED">ECU شناسایی شد</string>
+    <string name="CONNECTING">در حال اتصال…</string>
+    <string name="CONNECTED">متصل شد</string>
+    <string name="NODATA">بدون داده</string>
+    <string name="STOPPED">متوقف شده</string>
+    <string name="DISCONNECTED">قطع شده</string>
+    <string name="BUSERROR">خطای BUS</string>
+    <string name="DATAERROR">خطای DATA</string>
+    <string name="RXERROR">خطای RX</string>
+    <string name="ERROR">خطا</string>
+    <string name="obd_error">خطای پروتکل OBD</string>
+    <string name="copied_to_clipboard">کپی به حافظه موقت</string>
+    <string name="select_ecu_addr">انتخاب آدرس ECU …</string>
+    <string name="none_found">هیچ دستگاهی یافت نشد</string>
+    <string name="metric">متریک</string>
+    <string name="imperial">امپریال</string>
+    <string name="demo_stopped">حالت DEMO متوقف شد</string>
+    <string name="demo_started">حالت DEMO شروع شد</string>
+    <string name="demo">نمایش…</string>
+    <string name="title_connected_to">متصل به %s</string>
+    <string name="obd_clearcodes">پاک کردن کدهای خطا</string>
+    <string name="obd_clear_info">
+این عمل MIL را بازنشانی کرده و تمام اطلاعات تشخیصی مربوط به آلایندگی را پاک خواهد کرد، از جمله:\n
+ - کدهای مشکلات تشخیصی\n
+ - داده‌های فریز فریم\n
+ - داده‌های تست سنسور اکسیژن\n
+ - وضعیت آزمون‌های نظارت سیستم\n
+ - نتایج آزمون‌های نظارت درون‌برد\n
+ - مسافت پیموده شده در حالی که MIL فعال بود\n
+ - تعداد گرم شدن‌ها از زمانی که DTC‌ها پاک شدند\n
+ - مسافت پیموده شده از زمانی که DTC‌ها پاک شدند\n
+ - زمان کارکرد موتور در حالی که MIL فعال بود\n
+ - زمان از زمانی که DTC‌ها پاک شدند\n\n
+عملیات خاص پاکسازی/بازنشانی دیگری ممکن است انجام شود.\n
+از دست دادن داده‌ها ممکن است باعث شود که خودرو به مدت کوتاهی به‌طور نامناسب عمل کند در حالی که ECU خود را کالیبره می‌کند.
+</string>
+    <string name="obd_test_confirm">کنترل تست OBD درخواست شده است.\n\n
+کنترل تست OBD درخواست شده ممکن است ایجاد کند:\n
+ - حرکت خودرو\n
+ - دود اگزوز\n
+ - دمای بالای اگزوز\n
+ - صدای بلند موتور\n
+ - بخار سوخت\n
+ - و غیره\n\n
+لطفاً تأیید کنید که این کنترل تست را با خطر خود و تنها در محیط تست ایمن انجام دهید!
+</string>
+    <string name="obd_test_progress">در حال پیشرفت کنترل تست OBD.\n
+        لطفاً واکنش خودرو را بررسی کنید.</string>
+    <string name="none_paired">هیچ دستگاهی جفت نشده است</string>
+    <string name="connectionlost">اتصال دستگاه قطع شد</string>
+    <string name="english">انگلیسی</string>
+    <string name="afrikaans_afrikaans">آفریکانس (Afrikaans)</string>
+    <string name="arabic">عربی (عربي)</string>
+    <string name="chinese">چینی (中国人)</string>
+    <string name="czech_e_tina">چک (čeština)</string>
+    <string name="danish_dansk">دانمارکی (dansk)</string>
+    <string name="dutch_nederlands">هلندی (Nederlands)</string>
+    <string name="french_fran_ais">فرانسوی (Français)</string>
+    <string name="german_deutsch">آلمانی (Deutsch)</string>
+    <string name="greek">یونانی (ελληνικά)</string>
+    <string name="hindi">هندی (हिंदी)</string>
+    <string name="indonesian_indonesia">اندونزیایی (Indonesia)</string>
+    <string name="italian_italiano">ایتالیایی (Italiano)</string>
+    <string name="japanese">ژاپنی (日本語)</string>
+    <string name="korean">کره‌ای (한국인)</string>
+    <string name="malay_melayu">مالایی (Melayu)</string>
+    <string name="norwegian_norsk">نروژی (norsk)</string>
+    <string name="russian">روسی (Русский)</string>
+    <string name="portugues_portugu_s">پرتغالی (Português)</string>
+    <string name="persian">فارسی (فارسی)</string>
+    <string name="spanish_espa_ol">اسپانیایی (Español)</string>
+    <string name="thai">تایلندی (แบบไทย)</string>
+    <string name="turkish_t_rk_e">ترکی (Türkçe)</string>
+    <string name="urdu">اردو (اردو)</string>
+    <string name="vietnamese_ti_ng_vi_t">ویتنامی (Tiếng Việt)</string>
+    <string name="languages">زبان‌ها</string>
+    <string name="language">زبان</string>
+    <string name="faults">خطاها</string>
+    <string name="help">کمک</string>
+    <string name="realtime">زمان واقعی</string>
+    <string name="all_sensors">تمام حسگرها</string>
+
+</resources>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  AndrOBD -->
+    <string name="app_name" translatable="false">Car Doctor</string>
+    <string name="privacy_link" translatable="false">http://privacypolicyrangersaround.blogspot.com/2018/05/privacy-policy.html</string>
+    <string name="terms_link" translatable="false">https://zawajulshariaprivacypolicy.blogspot.com/2024/08/terms-of-use.html</string>
+
+    <string name="welcome_to">SELAMAT DATANG KE</string>
+    <string name="let_s_go">Jom Pergi</string>
+    <string name="scan_diagnose_and_fix_issues">Imbas, Diagnos dan Betulkan Masalah</string>
+    <string name="car_doctor">Doktor Kereta</string>
+    <string name="bluetooth_pairing">Jodohkan Bluetooth</string>
+
+    <string-array name="speedTestRangeValues">
+        <item>0</item>
+        <item>100</item>
+        <item>200</item>
+        <item>300</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>5000</item>
+    </string-array>
+
+    <string-array name="elmcomm_states" translatable="false">
+        <item>@string/UNDEFINED</item>
+        <item>@string/INITIALIZING</item>
+        <item>@string/INITIALIZED</item>
+        <item>@string/ECU_DETECT</item>
+        <item>@string/ECU_DETECTED</item>
+        <item>@string/CONNECTING</item>
+        <item>@string/CONNECTED</item>
+        <item>@string/NODATA</item>
+        <item>@string/STOPPED</item>
+        <item>@string/DISCONNECTED</item>
+        <item>@string/BUSERROR</item>
+        <item>@string/DATAERROR</item>
+        <item>@string/RXERROR</item>
+        <item>@string/ERROR</item>
+    </string-array>
+
+    <string-array name="measure_options" translatable="false">
+        <item>@string/metric</item>
+        <item>@string/imperial</item>
+    </string-array>
+    <string-array name="measure_option_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string name="title_pref_bluetooth" translatable="false">Bluetooth</string>
+    <string name="title_pref_gps" translatable="false">GPS</string>
+    <string name="status_obd_no_support">NA</string>
+    <string name="pref_bluetooth_title">Aktifkan Bluetooth</string>
+    <string name="pref_bluetooth_summaryOff">Hidupkan Bluetooth</string>
+    <string name="pref_bluetooth_summaryOn">Matikan Bluetooth</string>
+    <string name="pref_bluetooth_list_devices_summary">Senarai peranti bluetooth yang dipadankan.</string>
+    <string name="pref_bluetooth_list_devices_title">Peranti Bluetooth</string>
+    <string name="pref_gps_category_title">Aktifkan GPS</string>
+    <string name="pref_gps_category_summaryOff">Hidupkan GPS</string>
+    <string name="pref_gps_category_summaryOn">Matikan GPS</string>
+    <string name="pref_gps_update_period_title">Tempoh Kemas Kini dalam Saat</string>
+    <string name="pref_gps_update_period_summary">Tempoh masa antara pertanyaan kedudukan baru dalam saat</string>
+    <string name="pref_gps_distance_period_title">Tempoh Kemas Kini dalam Meter</string>
+    <string name="pref_gps_distance_period_summary">Jarak Minimum antara kemas kini lokasi, dalam meter</string>
+    <string name="default_dirname_full_logging">OBDReaderLogs</string>
+    <string name="text_noerrors">Tiada kesilapan yang ditemui!</string>
+    <string name="pref_gps_category" translatable="false">gps_category</string>
+    <string name="base64key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq/BikXyTp4nSCT74OEPQXnOSJw6Sa4OozMB0vmQQBGsx4r/KGQ9J0V26ti5ObtTSUeyLWaytebpuxpv++kf8P9GDeLc+QvniNfXjFH6QEQJ+sz1tSZVJir3StfWbRKqwzG39vEb4mqPNh8VpMFI5MWoNXJFi8Bcxv/ad94Uz8jUiolrwCR6oWNCU5wrkZGUZAi0ToWbGOlN7FZ55ACJ5T3J2le25ydtpbRvRkoTMFwF30seuGn/C3ghvQTNVAe7Oh3QMJ/DcWjhxD090NaKVBdhtJPn5R2as5At7/a1jb+FUNbzrDBGcFnx5WJ3oEXoFZ1QX6KzA71z5ezT2kD7fvwIDAQAB</string>
+    <string name="Purchase_OK">OK</string>
+    <string name="Purchase_ERROR">Ralat</string>
+    <string name="Purchase_PENDING">Pembelian Tertunda. Sila lengkapkan Transaksi</string>
+    <string name="Purchase_INVALID">Ralat: Pembelian Tidak Sah</string>
+    <string name="Purchase_UNKNOWN">Status Pembelian Tidak Diketahui</string>
+    <string name="Premium_User_Msg">Tahniah! Anda adalah pengguna premium.</string>
+    <string name="Purchase_OK_Dialog_Msg">Pembelian Berjaya!</string>
+    <string name="Purchase_OK_Dialog_Msg_Detail">Aplikasi akan dimulakan semula dan iklan akan dikeluarkan.</string>
+    <string name="exit_dialog_message">Sila beri penilaian jika anda mendapati aplikasi ini berguna atau tekan Ya untuk keluar.</string>
+    <string name="dialog_loading_title">Memuatkan…</string>
+    <string name="dialog_loading_body">Memuatkan paparan aplikasi, sila tunggu…</string>
+    <string name="text_bluetooth_nodevice">Tiada peranti Bluetooth yang dipilih</string>
+    <string name="text_bluetooth_error_connecting">Tidak dapat menyambung ke peranti Bluetooth!</string>
+    <string name="text_obd_command_failure">Kegagalan arahan OBD!</string>
+    <string name="text_dtc_no_data">Tiada DTC disimpan</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="paired_devices">Peranti Dipadankan</string>
+    <string name="available_devices">Peranti Tersedia</string>
+    <string name="turn_on_bluetooth_to_see_devices">Hidupkan bluetooth untuk melihat peranti</string>
+    <string name="bluetooth_is_off">Bluetooth dimatikan</string>
+    <string name="refresh">Segar Semula</string>
+    <string name="code_details">Maklumat Kod</string>
+    <string name="code">Kod:</string>
+    <string name="solution">Penyelesaian:</string>
+    <string name="cause">Punca:</string>
+    <string name="symptoms">Gejala:</string>
+    <string name="fault_codes">Kod Kesalahan</string>
+    <string name="search">Cari</string>
+    <string name="obd_data">Data OBD</string>
+    <string name="no_data_found">Tiada Data Ditemui</string>
+    <string name="please_wait">Sila tunggu.....</string>
+    <string name="go_to_premimum">Pergi ke Premium</string>
+    <string name="lifetime">Seumur Hidup</string>
+    <string name="unlimited_clear_mil">Jelas MIL Tanpa Had</string>
+    <string name="unlimited_car_diagnose">Diagnosa Kereta Tanpa Had</string>
+    <string name="unlimited_pro_features">Ciri Pro Tanpa Had</string>
+    <string name="cancel_subscription_at_least_24_hours_before_renewal">Batalkan Langganan sekurang-kurangnya 24 jam sebelum pembaharuan</string>
+    <string name="get_this_package">Dapatkan Pakej Ini</string>
+    <string name="restore_purchases">Pulihkan Pembelian</string>
+    <string name="subscription_policy">Dasar Langganan</string>
+    <string name="billing_begins_when_you_opt_for_a_subscription_user_can_cancel_subscription_within_24_hours_of_purchase_monthly_subscription_will_automatically_renews_until_user_cancel_it_user_can_cancel_any_time_in_google_account">Penagihan bermula apabila anda memilih langganan, Pengguna boleh membatalkan langganan dalam masa 24 jam dari Pembelian, Langganan Bulanan akan diperbaharui secara automatik sehingga pengguna membatalkannya. Pengguna boleh membatalkan pada bila-bila masa dalam Akaun Google.</string>
+    <string name="privacy_policy">Dasar Privasi</string>
+    <string name="terms_of_use">Terma Penggunaan</string>
+    <string name="real_time">Masa Nyata</string>
+    <string name="colent">Colent</string>
+    <string name="air_intake_c">Pengambilan Udara \'C\'</string>
+    <string name="engine_load">Beban Enjin</string>
+    <string name="abs_load">Beban ABS</string>
+    <string name="throttle">Throttle</string>
+    <string name="fuel_pressure">Tekanan Minyak</string>
+    <string name="mass_air_flow_g_s">Aliran Udara Massa \'g/s\'</string>
+    <string name="air_fuel_ratio">Nisbah Udara/Minyak</string>
+    <string name="barometric_pressure_psi">Tekanan Barometrik \'psi\'</string>
+    <string name="troubles">masalah....</string>
+    <string name="clear">Jelas</string>
+    <string name="no_fault_found">Tiada Kesalahan Ditemui</string>
+    <string name="setting">Tetapan</string>
+    <string name="adapter_type">Jenis Penyesuai</string>
+    <string name="connect_via_bluetooth">Sambung Melalui Bluetooth</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="connect_via_wi_fi">Sambung Melalui Wi-Fi</string>
+    <string name="theme">Tema</string>
+    <string name="light_mode">Mod Terang</string>
+    <string name="switch_to_light_mode">Tukar ke Mod Terang</string>
+    <string name="dark_mode">Mod Gelap</string>
+    <string name="switch_to_dark_mode">Tukar ke Mod Gelap</string>
+    <string name="connectivity">Keterhubungan</string>
+    <string name="share">Kongsi</string>
+    <string name="share_with_friends">Kongsi dengan rakan</string>
+    <string name="rate">Kadar</string>
+    <string name="share_your_valuable_feedback">Kongsi maklum balas berharga anda</string>
+    <string name="more">Lebih</string>
+    <string name="see_more_apps">Lihat aplikasi lain</string>
+    <string name="car_doctor_scanning_diagnosing_treatment">Doktor Kereta - Imbasan|Diagnosa|Rawatan</string>
+    <string name="scanning">Imbasan</string>
+    <string name="disconnect">Putuskan Sambungan</string>
+    <string name="connect">Sambung</string>
+    <string name="disconnected">Putus Sambungan</string>
+    <string name="connecting">Menyambung.....</string>
+    <string name="saved_data">Simpan Data</string>
+    <string name="connected_to">Sambung kepada</string>
+    <string name="unabletoconnect">Tidak Dapat Menyambung</string>
+    <string name="UNDEFINED">Tidak Ditakrifkan</string>
+    <string name="INITIALIZING">Memulakan…</string>
+    <string name="INITIALIZED">Dikendalikan</string>
+    <string name="ECU_DETECT">Mengesan ECU…</string>
+    <string name="ECU_DETECTED">ECU Dikesan</string>
+    <string name="CONNECTING">Menyambung…</string>
+    <string name="CONNECTED">Sambung</string>
+    <string name="NODATA">Tiada data</string>
+    <string name="STOPPED">Dihentikan</string>
+    <string name="DISCONNECTED">Putus Sambungan</string>
+    <string name="BUSERROR">Ralat BUS</string>
+    <string name="DATAERROR">Ralat DATA</string>
+    <string name="RXERROR">Ralat RX</string>
+    <string name="ERROR">Ralat</string>
+    <string name="obd_error">Ralat protokol OBD</string>
+    <string name="copied_to_clipboard">Disalin ke papan klip</string>
+    <string name="select_ecu_addr">Pilih alamat ECU …</string>
+    <string name="none_found">Tiada Peranti Ditemui</string>
+    <string name="metric">metrik</string>
+    <string name="imperial">imperial</string>
+    <string name="demo_stopped">Mod DEMO dihentikan</string>
+    <string name="demo_started">Mod DEMO bermula</string>
+    <string name="demo">Demo…</string>
+    <string name="title_connected_to">Sambung ke %s</string>
+    <string name="obd_clearcodes">Jelas kod kesalahan</string>
+    <string name="obd_clear_info">Ini akan menetapkan semula MIL dan menghapuskan semua maklumat diagnostik berkaitan pelepasan, termasuk:
+ - Kod kesalahan diagnostik
+ - Data bingkai beku
+ - Data ujian sensor oksigen
+ - Status ujian pemantauan sistem
+ - Keputusan ujian pemantauan di atas kapal
+ - Jarak yang dilalui semasa MIL diaktifkan
+ - Bilangan pemanasan semula sejak DTC dibersihkan
+ - Jarak yang dilalui sejak DTC dibersihkan
+ - Masa operasi enjin semasa MIL diaktifkan
+ - Masa sejak DTC dibersihkan
+
+Tindakan pembersihan/penetapan semula khusus pengeluar lain mungkin berlaku.
+Kehilangan data mungkin menyebabkan kenderaan berfungsi dengan buruk untuk jangka masa pendek semasa ECU melakukan kalibrasi semula.</string>
+    <string name="obd_test_confirm">Ujian OBD dikawal diminta.
+
+Ujian OBD yang diminta mungkin menghasilkan:
+ - Gerakan kenderaan
+ - Asap ekzos
+ - Suhu ekzos tinggi
+ - Bunyi enjin yang kuat
+ - Wap bahan api
+ - dll.
+
+Sila sahkan untuk melaksanakan kawalan ujian ini dengan risiko anda sendiri hanya dalam persekitaran ujian yang selamat!</string>
+    <string name="obd_test_progress">Kawalan ujian OBD sedang dijalankan.\n
+        Sila periksa reaksi kenderaan.</string>
+    <string name="none_paired">Tiada Peranti Dipasangkan</string>
+
+    <string name="connectionlost">Sambungan peranti telah hilang</string>
+    <string name="english">Inggeris</string>
+    <string name="afrikaans_afrikaans">Afrikaans (Afrikaans)</string>
+    <string name="arabic">Arab (عربي)</string>
+    <string name="chinese">Cina (中国人)</string>
+    <string name="czech_e_tina">Czech (čeština)</string>
+    <string name="danish_dansk">Danish (dansk)</string>
+    <string name="dutch_nederlands">Belanda (Nederlands)</string>
+    <string name="french_fran_ais">Perancis (Français)</string>
+    <string name="german_deutsch">Jerman (Deutsch)</string>
+    <string name="greek">Yunani (ελληνικά)</string>
+    <string name="hindi">Hindi (हिंदी)</string>
+    <string name="indonesian_indonesia">Indonesia (Indonesia)</string>
+    <string name="italian_italiano">Itali (Italiano)</string>
+    <string name="japanese">Jepun (日本語)</string>
+    <string name="korean">Korea (한국인)</string>
+    <string name="malay_melayu">Melayu (Melayu)</string>
+    <string name="norwegian_norsk">Norwegia (norsk)</string>
+    <string name="russian">Rusia (Русский)</string>
+    <string name="portugues_portugu_s">Portugis (Português)</string>
+    <string name="persian">Parsi (فارسی)</string>
+    <string name="spanish_espa_ol">Sepanyol (Español)</string>
+    <string name="thai">Thai (แบบไทย)</string>
+    <string name="turkish_t_rk_e">Turki (Türkçe)</string>
+    <string name="urdu">Urdu (اردو)</string>
+    <string name="vietnamese_ti_ng_vi_t">Vietnam (Tiếng Việt)</string>
+    <string name="languages">Bahasa</string>
+    <string name="language">Bahasa</string>
+    <string name="faults">Kesalahan</string>
+    <string name="help">Bantuan</string>
+    <string name="realtime">Masa nyata</string>
+    <string name="all_sensors">Semua sensor</string>
+
+
+</resources>

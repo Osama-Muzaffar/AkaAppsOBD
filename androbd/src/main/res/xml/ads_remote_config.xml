@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>ads_json_strings</key>
+        {
+        "splash_intersitial": true,
+        "splash_banner": true,
+        "main_banner_simple": true,
+        "main_banner_collapsible": true,
+        "connect_intersitial": true,
+        "scanning_intersitial": true,
+        "realtime_intersitial": true,
+        "obddata_intersitial": true,
+        "faultcode_intersitial": true,
+        "faultcode_details_banner": true,
+        "help_intersitial": true,
+        "paired_banner_simple": true,
+        "paired_banner_collapse": true,
+        "scanning_banner_simple": true,
+        "scanning_banner_collapse": true,
+        "statushistory_banner": true,
+        "statusdownload_interstatial": true,
+        "obddata_banner_simple": true,
+        "obddata_banner_collapse": true,
+        "faultcodes_banner_simple": true,
+        "faultcodes_banner_collapse": true,
+        "realtime_native": true,
+        "realtime_banner": true,
+        "language_native": true,
+        "language_banner_simple": true,
+        "language_banner_collapsible": true,
+        "setting_banner_collapsible": true,
+        "setting_banner": true,
+        "setting_native": true
+        }
+    </entry>
+</defaultsMap>

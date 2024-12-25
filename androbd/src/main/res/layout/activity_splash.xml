@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/car_bg"
+    tools:context=".Activity.SplashActivity">
+
+
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_marginTop="-20sp"-->
+<!--        android:src="@drawable/car_bg"-->
+<!--        android:scaleType="fitXY"/>-->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_to"
+        android:textSize="22sp"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/main_purple"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10sp"
+        android:text="@string/car_doctor"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="20sp"
+        android:textColor="@color/main_purple"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20sp"
+        android:text="@string/scan_diagnose_and_fix_issues"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintBottom_toTopOf="@+id/container"
+        app:layout_constraintEnd_toEndOf="@+id/container"
+        app:layout_constraintStart_toStartOf="@+id/container" />
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/banneradsview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:indeterminate="true"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/main_purple"
+            android:layout_marginBottom="30sp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/letsgocard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20sp"
+            android:visibility="invisible"
+            android:layout_centerInParent="true"
+            android:backgroundTint="@color/main_purple"
+            android:layout_marginBottom="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:paddingHorizontal="40sp"
+                android:paddingVertical="10sp"
+                android:text="@string/let_s_go"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+
+    <com.akapps.obd2carscannerapp.Ads.BannerAdView
+        android:id="@+id/banneradsview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

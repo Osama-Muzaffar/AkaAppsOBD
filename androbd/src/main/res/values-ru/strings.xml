@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  AndrOBD -->
+    <string name="app_name" translatable="false">Car Doctor</string>
+    <string name="privacy_link" translatable="false">http://privacypolicyrangersaround.blogspot.com/2018/05/privacy-policy.html</string>
+    <string name="terms_link" translatable="false">https://zawajulshariaprivacypolicy.blogspot.com/2024/08/terms-of-use.html</string>
+
+    <string name="welcome_to">ДОБРО ПОЖАЛОВАТЬ В</string>
+    <string name="let_s_go">Поехали</string>
+    <string name="scan_diagnose_and_fix_issues">Сканировать, Диагностировать и Исправить Проблемы</string>
+    <string name="car_doctor">Доктор Автомобилей</string>
+    <string name="bluetooth_pairing">Сопряжение по Bluetooth</string>
+
+    <string-array name="speedTestRangeValues">
+        <item>0</item>
+        <item>100</item>
+        <item>200</item>
+        <item>300</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>5000</item>
+    </string-array>
+
+    <string-array name="elmcomm_states" translatable="false">
+        <item>@string/UNDEFINED</item>
+        <item>@string/INITIALIZING</item>
+        <item>@string/INITIALIZED</item>
+        <item>@string/ECU_DETECT</item>
+        <item>@string/ECU_DETECTED</item>
+        <item>@string/CONNECTING</item>
+        <item>@string/CONNECTED</item>
+        <item>@string/NODATA</item>
+        <item>@string/STOPPED</item>
+        <item>@string/DISCONNECTED</item>
+        <item>@string/BUSERROR</item>
+        <item>@string/DATAERROR</item>
+        <item>@string/RXERROR</item>
+        <item>@string/ERROR</item>
+    </string-array>
+
+    <string-array name="measure_options" translatable="false">
+        <item>@string/metric</item>
+        <item>@string/imperial</item>
+    </string-array>
+    <string-array name="measure_option_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string name="title_pref_bluetooth" translatable="false">Bluetooth</string>
+    <string name="title_pref_gps" translatable="false">GPS</string>
+    <string name="status_obd_no_support">Н/Д</string>
+    <string name="pref_bluetooth_title">Включить Bluetooth</string>
+    <string name="pref_bluetooth_summaryOff">Включить Bluetooth</string>
+    <string name="pref_bluetooth_summaryOn">Выключить Bluetooth</string>
+    <string name="pref_bluetooth_list_devices_summary">Список сопряжённых устройств Bluetooth.</string>
+    <string name="pref_bluetooth_list_devices_title">Устройства Bluetooth</string>
+    <string name="pref_gps_category_title">Включить GPS</string>
+    <string name="pref_gps_category_summaryOff">Включить GPS</string>
+    <string name="pref_gps_category_summaryOn">Выключить GPS</string>
+    <string name="pref_gps_update_period_title">Период обновления в секундах</string>
+    <string name="pref_gps_update_period_summary">Длительность времени между запросами нового положения в секундах</string>
+    <string name="pref_gps_distance_period_title">Период обновления в метрах</string>
+    <string name="pref_gps_distance_period_summary">Минимальное расстояние между обновлениями местоположения в метрах</string>
+    <string name="default_dirname_full_logging">OBDReaderLogs</string>
+    <string name="text_noerrors">Ошибок не найдено!</string>
+    <string name="pref_gps_category" translatable="false">gps_category</string>
+    <string name="base64key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq/BikXyTp4nSCT74OEPQXnOSJw6Sa4OozMB0vmQQBGsx4r/KGQ9J0V26ti5ObtTSUeyLWaytebpuxpv++kf8P9GDeLc+QvniNfXjFH6QEQJ+sz1tSZVJir3StfWbRKqwzG39vEb4mqPNh8VpMFI5MWoNXJFi8Bcxv/ad94Uz8jUiolrwCR6oWNCU5wrkZGUZAi0ToWbGOlN7FZ55ACJ5T3J2le25ydtpbRvRkoTMFwF30seuGn/C3ghvQTNVAe7Oh3QMJ/DcWjhxD090NaKVBdhtJPn5R2as5At7/a1jb+FUNbzrDBGcFnx5WJ3oEXoFZ1QX6KzA71z5ezT2kD7fvwIDAQAB</string>
+    <string name="Purchase_OK">ОК</string>
+    <string name="Purchase_ERROR">ОШИБКА</string>
+    <string name="Purchase_PENDING">Покупка ожидает. Пожалуйста, завершите транзакцию</string>
+    <string name="Purchase_INVALID">Ошибка: Неверная покупка</string>
+    <string name="Purchase_UNKNOWN">Неизвестный статус покупки</string>
+    <string name="Premium_User_Msg">Поздравляем! Вы - премиум пользователь.</string>
+    <string name="Purchase_OK_Dialog_Msg">Покупка успешна!</string>
+    <string name="Purchase_OK_Dialog_Msg_Detail">Теперь приложение перезапустится, и вы избавитесь от рекламы.</string>
+    <string name="exit_dialog_message">Пожалуйста, оцените нас, если вы нашли это приложение полезным, или нажмите "Да" для выхода.</string>
+    <string name="dialog_loading_title">Загрузка…</string>
+    <string name="dialog_loading_body">Загрузка вида приложения, пожалуйста, подождите…</string>
+    <string name="text_bluetooth_nodevice">Устройство Bluetooth не выбрано</string>
+    <string name="text_bluetooth_error_connecting">Не удается подключиться к устройству Bluetooth!</string>
+    <string name="text_obd_command_failure">Ошибка команды OBD!</string>
+    <string name="text_dtc_no_data">DTC не сохранены</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="paired_devices">Сопряжённые устройства</string>
+    <string name="available_devices">Доступные устройства</string>
+    <string name="turn_on_bluetooth_to_see_devices">Включите Bluetooth, чтобы увидеть устройства</string>
+    <string name="bluetooth_is_off">Bluetooth выключен</string>
+    <string name="refresh">Обновить</string>
+    <string name="code_details">Подробности кода</string>
+    <string name="code">Код:</string>
+    <string name="solution">Решение:</string>
+    <string name="cause">Причина:</string>
+    <string name="symptoms">Симптомы:</string>
+    <string name="fault_codes">Коды неисправностей</string>
+    <string name="search">Поиск</string>
+    <string name="obd_data">Данные OBD</string>
+    <string name="no_data_found">Данные не найдены</string>
+    <string name="please_wait">Пожалуйста, подождите.....</string>
+    <string name="go_to_premimum">Перейти на Премиум</string>
+    <string name="lifetime">Пожизненно</string>
+    <string name="unlimited_clear_mil">Неограниченная очистка MIL</string>
+    <string name="unlimited_car_diagnose">Неограниченная диагностика автомобиля</string>
+    <string name="unlimited_pro_features">Неограниченные профессиональные функции</string>
+    <string name="cancel_subscription_at_least_24_hours_before_renewal">Отмените подписку не менее чем за 24 часа до продления</string>
+    <string name="get_this_package">Получить этот пакет</string>
+    <string name="restore_purchases">Восстановить покупки</string>
+    <string name="subscription_policy">Политика подписки</string>
+    <string name="billing_begins_when_you_opt_for_a_subscription_user_can_cancel_subscription_within_24_hours_of_purchase_monthly_subscription_will_automatically_renews_until_user_cancel_it_user_can_cancel_any_time_in_google_account">Списание начинается, когда вы выбираете подписку. Пользователь может отменить подписку в течение 24 часов с момента покупки. Ежемесячная подписка будет автоматически продлеваться, пока пользователь не отменит её. Пользователь может отменить подписку в любое время в аккаунте Google.</string>
+    <string name="privacy_policy">Политика конфиденциальности</string>
+    <string name="terms_of_use">Условия использования</string>
+    <string name="real_time">Реальное время</string>
+    <string name="colent">Колент</string>
+    <string name="air_intake_c">Впускной воздух \'C\'</string>
+    <string name="engine_load">Нагрузка на двигатель</string>
+    <string name="abs_load">Нагрузка ABS</string>
+    <string name="throttle">Дроссель</string>
+    <string name="fuel_pressure">Давление топлива</string>
+    <string name="mass_air_flow_g_s">Массовый расход воздуха \'г/с\'</string>
+    <string name="air_fuel_ratio">Соотношение воздух/топливо</string>
+    <string name="barometric_pressure_psi">Барометрическое давление \'psi\'</string>
+    <string name="troubles">Проблемы....</string>
+    <string name="clear">Очистить</string>
+    <string name="no_fault_found">Не обнаружено неисправностей</string>
+    <string name="setting">Настройки</string>
+    <string name="adapter_type">Тип адаптера</string>
+    <string name="connect_via_bluetooth">Подключиться через Bluetooth</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="connect_via_wi_fi">Подключиться через Wi-Fi</string>
+    <string name="theme">Тема</string>
+    <string name="light_mode">Светлый режим</string>
+    <string name="switch_to_light_mode">Переключиться на светлый режим</string>
+    <string name="dark_mode">Тёмный режим</string>
+    <string name="switch_to_dark_mode">Переключиться на тёмный режим</string>
+    <string name="connectivity">Связь</string>
+    <string name="share">Поделиться</string>
+    <string name="share_with_friends">Поделиться с друзьями</string>
+    <string name="rate">Оценить</string>
+    <string name="share_your_valuable_feedback">Поделитесь своим ценным отзывом</string>
+    <string name="more">Ещё</string>
+    <string name="see_more_apps">Посмотреть больше приложений</string>
+    <string name="car_doctor_scanning_diagnosing_treatment">Доктор Автомобилей - Сканирование|Диагностика|Лечение</string>
+    <string name="scanning">Сканирование</string>
+    <string name="disconnect">Отключить</string>
+    <string name="connect">Подключить</string>
+    <string name="disconnected">Отключено</string>
+    <string name="connecting">Подключение.....</string>
+    <string name="saved_data">Сохраненные данные</string>
+    <string name="connected_to">Подключено к</string>
+    <string name="unabletoconnect">Не удается подключиться</string>
+    <string name="UNDEFINED">Неопределено</string>
+    <string name="INITIALIZING">Инициализация…</string>
+    <string name="INITIALIZED">Инициализировано</string>
+    <string name="ECU_DETECT">Обнаружение ECU…</string>
+    <string name="ECU_DETECTED">ECU обнаружен</string>
+    <string name="CONNECTING">Подключение…</string>
+    <string name="CONNECTED">Подключено</string>
+    <string name="NODATA">Нет данных</string>
+    <string name="STOPPED">Остановлено</string>
+    <string name="DISCONNECTED">Отключено</string>
+    <string name="BUSERROR">Ошибка BUS</string>
+    <string name="DATAERROR">Ошибка DATA</string>
+    <string name="RXERROR">Ошибка RX</string>
+    <string name="ERROR">Ошибка</string>
+    <string name="obd_error">Ошибка протокола OBD</string>
+    <string name="copied_to_clipboard">Скопировано в буфер обмена</string>
+    <string name="select_ecu_addr">Выберите адрес ECU …</string>
+    <string name="none_found">Устройства не найдены</string>
+    <string name="metric">метрическая</string>
+    <string name="imperial">имперская</string>
+    <string name="demo_stopped">Режим DEMO остановлен</string>
+    <string name="demo_started">Режим DEMO начат</string>
+    <string name="demo">Демо…</string>
+    <string name="title_connected_to">Подключено к %s</string>
+    <string name="obd_clearcodes">Очистить коды неисправностей</string>
+    <string name="obd_clear_info">
+Это сбросит MIL и очистит всю информацию, связанную с выбросами,\n
+включая:\n
+ - Диагностические коды неисправностей\n
+ - Данные замороженной рамки\n
+ - Данные теста кислородного датчика\n
+ - Статус тестов системного мониторинга\n
+ - Результаты тестов на борту\n
+ - Расстояние, пройденное с активированным MIL\n
+ - Количество разогревов после очистки DTC\n
+ - Расстояние, пройденное после очистки DTC\n
+ - Время работы двигателя с активированным MIL\n
+ - Время с момента очистки DTC\n\n
+Могут происходить другие специфические для производителя действия по очистке/сбросу.\n
+Потеря данных может вызвать временные проблемы с работой автомобиля, пока ECU не откалибруется.
+</string>
+    <string name="obd_test_confirm">Запрашивается контрольный тест OBD.\n\n
+    Запрашиваемый контрольный тест OBD может вызвать:\n
+    - Движение автомобиля\n
+    - Дым из выхлопной трубы\n
+    - Высокую температуру выхлопных газов\n
+    - Громкий шум двигателя\n
+    - Топливные пары\n
+    - и др.\n\n
+    Пожалуйста, подтвердите выполнение этого теста на собственный риск в безопасной тестовой среде!
+</string>
+    <string name="obd_test_progress">Контроль теста OBD в процессе.\nПожалуйста, проверьте реакцию автомобиля.</string>
+    <string name="none_paired">Устройства не подключены</string>
+
+    <string name="connectionlost">Соединение с устройством было потеряно</string>
+    <string name="english">Английский</string>
+    <string name="afrikaans_afrikaans">Африкаанс (Afrikaans)</string>
+    <string name="arabic">Арабский (عربي)</string>
+    <string name="chinese">Китайский (中国人)</string>
+    <string name="czech_e_tina">Чешский (čeština)</string>
+    <string name="danish_dansk">Датский (dansk)</string>
+    <string name="dutch_nederlands">Нидерландский (Nederlands)</string>
+    <string name="french_fran_ais">Французский (Français)</string>
+    <string name="german_deutsch">Немецкий (Deutsch)</string>
+    <string name="greek">Греческий (ελληνικά)</string>
+    <string name="hindi">Хинди (हिंदी)</string>
+    <string name="indonesian_indonesia">Индонезийский (Indonesia)</string>
+    <string name="italian_italiano">Итальянский (Italiano)</string>
+    <string name="japanese">Японский (日本語)</string>
+    <string name="korean">Корейский (한국인)</string>
+    <string name="malay_melayu">Малайский (Melayu)</string>
+    <string name="norwegian_norsk">Норвежский (norsk)</string>
+    <string name="russian">Русский (Русский)</string>
+    <string name="portugues_portugu_s">Португальский (Português)</string>
+    <string name="persian">Персидский (فارسی)</string>
+    <string name="spanish_espa_ol">Испанский (Español)</string>
+    <string name="thai">Тайский (แบบไทย)</string>
+    <string name="turkish_t_rk_e">Турецкий (Türkçe)</string>
+    <string name="urdu">Урду (اردو)</string>
+    <string name="vietnamese_ti_ng_vi_t">Вьетнамский (Tiếng Việt)</string>
+    <string name="languages">Языки</string>
+    <string name="language">Язык</string>
+    <string name="faults">Ошибки</string>
+    <string name="help">Помощь</string>
+    <string name="realtime">В реальном времени</string>
+    <string name="all_sensors">Все датчики</string>
+
+</resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "348239260602",
+    "project_id": "obd-ak",
+    "storage_bucket": "obd-ak.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:348239260602:android:5c6ca1f6572331908c0b83",
+        "android_client_info": {
+          "package_name": "com.akapps.obd2carscannerapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4EE-2zvn4FZIKubAWObxu9ktizeY_lFg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

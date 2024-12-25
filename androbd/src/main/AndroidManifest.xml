@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- start/stop bluetooth adapter -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> <!-- connect/disconnect bluetooth devices -->
+    <uses-permission android:name="android.permission.BLUETOOTH" /> <!-- to keep Bluetooth measurement running even when screen is inactive -->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- allow saving screenshots -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- allow saving screenshots -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- allow access to WIFI adapter -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="false" />
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme.Dark">
+        <activity
+            android:name=".Activity.MyMainActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activity.SelectLanguageActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".Activity.SplashActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.TermsPrivacyActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activity.FaultCodeDetailsActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activity.PurchaseActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activity.SettingActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activity.HelpsActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activity.MyRealTimeActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activity.RealTimeActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activity.FaultCodesActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activity.ScanningActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activity.ObdDataActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activity.DashboardActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter" />
+        </activity>
+        <activity
+            android:name=".Activity.ConnectionPairingActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppTheme" /> <!-- <activity -->
+        <!-- android:name=".MainActivity" -->
+        <!-- android:configChanges="keyboardHidden|orientation|screenSize" -->
+        <!-- android:exported="true" -->
+        <!-- android:label="@string/app_name"> -->
+        <!--  -->
+        <!-- </activity> -->
+        <!-- <activity -->
+        <!-- android:name=".UsbDeviceListActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
+        <!-- android:label="@string/select_device" /> -->
+        <!-- <activity -->
+        <!-- android:name=".BtDeviceListActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
+        <!-- android:label="@string/select_device" /> -->
+        <!-- <activity -->
+        <!-- android:name=".ChartActivity" -->
+        <!-- android:configChanges="touchscreen|orientation|screenSize" -->
+        <!-- android:label="@string/chart" /> -->
+        <!-- <activity -->
+        <!-- android:name=".DashBoardActivity" -->
+        <!-- android:configChanges="touchscreen|orientation|screenSize" -->
+        <!-- android:label="@string/dashboard" /> -->
+        <!-- <activity -->
+        <!-- android:name=".SettingsActivity" -->
+        <!-- android:configChanges="touchscreen|orientation|screenSize" -->
+        <!-- android:label="@string/settings" /> -->
+        <!-- <activity -->
+        <!-- android:name=".PidCustomization" -->
+        <!-- android:configChanges="touchscreen|orientation|screenSize" -->
+        <!-- android:label="@string/customize_display" /> -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <service
+            android:name=".Trips.ObdGatewayService1"
+            android:exported="false"
+            android:launchMode="singleInstance" />
+        <service
+            android:name=".Trips.MockObdGatewayService"
+            android:exported="false"
+            android:launchMode="singleInstance" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-8011932915847069~8697028536" />
+
+        <property
+            android:name="android.adservices.AD_SERVICES_CONFIG"
+            android:resource="@xml/gma_ad_services_config"
+            tools:replace="android:resource" />
+
+        <receiver android:name=".Reciever.NotificationReceiver"/>
+    </application>
+
+</manifest>

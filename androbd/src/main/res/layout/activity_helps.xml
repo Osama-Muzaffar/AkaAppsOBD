@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    tools:context=".Activity.HelpsActivity">
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/sliderview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:iss_no_dots="true"
+        app:iss_auto_cycle="false"
+        app:iss_period="1000"
+        app:iss_delay="1000"  />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

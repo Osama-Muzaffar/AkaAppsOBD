@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/sound_icon">
+
+    <target
+        android:name="bar1"
+        android:animation="@animator/fill_animation"/>
+    <target
+        android:name="bar2"
+        android:animation="@animator/fill_animation"/>
+    <target
+        android:name="bar3"
+        android:animation="@animator/fill_animation"/>
+    <target
+        android:name="bar4"
+        android:animation="@animator/fill_animation"/>
+</animated-vector>

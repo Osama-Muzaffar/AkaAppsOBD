@@ -1,0 +1,40 @@
+apply plugin: 'java'
+
+compileJava {
+    options.incremental = true
+}
+
+sourceSets {
+    main {
+        java {
+            exclude(
+                    'com/akapps/common/res',
+                    'com/akapps/pvs/gui',
+                    'com/akapps/prot/gui',
+                    'com/akapps/ecu/gui',
+                    'com/akapps/ecu/prot/vag',
+            )
+        }
+        resources {
+            srcDirs("src/main/java")
+            include('com/akapps/ecu/prot/obd/res/*')
+        }
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.2'
+    implementation 'org.jfree:jfreechart:1.5.3' // Use the latest version available
+
+}
+
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}

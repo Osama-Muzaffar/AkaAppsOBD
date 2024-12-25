@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  AndrOBD -->
+    <string name="app_name" translatable="false">Car Doctor</string>
+    <string name="privacy_link" translatable="false">http://privacypolicyrangersaround.blogspot.com/2018/05/privacy-policy.html</string>
+    <string name="terms_link" translatable="false">https://zawajulshariaprivacypolicy.blogspot.com/2024/08/terms-of-use.html</string>
+
+    <string name="welcome_to">Velkommen til</string>
+    <string name="let_s_go">Kom i gang</string>
+    <string name="scan_diagnose_and_fix_issues">Scanne, diagnosticere og rette problemer</string>
+    <string name="car_doctor">Bil-læge</string>
+    <string name="bluetooth_pairing">Bluetooth-parring</string>
+
+    <string-array name="speedTestRangeValues">
+        <item>0</item>
+        <item>100</item>
+        <item>200</item>
+        <item>300</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>5000</item>
+    </string-array>
+
+    <string-array name="elmcomm_states" translatable="false">
+        <item>@string/UNDEFINED</item>
+        <item>@string/INITIALIZING</item>
+        <item>@string/INITIALIZED</item>
+        <item>@string/ECU_DETECT</item>
+        <item>@string/ECU_DETECTED</item>
+        <item>@string/CONNECTING</item>
+        <item>@string/CONNECTED</item>
+        <item>@string/NODATA</item>
+        <item>@string/STOPPED</item>
+        <item>@string/DISCONNECTED</item>
+        <item>@string/BUSERROR</item>
+        <item>@string/DATAERROR</item>
+        <item>@string/RXERROR</item>
+        <item>@string/ERROR</item>
+    </string-array>
+
+    <string-array name="measure_options" translatable="false">
+        <item>@string/metric</item>
+        <item>@string/imperial</item>
+    </string-array>
+    <string-array name="measure_option_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string name="title_pref_bluetooth" translatable="false">Bluetooth</string>
+    <string name="title_pref_gps" translatable="false">GPS</string>
+    <string name="status_obd_no_support">Ikke tilgængelig</string>
+    <string name="pref_bluetooth_title">Aktivér Bluetooth</string>
+    <string name="pref_bluetooth_summaryOff">Slå Bluetooth til</string>
+    <string name="pref_bluetooth_summaryOn">Slå Bluetooth fra</string>
+    <string name="pref_bluetooth_list_devices_summary">Liste over tilsluttede Bluetooth-enheder.</string>
+    <string name="pref_bluetooth_list_devices_title">Bluetooth-enheder</string>
+    <string name="pref_gps_category_title">Aktivér GPS</string>
+    <string name="pref_gps_category_summaryOff">Slå GPS til</string>
+    <string name="pref_gps_category_summaryOn">Slå GPS fra</string>
+    <string name="pref_gps_update_period_title">Opdateringsinterval i sekunder</string>
+    <string name="pref_gps_update_period_summary">Tidsintervallet mellem forespørgsler om nye positioner i sekunder</string>
+    <string name="pref_gps_distance_period_title">Opdateringsinterval i meter</string>
+    <string name="pref_gps_distance_period_summary">Minimum afstand mellem positionopdateringer, i meter</string>
+    <string name="default_dirname_full_logging">OBDReaderLogs</string>
+    <string name="text_noerrors">Ingen fejl fundet!</string>
+    <string name="pref_gps_category" translatable="false">gps_category</string>
+    <string name="base64key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq/BikXyTp4nSCT74OEPQXnOSJw6Sa4OozMB0vmQQBGsx4r/KGQ9J0V26ti5ObtTSUeyLWaytebpuxpv++kf8P9GDeLc+QvniNfXjFH6QEQJ+sz1tSZVJir3StfWbRKqwzG39vEb4mqPNh8VpMFI5MWoNXJFi8Bcxv/ad94Uz8jUiolrwCR6oWNCU5wrkZGUZAi0ToWbGOlN7FZ55ACJ5T3J2le25ydtpbRvRkoTMFwF30seuGn/C3ghvQTNVAe7Oh3QMJ/DcWjhxD090NaKVBdhtJPn5R2as5At7/a1jb+FUNbzrDBGcFnx5WJ3oEXoFZ1QX6KzA71z5ezT2kD7fvwIDAQAB</string>
+    <string name="Purchase_OK">OK</string>
+    <string name="Purchase_ERROR">FEJL</string>
+    <string name="Purchase_PENDING">Køb er afventende. Afslut venligst transaktionen</string>
+    <string name="Purchase_INVALID">Fejl: Ugyldigt køb</string>
+    <string name="Purchase_UNKNOWN">Købsstatus ukendt</string>
+    <string name="Premium_User_Msg">Tillykke! Du er en Premium-bruger.</string>
+    <string name="Purchase_OK_Dialog_Msg">Køb gennemført!</string>
+    <string name="Purchase_OK_Dialog_Msg_Detail">Appen genstarter nu, og du vil ikke længere se annoncer.</string>
+    <string name="exit_dialog_message">Vær venlig at bedømme os, hvis du finder denne app nyttig, eller tryk Ja for at afslutte.</string>
+    <string name="dialog_loading_title">Indlæser…</string>
+    <string name="dialog_loading_body">Appen indlæses, vent venligst…</string>
+    <string name="text_bluetooth_nodevice">Ingen Bluetooth-enhed valgt</string>
+    <string name="text_bluetooth_error_connecting">Kan ikke oprette forbindelse til Bluetooth-enheden!</string>
+    <string name="text_obd_command_failure">OBD-kommando mislykkedes!</string>
+    <string name="text_dtc_no_data">Ingen DTC gemt</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="paired_devices">Parrede enheder</string>
+    <string name="available_devices">Tilgængelige enheder</string>
+    <string name="turn_on_bluetooth_to_see_devices">Tænd Bluetooth for at se enheder</string>
+    <string name="bluetooth_is_off">Bluetooth er slukket</string>
+    <string name="refresh">Opdater</string>
+    <string name="code_details">Kode-detaljer</string>
+    <string name="code">Kode:</string>
+    <string name="solution">Løsning:</string>
+    <string name="cause">Årsag:</string>
+    <string name="symptoms">Symptomer:</string>
+    <string name="fault_codes">Fejlkoder</string>
+    <string name="search">Søg</string>
+    <string name="obd_data">OBD-data</string>
+    <string name="no_data_found">Ingen data fundet</string>
+    <string name="please_wait">Vent venligst.....</string>
+    <string name="go_to_premimum">Opgrader til Premium</string>
+    <string name="lifetime">Livstid</string>
+    <string name="unlimited_clear_mil">Ubegrænset MIL-udrensning</string>
+    <string name="unlimited_car_diagnose">Ubegrænset bildiagnose</string>
+    <string name="unlimited_pro_features">Ubegrænsede Pro-funktioner</string>
+    <string name="cancel_subscription_at_least_24_hours_before_renewal">Opsig abonnementet mindst 24 timer før fornyelse</string>
+    <string name="get_this_package">Få denne pakke</string>
+    <string name="restore_purchases">Gendan køb</string>
+    <string name="subscription_policy">Abonnementsbetingelser</string>
+    <string name="billing_begins_when_you_opt_for_a_subscription_user_can_cancel_subscription_within_24_hours_of_purchase_monthly_subscription_will_automatically_renews_until_user_cancel_it_user_can_cancel_any_time_in_google_account">Faktureringen begynder, når du vælger et abonnement. Brugeren kan opsige abonnementet inden for 24 timer efter køb. Det månedlige abonnement fornyes automatisk, indtil brugeren opsiger det. Brugeren kan opsige det når som helst via Google-kontoen.</string>
+    <string name="privacy_policy">Privatlivspolitik</string>
+    <string name="terms_of_use">Brugsvilkår</string>
+    <string name="real_time">Realtid</string>
+    <string name="colent">Colent</string>
+    <string name="air_intake_c">Luftindtag \'C\'</string>
+    <string name="engine_load">Motortryk</string>
+    <string name="abs_load">ABS-belastning</string>
+    <string name="throttle">Gasklap</string>
+    <string name="fuel_pressure">Brændstoftryk</string>
+    <string name="mass_air_flow_g_s">Masseluftstrøm \'g/s\'</string>
+    <string name="air_fuel_ratio">Luft/brændstof-forhold</string>
+    <string name="barometric_pressure_psi">Barometrisk tryk \'psi\'</string>
+    <string name="troubles">Problemer....</string>
+    <string name="clear">Ryd</string>
+    <string name="no_fault_found">Ingen fejl fundet</string>
+    <string name="setting">Indstilling</string>
+    <string name="adapter_type">Adaptertype</string>
+    <string name="connect_via_bluetooth">Opret forbindelse via Bluetooth</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="connect_via_wi_fi">Opret forbindelse via Wi-Fi</string>
+    <string name="theme">Tema</string>
+    <string name="light_mode">Lyst tema</string>
+    <string name="switch_to_light_mode">Skift til lyst tema</string>
+    <string name="dark_mode">Mørkt tema</string>
+    <string name="switch_to_dark_mode">Skift til mørkt tema</string>
+    <string name="connectivity">Konnektivitet</string>
+    <string name="share">Del</string>
+    <string name="share_with_friends">Del med venner</string>
+    <string name="rate">Bedøm</string>
+    <string name="share_your_valuable_feedback">Del din værdifulde feedback</string>
+    <string name="more">Mere</string>
+    <string name="see_more_apps">Se flere apps</string>
+    <string name="car_doctor_scanning_diagnosing_treatment">Bil-læge - Scanning|Diagnostik|Behandling</string>
+    <string name="scanning">Scanning</string>
+    <string name="disconnect">Afbryd</string>
+    <string name="connect">Forbind</string>
+    <string name="disconnected">Afbundet</string>
+    <string name="connecting">Forbinder.....</string>
+    <string name="saved_data">Gemte data</string>
+    <string name="connected_to">Forbundet til</string>
+    <string name="unabletoconnect">Kunne ikke oprette forbindelse</string>
+    <string name="UNDEFINED">Ubestemt</string>
+    <string name="INITIALIZING">Initialiserer…</string>
+    <string name="INITIALIZED">Initialiseret</string>
+    <string name="ECU_DETECT">ECU opdages…</string>
+    <string name="ECU_DETECTED">ECU registreret</string>
+    <string name="CONNECTING">Forbinder…</string>
+    <string name="CONNECTED">Forbundet</string>
+    <string name="NODATA">Ingen data</string>
+    <string name="STOPPED">Stoppet</string>
+    <string name="DISCONNECTED">Afbundet</string>
+    <string name="BUSERROR">BUS-fejl</string>
+    <string name="DATAERROR">DATA-fejl</string>
+    <string name="RXERROR">RX-fejl</string>
+    <string name="ERROR">Fejl</string>
+    <string name="obd_error">OBD-protokolfejl</string>
+    <string name="copied_to_clipboard">Kopieret til udklipsholder</string>
+    <string name="select_ecu_addr">Vælg ECU-adresse …</string>
+    <string name="none_found">Ingen enheder fundet</string>
+    <string name="metric">metrisk</string>
+    <string name="imperial">imperial</string>
+    <string name="demo_stopped">DEMO-tilstand stoppet</string>
+    <string name="demo_started">DEMO-tilstand startet</string>
+    <string name="demo">Demo…</string>
+    <string name="title_connected_to">Forbundet til %s</string>
+    <string name="obd_clearcodes">Fejlkoder nulstille</string>
+    <string name="obd_clear_info">
+Dette nulstiller MIL og sletter alle emissionsrelaterede diagnostiske data,\n
+herunder:\n
+ - Diagnostiske fejlkoder\n
+ - Freeze-frame data\n
+ - Oxygen sensor test data\n
+ - Systemovervågningsstatus\n
+ - On-Board overvågningsresultater\n
+ - Kørsel, mens MIL var aktiv\n
+ - Antal opvarmninger siden nulstilling af DTC\'er\n
+ - Kørsel siden nulstilling af DTC\'er\n
+ - Motorens driftstid, mens MIL var aktiv\n
+ - Tid siden nulstilling af DTC\'er\n\n
+Andre producent-specifikke sletnings-/nulstillingsprocesser kan finde sted.\n
+Data tab kan medføre, at køretøjet kører dårligt i en kort periode, mens ECU\'en genkalibrerer.
+</string>
+    <string name="obd_test_confirm">OBD-testkontrol anmodet.\n\n
+        Den anmodede OBD-testkontrol kan medføre:\n
+        - Køretøjsbevægelse\n
+        - Udstødningsgasser\n
+        - Høj udstødningstemperatur\n
+        - Høj motorstøj\n
+        - Brændstofdampe\n
+        - osv.\n\n
+        Bekræft venligst for at udføre denne testkontrol på eget ansvar og kun i et sikkert testmiljø!
+</string>
+    <string name="obd_test_progress">OBD-testkontrol kører.\n
+        Kontroller venligst køretøjets reaktion.</string>
+    <string name="none_paired">Ingen enheder parret</string>
+    <string name="connectionlost">Forbindelse til enhed mistet</string>
+    <string name="english">Engelsk</string>
+    <string name="afrikaans_afrikaans">Afrikaans (Afrikaans)</string>
+    <string name="arabic">Arabisk (عربي)</string>
+    <string name="chinese">Kinesisk (中国人)</string>
+    <string name="czech_e_tina">Tjekkisk (čeština)</string>
+    <string name="danish_dansk">Dansk (dansk)</string>
+    <string name="dutch_nederlands">Hollandsk (Nederlands)</string>
+    <string name="french_fran_ais">Fransk (Français)</string>
+    <string name="german_deutsch">Tysk (Deutsch)</string>
+    <string name="greek">Græsk (ελληνικά)</string>
+    <string name="hindi">Hindi (हिंदी)</string>
+    <string name="indonesian_indonesia">Indonesisk (Indonesia)</string>
+    <string name="italian_italiano">Italiensk (Italiano)</string>
+    <string name="japanese">Japansk (日本語)</string>
+    <string name="korean">Koreansk (한국어)</string>
+    <string name="malay_melayu">Malay (Melayu)</string>
+    <string name="norwegian_norsk">Norsk (norsk)</string>
+    <string name="russian">Russisk (Русский)</string>
+    <string name="portugues_portugu_s">Portugisisk (Português)</string>
+    <string name="persian">Persisk (فارسی)</string>
+    <string name="spanish_espa_ol">Spansk (Español)</string>
+    <string name="thai">Thailandsk (ไทย)</string>
+    <string name="turkish_t_rk_e">Tyrkisk (Türkçe)</string>
+    <string name="urdu">Urdu (اردو)</string>
+    <string name="vietnamese_ti_ng_vi_t">Vietnamesisk (Tiếng Việt)</string>
+    <string name="languages">Sprog</string>
+    <string name="language">Sprog</string>
+    <string name="faults">Fejl</string>
+    <string name="help">Hjælp</string>
+    <string name="realtime">Realtid</string>
+    <string name="all_sensors">Alle sensorer</string>
+
+</resources>

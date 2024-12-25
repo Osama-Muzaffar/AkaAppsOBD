@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  AndrOBD -->
+    <string name="app_name" translatable="false">Car Doctor</string>
+    <string name="privacy_link" translatable="false">http://privacypolicyrangersaround.blogspot.com/2018/05/privacy-policy.html</string>
+    <string name="terms_link" translatable="false">https://zawajulshariaprivacypolicy.blogspot.com/2024/08/terms-of-use.html</string>
+
+    <string name="welcome_to">HOŞGELDİNİZ</string>
+    <string name="let_s_go">Hadi Gidelim</string>
+    <string name="scan_diagnose_and_fix_issues">Tarama, Teşhis ve Sorunları Düzeltme</string>
+    <string name="car_doctor">Araç Doktoru</string>
+    <string name="bluetooth_pairing">Bluetooth Eşleştirme</string>
+
+    <string-array name="speedTestRangeValues">
+        <item>0</item>
+        <item>100</item>
+        <item>200</item>
+        <item>300</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>5000</item>
+    </string-array>
+
+    <string-array name="elmcomm_states" translatable="false">
+        <item>@string/UNDEFINED</item>
+        <item>@string/INITIALIZING</item>
+        <item>@string/INITIALIZED</item>
+        <item>@string/ECU_DETECT</item>
+        <item>@string/ECU_DETECTED</item>
+        <item>@string/CONNECTING</item>
+        <item>@string/CONNECTED</item>
+        <item>@string/NODATA</item>
+        <item>@string/STOPPED</item>
+        <item>@string/DISCONNECTED</item>
+        <item>@string/BUSERROR</item>
+        <item>@string/DATAERROR</item>
+        <item>@string/RXERROR</item>
+        <item>@string/ERROR</item>
+    </string-array>
+
+    <string-array name="measure_options" translatable="false">
+        <item>@string/metric</item>
+        <item>@string/imperial</item>
+    </string-array>
+    <string-array name="measure_option_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string name="title_pref_bluetooth" translatable="false">Bluetooth</string>
+    <string name="title_pref_gps" translatable="false">GPS</string>
+    <string name="status_obd_no_support">UYGULANAMAZ</string>
+    <string name="pref_bluetooth_title">Bluetooth\'u Etkinleştir</string>
+    <string name="pref_bluetooth_summaryOff">Bluetooth\'u Aç</string>
+    <string name="pref_bluetooth_summaryOn">Bluetooth\'u Kapat</string>
+    <string name="pref_bluetooth_list_devices_summary">Eşleştirilmiş Bluetooth cihazlarının listesi.</string>
+    <string name="pref_bluetooth_list_devices_title">Bluetooth Cihazları</string>
+    <string name="pref_gps_category_title">GPS\'i Etkinleştir</string>
+    <string name="pref_gps_category_summaryOff">GPS\'i Aç</string>
+    <string name="pref_gps_category_summaryOn">GPS\'i Kapat</string>
+    <string name="pref_gps_update_period_title">Güncelleme Periyodu (Saniye)</string>
+    <string name="pref_gps_update_period_summary">Yeni konumu sorgulama arasındaki süre saniye cinsinden</string>
+    <string name="pref_gps_distance_period_title">Güncelleme Periyodu (Metre)</string>
+    <string name="pref_gps_distance_period_summary">Konum güncellemeleri arasındaki minimum mesafe, metre cinsinden</string>
+    <string name="default_dirname_full_logging">OBDReaderLogs</string>
+    <string name="text_noerrors">Hiçbir hata bulunamadı!</string>
+    <string name="pref_gps_category" translatable="false">gps_category</string>
+    <string name="base64key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq/BikXyTp4nSCT74OEPQXnOSJw6Sa4OozMB0vmQQBGsx4r/KGQ9J0V26ti5ObtTSUeyLWaytebpuxpv++kf8P9GDeLc+QvniNfXjFH6QEQJ+sz1tSZVJir3StfWbRKqwzG39vEb4mqPNh8VpMFI5MWoNXJFi8Bcxv/ad94Uz8jUiolrwCR6oWNCU5wrkZGUZAi0ToWbGOlN7FZ55ACJ5T3J2le25ydtpbRvRkoTMFwF30seuGn/C3ghvQTNVAe7Oh3QMJ/DcWjhxD090NaKVBdhtJPn5R2as5At7/a1jb+FUNbzrDBGcFnx5WJ3oEXoFZ1QX6KzA71z5ezT2kD7fvwIDAQAB</string>
+    <string name="Purchase_OK">Tamam</string>
+    <string name="Purchase_ERROR">HATA</string>
+    <string name="Purchase_PENDING">Satın Alma Beklemede. Lütfen İşlemi Tamamlayın</string>
+    <string name="Purchase_INVALID">Hata: Geçersiz Satın Alma</string>
+    <string name="Purchase_UNKNOWN">Satın Alma Durumu Bilinmiyor</string>
+    <string name="Premium_User_Msg">Tebrikler! Bir premium kullanıcı oldunuz.</string>
+    <string name="Purchase_OK_Dialog_Msg">Satın Alma Başarılı!</string>
+    <string name="Purchase_OK_Dialog_Msg_Detail">Şimdi uygulama yeniden başlayacak ve reklamlar kaldırılacak.</string>
+    <string name="exit_dialog_message">Bu uygulamayı faydalı bulduysanız lütfen bizi değerlendirin veya çıkmak için Evet\'i tıklayın.</string>
+    <string name="dialog_loading_title">Yükleniyor…</string>
+    <string name="dialog_loading_body">Uygulama Görünümü Yükleniyor, lütfen bekleyin…</string>
+    <string name="text_bluetooth_nodevice">Bluetooth cihazı seçilmedi</string>
+    <string name="text_bluetooth_error_connecting">Bluetooth cihazına bağlanılamıyor!</string>
+    <string name="text_obd_command_failure">OBD komut hatası!</string>
+    <string name="text_dtc_no_data">DTC bulunamadı</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="paired_devices">Eşleştirilmiş Cihazlar</string>
+    <string name="available_devices">Mevcut Cihazlar</string>
+    <string name="turn_on_bluetooth_to_see_devices">Cihazları görmek için Bluetooth\'u açın</string>
+    <string name="bluetooth_is_off">Bluetooth Kapalı</string>
+    <string name="refresh">Yenile</string>
+    <string name="code_details">Kod Detayları</string>
+    <string name="code">Kod:</string>
+    <string name="solution">Çözüm:</string>
+    <string name="cause">Neden:</string>
+    <string name="symptoms">Belirtiler:</string>
+    <string name="fault_codes">Hata Kodları</string>
+    <string name="search">Ara</string>
+    <string name="obd_data">OBD Verisi</string>
+    <string name="no_data_found">Veri Bulunamadı</string>
+    <string name="please_wait">Lütfen bekleyin.....</string>
+    <string name="go_to_premimum">Premium\'a Geç</string>
+    <string name="lifetime">Ömür Boyu</string>
+    <string name="unlimited_clear_mil">Sonsuz MIL Temizleme</string>
+    <string name="unlimited_car_diagnose">Sonsuz Araç Teşhisi</string>
+    <string name="unlimited_pro_features">Sonsuz Pro Özellikleri</string>
+    <string name="cancel_subscription_at_least_24_hours_before_renewal">Yenilemeden en az 24 saat önce aboneliği iptal edin</string>
+    <string name="get_this_package">Bu Paketi Al</string>
+    <string name="restore_purchases">Satın Alımları Geri Yükle</string>
+    <string name="subscription_policy">Abonelik Politikası</string>
+    <string name="billing_begins_when_you_opt_for_a_subscription_user_can_cancel_subscription_within_24_hours_of_purchase_monthly_subscription_will_automatically_renews_until_user_cancel_it_user_can_cancel_any_time_in_google_account">Faturalama, bir abonelik seçtiğinizde başlar. Kullanıcı, satın alma işleminden sonra 24 saat içinde aboneliği iptal edebilir. Aylık abonelik, kullanıcı iptal edene kadar otomatik olarak yenilenir. Kullanıcı, Google Hesabı üzerinden herhangi bir zamanda iptal edebilir.</string>
+    <string name="privacy_policy">Gizlilik Politikası</string>
+    <string name="terms_of_use">Kullanım Şartları</string>
+    <string name="real_time">Gerçek Zamanlı</string>
+    <string name="colent">Colent</string>
+    <string name="air_intake_c">Hava Girişi \'C\'</string>
+    <string name="engine_load">Motor Yükü</string>
+    <string name="abs_load">ABS Yükü</string>
+    <string name="throttle">Gaz Kelebeği</string>
+    <string name="fuel_pressure">Yakıt Basıncı</string>
+    <string name="mass_air_flow_g_s">Kütle Hava Akışı \'g/s\'</string>
+    <string name="air_fuel_ratio">Hava/Yakıt Oranı</string>
+    <string name="barometric_pressure_psi">Barometrik Basınç \'psi\'</string>
+    <string name="troubles">Sorunlar....</string>
+    <string name="clear">Temizle</string>
+    <string name="no_fault_found">Hata Bulunamadı</string>
+    <string name="setting">Ayar</string>
+    <string name="adapter_type">Adaptör Türü</string>
+    <string name="connect_via_bluetooth">Bluetooth Üzerinden Bağlan</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="connect_via_wi_fi">Wi-Fi Üzerinden Bağlan</string>
+    <string name="theme">Tema</string>
+    <string name="light_mode">Aydınlık Mod</string>
+    <string name="switch_to_light_mode">Aydınlık Mode\'a Geç</string>
+    <string name="dark_mode">Karanlık Mod</string>
+    <string name="switch_to_dark_mode">Karanlık Mode\'a Geç</string>
+    <string name="connectivity">Bağlantı</string>
+    <string name="share">Paylaş</string>
+    <string name="share_with_friends">Arkadaşlarınızla Paylaş</string>
+    <string name="rate">Değerlendir</string>
+    <string name="share_your_valuable_feedback">Değerli geri bildiriminizi paylaşın</string>
+    <string name="more">Daha Fazla</string>
+    <string name="see_more_apps">Diğer Uygulamalara Bakın</string>
+    <string name="car_doctor_scanning_diagnosing_treatment">Araç Doktoru - Tarama|Teşhis|Tedavi</string>
+    <string name="scanning">Tarama</string>
+    <string name="disconnect">Bağlantıyı Kes</string>
+    <string name="connect">Bağlan</string>
+    <string name="disconnected">Bağlantı Kesildi</string>
+    <string name="connecting">Bağlanıyor.....</string>
+    <string name="saved_data">Veri Kaydedildi</string>
+    <string name="connected_to">Bağlı %s</string>
+    <string name="unabletoconnect">Bağlantı Kurulamıyor</string>
+    <string name="UNDEFINED">Tanımsız</string>
+    <string name="INITIALIZING">Başlatılıyor…</string>
+    <string name="INITIALIZED">Başlatıldı</string>
+    <string name="ECU_DETECT">ECU algılanıyor…</string>
+    <string name="ECU_DETECTED">ECU algılandı</string>
+    <string name="CONNECTING">Bağlanıyor…</string>
+    <string name="CONNECTED">Bağlandı</string>
+    <string name="NODATA">Veri Yok</string>
+    <string name="STOPPED">Durdu</string>
+    <string name="DISCONNECTED">Bağlantı Kesildi</string>
+    <string name="BUSERROR">BUS hatası</string>
+    <string name="DATAERROR">VERİ hatası</string>
+    <string name="RXERROR">RX hatası</string>
+    <string name="ERROR">Hata</string>
+    <string name="obd_error">OBD protokol hatası</string>
+    <string name="copied_to_clipboard">Panoya kopyalandı</string>
+    <string name="select_ecu_addr">ECU adresini seçin …</string>
+    <string name="none_found">Cihaz Bulunamadı</string>
+    <string name="metric">metrik</string>
+    <string name="imperial">imperyal</string>
+    <string name="demo_stopped">DEMO modu durduruldu</string>
+    <string name="demo_started">DEMO modu başlatıldı</string>
+    <string name="demo">Demo…</string>
+    <string name="title_connected_to">Bağlı %s</string>
+    <string name="obd_clearcodes">Hata Kodlarını Temizle</string>
+    <string name="obd_clear_info">
+Bu, MIL\'yi sıfırlayacak ve tüm emisyonla ilgili teşhis\n
+bilgilerini temizleyecektir, bunlar:\n
+ - Teşhis sorun kodları\n
+ - Dondurulmuş kare veriler\n
+ - Oksijen sensörü test verileri\n
+ - Sistem izleme testlerinin durumu\n
+ - Araç içi izleme testleri sonuçları\n
+ - MIL etkinleştirildiğinde seyahat edilen mesafe\n
+ - DTC\'ler temizlendiğinden beri yapılan ısıtmaların sayısı\n
+ - DTC\'ler temizlendiğinden beri seyahat edilen mesafe\n
+ - MIL etkinleştirildiğinde motor çalışma süresi\n
+ - DTC\'ler temizlendiğinden beri geçen süre\n\n
+Diğer üreticiye özgü temizleme/sıfırlama işlemleri gerçekleşebilir.\n
+Veri kaybı, ECU\'nun kendini yeniden kalibre etmesi sırasında aracın kısa bir süre kötü çalışmasına neden olabilir.
+</string>
+    <string name="obd_test_confirm">OBD test kontrolü talep edildi.\n\n
+Talep edilen OBD test kontrolü aşağıdakileri üretebilir:\n
+ - Araç hareketi\n
+ - Egzoz dumanı\n
+ - Yüksek egzoz sıcaklığı\n
+ - Gürültülü motor sesi\n
+ - Yakıt buharı\n
+ - vb.\n\n
+Bu test kontrolünü kendi riskinizle sadece güvenli bir test ortamında gerçekleştirmek için lütfen onaylayın!
+</string>
+    <string name="obd_test_progress">OBD test kontrolü devam ediyor.\n
+Lütfen aracın tepkisini kontrol edin.</string>
+    <string name="none_paired">Eşleşmiş Cihaz Yok</string>
+
+    <string name="connectionlost">Cihaz bağlantısı kesildi</string>
+    <string name="english">İngilizce</string>
+    <string name="afrikaans_afrikaans">Afrikaans (Afrikaans)</string>
+    <string name="arabic">Arapça (عربي)</string>
+    <string name="chinese">Çince (中国人)</string>
+    <string name="czech_e_tina">Çekçe (čeština)</string>
+    <string name="danish_dansk">Danimarkaca (dansk)</string>
+    <string name="dutch_nederlands">Flemenkçe (Nederlands)</string>
+    <string name="french_fran_ais">Fransızca (Français)</string>
+    <string name="german_deutsch">Almanca (Deutsch)</string>
+    <string name="greek">Yunanca (ελληνικά)</string>
+    <string name="hindi">Hintçe (हिंदी)</string>
+    <string name="indonesian_indonesia">Endonezce (Indonesia)</string>
+    <string name="italian_italiano">İtalyanca (Italiano)</string>
+    <string name="japanese">Japonca (日本語)</string>
+    <string name="korean">Korece (한국인)</string>
+    <string name="malay_melayu">Malayca (Melayu)</string>
+    <string name="norwegian_norsk">Norveççe (norsk)</string>
+    <string name="russian">Rusça (Русский)</string>
+    <string name="portugues_portugu_s">Portekizce (Português)</string>
+    <string name="persian">Farsça (فارسی)</string>
+    <string name="spanish_espa_ol">İspanyolca (Español)</string>
+    <string name="thai">Tayca (แบบไทย)</string>
+    <string name="turkish_t_rk_e">Türkçe (Türkçe)</string>
+    <string name="urdu">Urduca (اردو)</string>
+    <string name="vietnamese_ti_ng_vi_t">Vietnamca (Tiếng Việt)</string>
+    <string name="languages">Diller</string>
+    <string name="language">Dil</string>
+    <string name="faults">Hatalar</string>
+    <string name="help">Yardım</string>
+    <string name="realtime">Gerçek zaman</string>
+    <string name="all_sensors">Tüm sensörler</string>
+
+
+</resources>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  AndrOBD -->
+    <string name="app_name" translatable="false">Car Doctor</string>
+    <string name="privacy_link" translatable="false">http://privacypolicyrangersaround.blogspot.com/2018/05/privacy-policy.html</string>
+    <string name="terms_link" translatable="false">https://zawajulshariaprivacypolicy.blogspot.com/2024/08/terms-of-use.html</string>
+
+    <string name="welcome_to">CHÀO MỪNG ĐẾN</string>
+    <string name="let_s_go">Đi thôi</string>
+    <string name="scan_diagnose_and_fix_issues">Quét, Chẩn đoán và Sửa lỗi</string>
+    <string name="car_doctor">Bác sĩ ô tô</string>
+    <string name="bluetooth_pairing">Ghép nối Bluetooth</string>
+
+    <string-array name="speedTestRangeValues">
+        <item>0</item>
+        <item>100</item>
+        <item>200</item>
+        <item>300</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>5000</item>
+    </string-array>
+
+    <string-array name="elmcomm_states" translatable="false">
+        <item>@string/UNDEFINED</item>
+        <item>@string/INITIALIZING</item>
+        <item>@string/INITIALIZED</item>
+        <item>@string/ECU_DETECT</item>
+        <item>@string/ECU_DETECTED</item>
+        <item>@string/CONNECTING</item>
+        <item>@string/CONNECTED</item>
+        <item>@string/NODATA</item>
+        <item>@string/STOPPED</item>
+        <item>@string/DISCONNECTED</item>
+        <item>@string/BUSERROR</item>
+        <item>@string/DATAERROR</item>
+        <item>@string/RXERROR</item>
+        <item>@string/ERROR</item>
+    </string-array>
+
+    <string-array name="measure_options" translatable="false">
+        <item>@string/metric</item>
+        <item>@string/imperial</item>
+    </string-array>
+    <string-array name="measure_option_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string name="title_pref_bluetooth" translatable="false">Bluetooth</string>
+    <string name="title_pref_gps" translatable="false">GPS</string>
+    <string name="status_obd_no_support">NA</string>
+    <string name="pref_bluetooth_title">Bật Bluetooth</string>
+    <string name="pref_bluetooth_summaryOff">Bật Bluetooth</string>
+    <string name="pref_bluetooth_summaryOn">Tắt Bluetooth</string>
+    <string name="pref_bluetooth_list_devices_summary">Danh sách các thiết bị Bluetooth đã ghép nối.</string>
+    <string name="pref_bluetooth_list_devices_title">Thiết bị Bluetooth</string>
+    <string name="pref_gps_category_title">Bật GPS</string>
+    <string name="pref_gps_category_summaryOff">Bật GPS</string>
+    <string name="pref_gps_category_summaryOn">Tắt GPS</string>
+    <string name="pref_gps_update_period_title">Khoảng thời gian cập nhật (giây)</string>
+    <string name="pref_gps_update_period_summary">Thời gian giữa các lần truy vấn vị trí mới (tính bằng giây)</string>
+    <string name="pref_gps_distance_period_title">Khoảng cách cập nhật (m)</string>
+    <string name="pref_gps_distance_period_summary">Khoảng cách tối thiểu giữa các lần cập nhật vị trí (tính bằng mét)</string>
+    <string name="default_dirname_full_logging">OBDReaderLogs</string>
+    <string name="text_noerrors">Không tìm thấy lỗi nào!</string>
+    <string name="pref_gps_category" translatable="false">gps_category</string>
+    <string name="base64key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq/BikXyTp4nSCT74OEPQXnOSJw6Sa4OozMB0vmQQBGsx4r/KGQ9J0V26ti5ObtTSUeyLWaytebpuxpv++kf8P9GDeLc+QvniNfXjFH6QEQJ+sz1tSZVJir3StfWbRKqwzG39vEb4mqPNh8VpMFI5MWoNXJFi8Bcxv/ad94Uz8jUiolrwCR6oWNCU5wrkZGUZAi0ToWbGOlN7FZ55ACJ5T3J2le25ydtpbRvRkoTMFwF30seuGn/C3ghvQTNVAe7Oh3QMJ/DcWjhxD090NaKVBdhtJPn5R2as5At7/a1jb+FUNbzrDBGcFnx5WJ3oEXoFZ1QX6KzA71z5ezT2kD7fvwIDAQAB</string>
+    <string name="Purchase_OK">OK</string>
+    <string name="Purchase_ERROR">LỖI</string>
+    <string name="Purchase_PENDING">Giao dịch đang chờ xử lý. Vui lòng hoàn tất giao dịch</string>
+    <string name="Purchase_INVALID">Lỗi: Mua hàng không hợp lệ</string>
+    <string name="Purchase_UNKNOWN">Tình trạng mua hàng không rõ</string>
+    <string name="Premium_User_Msg">Chúc mừng! Bạn là người dùng cao cấp.</string>
+    <string name="Purchase_OK_Dialog_Msg">Mua hàng thành công!</string>
+    <string name="Purchase_OK_Dialog_Msg_Detail">Ứng dụng sẽ khởi động lại và bạn sẽ không còn thấy quảng cáo.</string>
+    <string name="exit_dialog_message">Vui lòng đánh giá chúng tôi nếu bạn thấy ứng dụng này hữu ích hoặc nhấn Có để thoát.</string>
+    <string name="dialog_loading_title">Đang tải…</string>
+    <string name="dialog_loading_body">Đang tải giao diện ứng dụng, vui lòng chờ…</string>
+    <string name="text_bluetooth_nodevice">Chưa chọn thiết bị Bluetooth</string>
+    <string name="text_bluetooth_error_connecting">Không thể kết nối với thiết bị Bluetooth!</string>
+    <string name="text_obd_command_failure">Lệnh OBD thất bại!</string>
+    <string name="text_dtc_no_data">Không có dữ liệu DTC</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="paired_devices">Thiết bị đã ghép nối</string>
+    <string name="available_devices">Thiết bị khả dụng</string>
+    <string name="turn_on_bluetooth_to_see_devices">Bật Bluetooth để xem các thiết bị</string>
+    <string name="bluetooth_is_off">Bluetooth đang tắt</string>
+    <string name="refresh">Làm mới</string>
+    <string name="code_details">Chi tiết mã</string>
+    <string name="code">Mã:</string>
+    <string name="solution">Giải pháp:</string>
+    <string name="cause">Nguyên nhân:</string>
+    <string name="symptoms">Triệu chứng:</string>
+    <string name="fault_codes">Mã lỗi</string>
+    <string name="search">Tìm kiếm</string>
+    <string name="obd_data">Dữ liệu OBD</string>
+    <string name="no_data_found">Không tìm thấy dữ liệu</string>
+    <string name="please_wait">Vui lòng chờ.....</string>
+    <string name="go_to_premimum">Đăng ký Premium</string>
+    <string name="lifetime">Trọn đời</string>
+    <string name="unlimited_clear_mil">Xóa MIL không giới hạn</string>
+    <string name="unlimited_car_diagnose">Chẩn đoán ô tô không giới hạn</string>
+    <string name="unlimited_pro_features">Tính năng Pro không giới hạn</string>
+    <string name="cancel_subscription_at_least_24_hours_before_renewal">Hủy đăng ký ít nhất 24 giờ trước khi gia hạn</string>
+    <string name="get_this_package">Nhận gói này</string>
+    <string name="restore_purchases">Khôi phục giao dịch mua</string>
+    <string name="subscription_policy">Chính sách đăng ký</string>
+    <string name="billing_begins_when_you_opt_for_a_subscription_user_can_cancel_subscription_within_24_hours_of_purchase_monthly_subscription_will_automatically_renews_until_user_cancel_it_user_can_cancel_any_time_in_google_account">Hóa đơn sẽ bắt đầu khi bạn chọn đăng ký. Người dùng có thể hủy đăng ký trong vòng 24 giờ sau khi mua. Đăng ký hàng tháng sẽ tự động gia hạn cho đến khi người dùng hủy. Người dùng có thể hủy bất kỳ lúc nào trong tài khoản Google.</string>
+    <string name="privacy_policy">Chính sách quyền riêng tư</string>
+    <string name="terms_of_use">Điều khoản sử dụng</string>
+    <string name="real_time">Thực tế</string>
+    <string name="colent">Colent</string>
+    <string name="air_intake_c">Lượng không khí \'C\'</string>
+    <string name="engine_load">Tải động cơ</string>
+    <string name="abs_load">Tải ABS</string>
+    <string name="throttle">Bướm ga</string>
+    <string name="fuel_pressure">Áp suất nhiên liệu</string>
+    <string name="mass_air_flow_g_s">Lưu lượng không khí \'g/s\'</string>
+    <string name="air_fuel_ratio">Tỷ lệ không khí/nhiên liệu</string>
+    <string name="barometric_pressure_psi">Áp suất khí quyển \'psi\'</string>
+    <string name="troubles">Lỗi....</string>
+    <string name="clear">Xóa</string>
+    <string name="no_fault_found">Không tìm thấy lỗi</string>
+    <string name="setting">Cài đặt</string>
+    <string name="adapter_type">Loại Adapter</string>
+    <string name="connect_via_bluetooth">Kết nối qua Bluetooth</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="connect_via_wi_fi">Kết nối qua Wi-Fi</string>
+    <string name="theme">Giao diện</string>
+    <string name="light_mode">Chế độ sáng</string>
+    <string name="switch_to_light_mode">Chuyển sang chế độ sáng</string>
+    <string name="dark_mode">Chế độ tối</string>
+    <string name="switch_to_dark_mode">Chuyển sang chế độ tối</string>
+    <string name="connectivity">Kết nối</string>
+    <string name="share">Chia sẻ</string>
+    <string name="share_with_friends">Chia sẻ với bạn bè</string>
+    <string name="rate">Đánh giá</string>
+    <string name="share_your_valuable_feedback">Chia sẻ phản hồi quý giá của bạn</string>
+    <string name="more">Thêm</string>
+    <string name="see_more_apps">Xem thêm ứng dụng</string>
+    <string name="car_doctor_scanning_diagnosing_treatment">Bác sĩ ô tô - Quét | Chẩn đoán | Điều trị</string>
+    <string name="scanning">Đang quét</string>
+    <string name="disconnect">Ngắt kết nối</string>
+    <string name="connect">Kết nối</string>
+    <string name="disconnected">Đã ngắt kết nối</string>
+    <string name="connecting">Đang kết nối.....</string>
+    <string name="saved_data">Dữ liệu đã lưu</string>
+    <string name="connected_to">Đã kết nối với</string>
+    <string name="unabletoconnect">Không thể kết nối</string>
+    <string name="UNDEFINED">Chưa xác định</string>
+    <string name="INITIALIZING">Đang khởi tạo…</string>
+    <string name="INITIALIZED">Đã khởi tạo</string>
+    <string name="ECU_DETECT">Đang phát hiện ECU…</string>
+    <string name="ECU_DETECTED">Đã phát hiện ECU</string>
+    <string name="CONNECTING">Đang kết nối…</string>
+    <string name="CONNECTED">Đã kết nối</string>
+    <string name="NODATA">Không có dữ liệu</string>
+    <string name="STOPPED">Đã dừng</string>
+    <string name="DISCONNECTED">Đã ngắt kết nối</string>
+    <string name="BUSERROR">Lỗi BUS</string>
+    <string name="DATAERROR">Lỗi DỮ LIỆU</string>
+    <string name="RXERROR">Lỗi RX</string>
+    <string name="ERROR">Lỗi</string>
+    <string name="obd_error">Lỗi giao thức OBD</string>
+    <string name="copied_to_clipboard">Đã sao chép vào bảng tạm</string>
+    <string name="select_ecu_addr">Chọn địa chỉ ECU …</string>
+    <string name="none_found">Không tìm thấy thiết bị</string>
+    <string name="metric">đơn vị mét</string>
+    <string name="imperial">đơn vị Anh</string>
+    <string name="demo_stopped">Chế độ DEMO đã dừng</string>
+    <string name="demo_started">Chế độ DEMO đã bắt đầu</string>
+    <string name="demo">Demo…</string>
+    <string name="title_connected_to">Kết nối với %s</string>
+    <string name="obd_clearcodes">Xóa mã lỗi</string>
+    <string name="obd_clear_info">
+Điều này sẽ đặt lại MIL và xóa tất cả thông tin chẩn đoán liên quan đến khí thải bao gồm:\n
+ - Mã lỗi chẩn đoán\n
+ - Dữ liệu khung hình đông lạnh\n
+ - Dữ liệu kiểm tra cảm biến oxy\n
+ - Trạng thái của các bài kiểm tra giám sát hệ thống\n
+ - Kết quả của các bài kiểm tra giám sát trên xe\n
+ - Khoảng cách đã đi được khi MIL hoạt động\n
+ - Số lần khởi động lại kể từ khi xóa DTC\n
+ - Khoảng cách đã đi kể từ khi xóa DTC\n
+ - Thời gian động cơ hoạt động khi MIL hoạt động\n
+ - Thời gian kể từ khi xóa DTC\n\n
+Các hành động xóa/reset khác có thể xảy ra tùy thuộc vào nhà sản xuất.\n
+Việc mất dữ liệu có thể khiến xe hoạt động kém trong một thời gian ngắn trong khi ECU tự hiệu chỉnh.
+</string>
+    <string name="obd_test_confirm">Yêu cầu kiểm tra OBD.\n\n
+        Kiểm tra OBD yêu cầu có thể tạo ra:\n
+        - Chuyển động của xe\n
+        - Khói thải\n
+        - Nhiệt độ ống xả cao\n
+        - Tiếng động cơ to\n
+        - Hơi nhiên liệu\n
+        - v.v.\n\n
+        Vui lòng xác nhận để thực hiện kiểm tra này trên nguy cơ của riêng bạn trong môi trường kiểm tra an toàn!
+</string>
+    <string name="obd_test_progress">Đang tiến hành kiểm tra OBD.\n
+        Vui lòng kiểm tra phản ứng của xe.</string>
+    <string name="none_paired">Chưa có thiết bị nào được ghép nối</string>
+
+    <string name="connectionlost">Kết nối thiết bị đã bị mất</string>
+    <string name="english">Tiếng Anh</string>
+    <string name="afrikaans_afrikaans">Afrikaans (Afrikaans)</string>
+    <string name="arabic">Tiếng Ả Rập (عربي)</string>
+    <string name="chinese">Tiếng Trung (中国人)</string>
+    <string name="czech_e_tina">Tiếng Séc (čeština)</string>
+    <string name="danish_dansk">Tiếng Đan Mạch (dansk)</string>
+    <string name="dutch_nederlands">Tiếng Hà Lan (Nederlands)</string>
+    <string name="french_fran_ais">Tiếng Pháp (Français)</string>
+    <string name="german_deutsch">Tiếng Đức (Deutsch)</string>
+    <string name="greek">Tiếng Hy Lạp (ελληνικά)</string>
+    <string name="hindi">Tiếng Hindi (हिंदी)</string>
+    <string name="indonesian_indonesia">Tiếng Indonesia (Indonesia)</string>
+    <string name="italian_italiano">Tiếng Ý (Italiano)</string>
+    <string name="japanese">Tiếng Nhật (日本語)</string>
+    <string name="korean">Tiếng Hàn (한국인)</string>
+    <string name="malay_melayu">Tiếng Mã Lai (Melayu)</string>
+    <string name="norwegian_norsk">Tiếng Na Uy (norsk)</string>
+    <string name="russian">Tiếng Nga (Русский)</string>
+    <string name="portugues_portugu_s">Tiếng Bồ Đào Nha (Português)</string>
+    <string name="persian">Tiếng Ba Tư (فارسی)</string>
+    <string name="spanish_espa_ol">Tiếng Tây Ban Nha (Español)</string>
+    <string name="thai">Tiếng Thái (แบบไทย)</string>
+    <string name="turkish_t_rk_e">Tiếng Thổ Nhĩ Kỳ (Türkçe)</string>
+    <string name="urdu">Tiếng Urdu (اردو)</string>
+    <string name="vietnamese_ti_ng_vi_t">Tiếng Việt (Tiếng Việt)</string>
+    <string name="languages">Ngôn ngữ</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="faults">Lỗi</string>
+    <string name="help">Trợ giúp</string>
+    <string name="realtime">Thời gian thực</string>
+    <string name="all_sensors">Tất cả cảm biến</string>
+
+</resources>

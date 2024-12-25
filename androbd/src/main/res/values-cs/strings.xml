@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  AndrOBD -->
+    <string name="app_name" translatable="false">Car Doctor</string>
+    <string name="privacy_link" translatable="false">http://privacypolicyrangersaround.blogspot.com/2018/05/privacy-policy.html</string>
+    <string name="terms_link" translatable="false">https://zawajulshariaprivacypolicy.blogspot.com/2024/08/terms-of-use.html</string>
+
+    <string name="welcome_to">VÍTEJTE V</string>
+    <string name="let_s_go">Pojďme</string>
+    <string name="scan_diagnose_and_fix_issues">Skenování, Diagnostika a Oprava Problémů</string>
+    <string name="car_doctor">Auto Doktor</string>
+    <string name="bluetooth_pairing">Párování Bluetooth</string>
+
+    <string-array name="speedTestRangeValues">
+        <item>0</item>
+        <item>100</item>
+        <item>200</item>
+        <item>300</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>5000</item>
+    </string-array>
+
+    <string-array name="elmcomm_states" translatable="false">
+        <item>@string/UNDEFINED</item>
+        <item>@string/INITIALIZING</item>
+        <item>@string/INITIALIZED</item>
+        <item>@string/ECU_DETECT</item>
+        <item>@string/ECU_DETECTED</item>
+        <item>@string/CONNECTING</item>
+        <item>@string/CONNECTED</item>
+        <item>@string/NODATA</item>
+        <item>@string/STOPPED</item>
+        <item>@string/DISCONNECTED</item>
+        <item>@string/BUSERROR</item>
+        <item>@string/DATAERROR</item>
+        <item>@string/RXERROR</item>
+        <item>@string/ERROR</item>
+    </string-array>
+
+    <string-array name="measure_options" translatable="false">
+        <item>@string/metric</item>
+        <item>@string/imperial</item>
+    </string-array>
+    <string-array name="measure_option_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string name="title_pref_bluetooth" translatable="false">Bluetooth</string>
+    <string name="title_pref_gps" translatable="false">GPS</string>
+    <string name="status_obd_no_support">N/A</string>
+    <string name="pref_bluetooth_title">Povolit Bluetooth</string>
+    <string name="pref_bluetooth_summaryOff">Zapněte Bluetooth</string>
+    <string name="pref_bluetooth_summaryOn">Vypněte Bluetooth</string>
+    <string name="pref_bluetooth_list_devices_summary">Seznam spárovaných bluetooth zařízení.</string>
+    <string name="pref_bluetooth_list_devices_title">Zařízení Bluetooth</string>
+    <string name="pref_gps_category_title">Povolit GPS</string>
+    <string name="pref_gps_category_summaryOff">Zapněte GPS</string>
+    <string name="pref_gps_category_summaryOn">Vypněte GPS</string>
+    <string name="pref_gps_update_period_title">Interval aktualizace v sekundách</string>
+    <string name="pref_gps_update_period_summary">Délka času mezi dotazy na novou pozici v sekundách</string>
+    <string name="pref_gps_distance_period_title">Interval aktualizace v metrech</string>
+    <string name="pref_gps_distance_period_summary">Minimální vzdálenost mezi aktualizacemi polohy v metrech</string>
+    <string name="default_dirname_full_logging">OBDReaderLogs</string>
+    <string name="text_noerrors">Nebyl nalezen žádný chyby!</string>
+    <string name="pref_gps_category" translatable="false">gps_category</string>
+    <string name="base64key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq/BikXyTp4nSCT74OEPQXnOSJw6Sa4OozMB0vmQQBGsx4r/KGQ9J0V26ti5ObtTSUeyLWaytebpuxpv++kf8P9GDeLc+QvniNfXjFH6QEQJ+sz1tSZVJir3StfWbRKqwzG39vEb4mqPNh8VpMFI5MWoNXJFi8Bcxv/ad94Uz8jUiolrwCR6oWNCU5wrkZGUZAi0ToWbGOlN7FZ55ACJ5T3J2le25ydtpbRvRkoTMFwF30seuGn/C3ghvQTNVAe7Oh3QMJ/DcWjhxD090NaKVBdhtJPn5R2as5At7/a1jb+FUNbzrDBGcFnx5WJ3oEXoFZ1QX6KzA71z5ezT2kD7fvwIDAQAB</string>
+    <string name="Purchase_OK">OK</string>
+    <string name="Purchase_ERROR">CHYBA</string>
+    <string name="Purchase_PENDING">Nákup je v procesu. Dokončete transakci</string>
+    <string name="Purchase_INVALID">Chyba: Neplatný nákup</string>
+    <string name="Purchase_UNKNOWN">Stav nákupu neznámý</string>
+    <string name="Premium_User_Msg">Gratulujeme! Jste prémiový uživatel.</string>
+    <string name="Purchase_OK_Dialog_Msg">Nákup byl úspěšný!</string>
+    <string name="Purchase_OK_Dialog_Msg_Detail">Aplikace se nyní restartuje a zbavíte se reklam.</string>
+    <string name="exit_dialog_message">Ohodnoťte nás, pokud považujete tuto aplikaci za užitečnou, nebo stiskněte Ano pro ukončení.</string>
+    <string name="dialog_loading_title">Načítání…</string>
+    <string name="dialog_loading_body">Načítání zobrazení aplikace, prosím čekejte…</string>
+    <string name="text_bluetooth_nodevice">Žádné Bluetooth zařízení nebylo vybráno</string>
+    <string name="text_bluetooth_error_connecting">Nelze se připojit k zařízení Bluetooth!</string>
+    <string name="text_obd_command_failure">Chyba příkazu OBD!</string>
+    <string name="text_dtc_no_data">Žádná DTC uložena</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="paired_devices">Spárovaná zařízení</string>
+    <string name="available_devices">Dostupná zařízení</string>
+    <string name="turn_on_bluetooth_to_see_devices">Zapněte Bluetooth, abyste viděli zařízení</string>
+    <string name="bluetooth_is_off">Bluetooth je vypnutý</string>
+    <string name="refresh">Obnovit</string>
+    <string name="code_details">Detaily kódu</string>
+    <string name="code">Kód:</string>
+    <string name="solution">Řešení:</string>
+    <string name="cause">Příčina:</string>
+    <string name="symptoms">Příznaky:</string>
+    <string name="fault_codes">Kódy poruch</string>
+    <string name="search">Hledat</string>
+    <string name="obd_data">Data OBD</string>
+    <string name="no_data_found">Žádná data nenalezena</string>
+    <string name="please_wait">Prosím, čekejte.....</string>
+    <string name="go_to_premimum">Přejít na Premium</string>
+    <string name="lifetime">Doživotní</string>
+    <string name="unlimited_clear_mil">Neomezené Vymazání MIL</string>
+    <string name="unlimited_car_diagnose">Neomezená Diagnostika Vozidla</string>
+    <string name="unlimited_pro_features">Neomezené Pro Funkce</string>
+    <string name="cancel_subscription_at_least_24_hours_before_renewal">Zrušit předplatné nejméně 24 hodin před obnovou</string>
+    <string name="get_this_package">Získat tento balíček</string>
+    <string name="restore_purchases">Obnovit nákupy</string>
+    <string name="subscription_policy">Zásady předplatného</string>
+    <string name="billing_begins_when_you_opt_for_a_subscription_user_can_cancel_subscription_within_24_hours_of_purchase_monthly_subscription_will_automatically_renews_until_user_cancel_it_user_can_cancel_any_time_in_google_account">Účtování začíná, když si vyberete předplatné. Uživatel může zrušit předplatné do 24 hodin od nákupu. Měsíční předplatné se automaticky obnovuje, dokud jej uživatel nezruší. Uživatel může zrušit kdykoli v Google účtu.</string>
+    <string name="privacy_policy">Zásady ochrany osobních údajů</string>
+    <string name="terms_of_use">Podmínky použití</string>
+    <string name="real_time">Skutečný čas</string>
+    <string name="colent">Kolent</string>
+    <string name="air_intake_c">Nasávání vzduchu \'C\'</string>
+    <string name="engine_load">Zátěž motoru</string>
+    <string name="abs_load">Zátěž ABS</string>
+    <string name="throttle">Hladina</string>
+    <string name="fuel_pressure">Tlak paliva</string>
+    <string name="mass_air_flow_g_s">Hmotnostní průtok vzduchu \'g/s\'</string>
+    <string name="air_fuel_ratio">Poměr vzduch/palivo</string>
+    <string name="barometric_pressure_psi">Barometrický tlak \'psi\'</string>
+    <string name="troubles">problémy....</string>
+    <string name="clear">Vymazat</string>
+    <string name="no_fault_found">Žádná závada nenalezena</string>
+    <string name="setting">Nastavení</string>
+    <string name="adapter_type">Typ adaptéru</string>
+    <string name="connect_via_bluetooth">Připojit přes Bluetooth</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="connect_via_wi_fi">Připojit přes Wi-Fi</string>
+    <string name="theme">Téma</string>
+    <string name="light_mode">Světelný režim</string>
+    <string name="switch_to_light_mode">Přepnout na světelný režim</string>
+    <string name="dark_mode">Tmavý režim</string>
+    <string name="switch_to_dark_mode">Přepnout na tmavý režim</string>
+    <string name="connectivity">Konektivita</string>
+    <string name="share">Sdílet</string>
+    <string name="share_with_friends">Sdílet s přáteli</string>
+    <string name="rate">Ohodnotit</string>
+    <string name="share_your_valuable_feedback">Sdílet vaše cenné názory</string>
+    <string name="more">Více</string>
+    <string name="see_more_apps">Podívejte se na další aplikace</string>
+    <string name="car_doctor_scanning_diagnosing_treatment">Auto Doktor - Skenování|Diagnostika|Léčba</string>
+    <string name="scanning">Skenování</string>
+    <string name="disconnect">Odpojit</string>
+    <string name="connect">Připojit</string>
+    <string name="disconnected">Odpojeno</string>
+    <string name="connecting">Připojuji…..</string>
+    <string name="saved_data">Uložit data</string>
+    <string name="connected_to">Připojeno k</string>
+    <string name="unabletoconnect">Nelze se připojit</string>
+    <string name="UNDEFINED">Nedefinováno</string>
+    <string name="INITIALIZING">Inicializace…</string>
+    <string name="INITIALIZED">Inicializováno</string>
+    <string name="ECU_DETECT">Detekce ECU…</string>
+    <string name="ECU_DETECTED">ECU detekováno</string>
+    <string name="CONNECTING">Připojuji…</string>
+    <string name="CONNECTED">Připojeno</string>
+    <string name="NODATA">Žádná data</string>
+    <string name="STOPPED">Zastaveno</string>
+    <string name="DISCONNECTED">Odpojeno</string>
+    <string name="BUSERROR">Chyba BUS</string>
+    <string name="DATAERROR">Chyba DATA</string>
+    <string name="RXERROR">Chyba RX</string>
+    <string name="ERROR">Chyba</string>
+    <string name="obd_error">Chyba protokolu OBD</string>
+    <string name="copied_to_clipboard">Kopírováno do schránky</string>
+    <string name="select_ecu_addr">Vyberte adresu ECU …</string>
+    <string name="none_found">Žádná zařízení nenalezena</string>
+    <string name="metric">metrický</string>
+    <string name="imperial">imperiální</string>
+    <string name="demo_stopped">DEMO režim zastaven</string>
+    <string name="demo_started">DEMO režim spuštěn</string>
+    <string name="demo">Demo…</string>
+    <string name="title_connected_to">Připojeno k %s</string>
+    <string name="obd_clearcodes">Vymazat kódy poruch</string>
+    <string name="obd_clear_info">
+    Toto vyresetuje MIL a vymaže všechny diagnostické informace související s emisemi, včetně:\n
+     - Kódy diagnostických poruch\n
+     - Údaje z mraženého snímku\n
+     - Údaje o testu kyslíkového senzoru\n
+     - Stav systémových monitorovacích testů\n
+     - Výsledky palubních monitorovacích testů\n
+     - Ujetá vzdálenost při aktivovaném MIL\n
+     - Počet ohřevů od vymazání DTC\n
+     - Ujetá vzdálenost od vymazání DTC\n
+     - Doba chodu motoru při aktivovaném MIL\n
+     - Čas od vymazání DTC\n\n
+    Mohou se objevit další akce specifické pro výrobce při vymazání/resetování.\n
+    Ztráta dat může způsobit, že vozidlo bude krátkou dobu fungovat špatně, zatímco se ECU přenastavuje.
+    </string>
+    <string name="obd_test_confirm">Bylo požádáno o kontrolu OBD testu.\n\n
+        Požadovaná kontrola OBD testu může způsobit:\n
+        - Pohyb vozidla\n
+        - Kouř z výfuku\n
+        - Vysokou teplotu výfuku\n
+        - Hlučný hluk motoru\n
+        - Páru paliva\n
+        - atd.\n\n
+        Potvrďte, že provedete tuto testovací kontrolu na vlastní riziko pouze v bezpečném testovacím prostředí!
+    </string>
+    <string name="obd_test_progress">Probíhá kontrola OBD testu.\n
+        Zkontrolujte reakci vozidla.</string>
+    <string name="none_paired">Žádná zařízení spárována</string>
+    <string name="connectionlost">Spojení s zařízením bylo ztraceno</string>
+    <string name="english">Angličtina</string>
+    <string name="afrikaans_afrikaans">Afrikaans (Afrikaans)</string>
+    <string name="arabic">Arabština (عربي)</string>
+    <string name="chinese">Čínština (中国人)</string>
+    <string name="czech_e_tina">Čeština (čeština)</string>
+    <string name="danish_dansk">Dánština (dansk)</string>
+    <string name="dutch_nederlands">Nizozemština (Nederlands)</string>
+    <string name="french_fran_ais">Francouzština (Français)</string>
+    <string name="german_deutsch">Němčina (Deutsch)</string>
+    <string name="greek">Řečtina (ελληνικά)</string>
+    <string name="hindi">Hindština (हिंदी)</string>
+    <string name="indonesian_indonesia">Indonéština (Indonesia)</string>
+    <string name="italian_italiano">Italština (Italiano)</string>
+    <string name="japanese">Japonština (日本語)</string>
+    <string name="korean">Korejština (한국인)</string>
+    <string name="malay_melayu">Malajština (Melayu)</string>
+    <string name="norwegian_norsk">Norština (norsk)</string>
+    <string name="russian">Ruština (Русский)</string>
+    <string name="portugues_portugu_s">Portugalština (Português)</string>
+    <string name="persian">Perština (فارسی)</string>
+    <string name="spanish_espa_ol">Španělština (Español)</string>
+    <string name="thai">Thajština (แบบไทย)</string>
+    <string name="turkish_t_rk_e">Turečtina (Türkçe)</string>
+    <string name="urdu">Urdu (اردو)</string>
+    <string name="vietnamese_ti_ng_vi_t">Vietnamština (Tiếng Việt)</string>
+    <string name="languages">Jazyky</string>
+    <string name="language">Jazyk</string>
+    <string name="faults">Chyby</string>
+    <string name="help">Pomoc</string>
+    <string name="realtime">Reálný čas</string>
+    <string name="all_sensors">Všechny senzory</string>
+</resources>

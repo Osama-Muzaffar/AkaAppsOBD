@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  AndrOBD -->
+    <string name="app_name" translatable="false">Car Doctor</string>
+    <string name="privacy_link" translatable="false">http://privacypolicyrangersaround.blogspot.com/2018/05/privacy-policy.html</string>
+    <string name="terms_link" translatable="false">https://zawajulshariaprivacypolicy.blogspot.com/2024/08/terms-of-use.html</string>
+
+    <string name="welcome_to">BENVENUTO A</string>
+    <string name="let_s_go">Andiamo</string>
+    <string name="scan_diagnose_and_fix_issues">Scansiona, Diagnostica e Risolvi Problemi</string>
+    <string name="car_doctor">Dottore dell\'Auto</string>
+    <string name="bluetooth_pairing">Abbinamento Bluetooth</string>
+
+    <string-array name="speedTestRangeValues">
+        <item>0</item>
+        <item>100</item>
+        <item>200</item>
+        <item>300</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>5000</item>
+    </string-array>
+
+    <string-array name="elmcomm_states" translatable="false">
+        <item>@string/UNDEFINED</item>
+        <item>@string/INITIALIZING</item>
+        <item>@string/INITIALIZED</item>
+        <item>@string/ECU_DETECT</item>
+        <item>@string/ECU_DETECTED</item>
+        <item>@string/CONNECTING</item>
+        <item>@string/CONNECTED</item>
+        <item>@string/NODATA</item>
+        <item>@string/STOPPED</item>
+        <item>@string/DISCONNECTED</item>
+        <item>@string/BUSERROR</item>
+        <item>@string/DATAERROR</item>
+        <item>@string/RXERROR</item>
+        <item>@string/ERROR</item>
+    </string-array>
+
+    <string-array name="measure_options" translatable="false">
+        <item>@string/metric</item>
+        <item>@string/imperial</item>
+    </string-array>
+    <string-array name="measure_option_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string name="title_pref_bluetooth" translatable="false">Bluetooth</string>
+    <string name="title_pref_gps" translatable="false">GPS</string>
+    <string name="status_obd_no_support">NA</string>
+    <string name="pref_bluetooth_title">Abilita Bluetooth</string>
+    <string name="pref_bluetooth_summaryOff">Accendi Bluetooth</string>
+    <string name="pref_bluetooth_summaryOn">Spegni Bluetooth</string>
+    <string name="pref_bluetooth_list_devices_summary">Elenco dei dispositivi Bluetooth abbinati.</string>
+    <string name="pref_bluetooth_list_devices_title">Dispositivi Bluetooth</string>
+    <string name="pref_gps_category_title">Abilita GPS</string>
+    <string name="pref_gps_category_summaryOff">Accendi GPS</string>
+    <string name="pref_gps_category_summaryOn">Spegni GPS</string>
+    <string name="pref_gps_update_period_title">Periodo di Aggiornamento in Secondi</string>
+    <string name="pref_gps_update_period_summary">La durata tra le nuove interrogazioni di posizione in secondi</string>
+    <string name="pref_gps_distance_period_title">Periodo di Aggiornamento in Metri</string>
+    <string name="pref_gps_distance_period_summary">Distanza minima tra gli aggiornamenti della posizione, in metri</string>
+    <string name="default_dirname_full_logging">OBDReaderLogs</string>
+    <string name="text_noerrors">Non sono stati trovati errori!</string>
+    <string name="pref_gps_category" translatable="false">gps_category</string>
+    <string name="base64key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq/BikXyTp4nSCT74OEPQXnOSJw6Sa4OozMB0vmQQBGsx4r/KGQ9J0V26ti5ObtTSUeyLWaytebpuxpv++kf8P9GDeLc+QvniNfXjFH6QEQJ+sz1tSZVJir3StfWbRKqwzG39vEb4mqPNh8VpMFI5MWoNXJFi8Bcxv/ad94Uz8jUiolrwCR6oWNCU5wrkZGUZAi0ToWbGOlN7FZ55ACJ5T3J2le25ydtpbRvRkoTMFwF30seuGn/C3ghvQTNVAe7Oh3QMJ/DcWjhxD090NaKVBdhtJPn5R2as5At7/a1jb+FUNbzrDBGcFnx5WJ3oEXoFZ1QX6KzA71z5ezT2kD7fvwIDAQAB</string>
+    <string name="Purchase_OK">OK</string>
+    <string name="Purchase_ERROR">ERRORE</string>
+    <string name="Purchase_PENDING">Acquisto in attesa. Completa la transazione per favore</string>
+    <string name="Purchase_INVALID">Errore: Acquisto non valido</string>
+    <string name="Purchase_UNKNOWN">Stato dell\'acquisto sconosciuto</string>
+    <string name="Premium_User_Msg">Complimenti! Sei un utente premium.</string>
+    <string name="Purchase_OK_Dialog_Msg">Acquisto riuscito!</string>
+    <string name="Purchase_OK_Dialog_Msg_Detail">Ora l\'app verrà riavviata e non vedrai più annunci.</string>
+    <string name="exit_dialog_message">Per favore, valutaci se trovi utile questa app o premi Sì per uscire.</string>
+    <string name="dialog_loading_title">Caricamento…</string>
+    <string name="dialog_loading_body">Caricamento della visualizzazione dell\'app, attendere per favore…</string>
+    <string name="text_bluetooth_nodevice">Nessun dispositivo Bluetooth selezionato</string>
+    <string name="text_bluetooth_error_connecting">Impossibile connettersi al dispositivo Bluetooth!</string>
+    <string name="text_obd_command_failure">Errore del comando OBD!</string>
+    <string name="text_dtc_no_data">Nessun DTC memorizzato</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="paired_devices">Dispositivi Abbinati</string>
+    <string name="available_devices">Dispositivi Disponibili</string>
+    <string name="turn_on_bluetooth_to_see_devices">Accendi Bluetooth per vedere i dispositivi</string>
+    <string name="bluetooth_is_off">Bluetooth è spento</string>
+    <string name="refresh">Aggiorna</string>
+    <string name="code_details">Dettagli Codice</string>
+    <string name="code">Codice:</string>
+    <string name="solution">Soluzione:</string>
+    <string name="cause">Causa:</string>
+    <string name="symptoms">Sintomi:</string>
+    <string name="fault_codes">Codici di Guasto</string>
+    <string name="search">Cerca</string>
+    <string name="obd_data">Dati OBD</string>
+    <string name="no_data_found">Nessun Dato Trovato</string>
+    <string name="please_wait">Per favore, attendi.....</string>
+    <string name="go_to_premimum">Vai a Premium</string>
+    <string name="lifetime">A vita</string>
+    <string name="unlimited_clear_mil">Cancella MIL illimitato</string>
+    <string name="unlimited_car_diagnose">Diagnosi Auto Illimitata</string>
+    <string name="unlimited_pro_features">Funzionalità Pro Illimitate</string>
+    <string name="cancel_subscription_at_least_24_hours_before_renewal">Annulla l\'abbonamento almeno 24 ore prima del rinnovo</string>
+    <string name="get_this_package">Acquista questo pacchetto</string>
+    <string name="restore_purchases">Ripristina Acquisti</string>
+    <string name="subscription_policy">Politica di Abbonamento</string>
+    <string name="billing_begins_when_you_opt_for_a_subscription_user_can_cancel_subscription_within_24_hours_of_purchase_monthly_subscription_will_automatically_renews_until_user_cancel_it_user_can_cancel_any_time_in_google_account">La fatturazione inizia quando scegli un abbonamento. L\'utente può annullare l\'abbonamento entro 24 ore dall\'acquisto. L\'abbonamento mensile verrà rinnovato automaticamente fino a quando l\'utente non lo annulla. L\'utente può annullare in qualsiasi momento nel proprio account Google.</string>
+    <string name="privacy_policy">Politica sulla Privacy</string>
+    <string name="terms_of_use">Termini di Utilizzo</string>
+    <string name="real_time">Tempo reale</string>
+    <string name="colent">Colent</string>
+    <string name="air_intake_c">Aspirazione Aria \'C\'</string>
+    <string name="engine_load">Carico Motore</string>
+    <string name="abs_load">Carico ABS</string>
+    <string name="throttle">Aceleratore</string>
+    <string name="fuel_pressure">Pressione del Combustibile</string>
+    <string name="mass_air_flow_g_s">Flusso d\'Aria \'g/s\'</string>
+    <string name="air_fuel_ratio">Rapporto Aria/Combustibile</string>
+    <string name="barometric_pressure_psi">Pressione Barometrica \'psi\'</string>
+    <string name="troubles">Problemi....</string>
+    <string name="clear">Cancella</string>
+    <string name="no_fault_found">Nessun Guasto Trovato</string>
+    <string name="setting">Impostazioni</string>
+    <string name="adapter_type">Tipo di Adattatore</string>
+    <string name="connect_via_bluetooth">Collegati via Bluetooth</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="connect_via_wi_fi">Collegati via Wi-Fi</string>
+    <string name="theme">Tema</string>
+    <string name="light_mode">Modalità Chiara</string>
+    <string name="switch_to_light_mode">Passa alla modalità chiara</string>
+    <string name="dark_mode">Modalità Scura</string>
+    <string name="switch_to_dark_mode">Passa alla modalità scura</string>
+    <string name="connectivity">Connettività</string>
+    <string name="share">Condividi</string>
+    <string name="share_with_friends">Condividi con amici</string>
+    <string name="rate">Valuta</string>
+    <string name="share_your_valuable_feedback">Condividi il tuo prezioso feedback</string>
+    <string name="more">Altro</string>
+    <string name="see_more_apps">Vedi altre app</string>
+    <string name="car_doctor_scanning_diagnosing_treatment">Dottore dell\'Auto - Scansione|Diagnosi|Trattamento</string>
+    <string name="scanning">Scansione</string>
+    <string name="disconnect">Disconnetti</string>
+    <string name="connect">Collegati</string>
+    <string name="disconnected">Disconnesso</string>
+    <string name="connecting">Collegamento…..</string>
+    <string name="saved_data">Dati Salvati</string>
+    <string name="connected_to">Collegato a</string>
+    <string name="unabletoconnect">Impossibile Collegarsi</string>
+    <string name="UNDEFINED">Non Definito</string>
+    <string name="INITIALIZING">Inizializzazione…</string>
+    <string name="INITIALIZED">Inizializzato</string>
+    <string name="ECU_DETECT">Rilevamento ECU…</string>
+    <string name="ECU_DETECTED">ECU Rilevata</string>
+    <string name="CONNECTING">Collegamento…</string>
+    <string name="CONNECTED">Collegato</string>
+    <string name="NODATA">Nessun dato</string>
+    <string name="STOPPED">Fermato</string>
+    <string name="DISCONNECTED">Disconnesso</string>
+    <string name="BUSERROR">Errore BUS</string>
+    <string name="DATAERROR">Errore DATI</string>
+    <string name="RXERROR">Errore RX</string>
+    <string name="ERROR">Errore</string>
+    <string name="obd_error">Errore del protocollo OBD</string>
+    <string name="copied_to_clipboard">Copiato negli appunti</string>
+    <string name="select_ecu_addr">Seleziona indirizzo ECU …</string>
+    <string name="none_found">Nessun Dispositivo Trovato</string>
+    <string name="metric">metrico</string>
+    <string name="imperial">imperiale</string>
+    <string name="demo_stopped">Modalità DEMO fermata</string>
+    <string name="demo_started">Modalità DEMO avviata</string>
+    <string name="demo">Demo…</string>
+    <string name="title_connected_to">Collegato a %s</string>
+    <string name="obd_clearcodes">Cancella codici di guasto</string>
+    <string name="obd_clear_info">
+Questo ripristinerà il MIL e cancellerà tutte le informazioni diagnostiche relative alle emissioni\n
+inclusi:\n
+ - Codici di guasto diagnostici\n
+ - Dati del freeze frame\n
+ - Dati del test del sensore di ossigeno\n
+ - Stato dei test di monitoraggio del sistema\n
+ - Risultati dei test di monitoraggio a bordo\n
+ - Distanza percorsa mentre il MIL è attivato\n
+ - Numero di accensioni dal momento in cui i DTC sono stati cancellati\n
+ - Distanza percorsa dal momento in cui i DTC sono stati cancellati\n
+ - Tempo di funzionamento del motore mentre il MIL è attivato\n
+ - Tempo trascorso dall\'annullamento dei DTC\n\n
+Possono verificarsi altre azioni specifiche del produttore di cancellazione/reset.\n
+La perdita di dati potrebbe causare un funzionamento scadente del veicolo per un breve \n
+periodo di tempo mentre l\'ECU si ricalibra.
+</string>
+    <string name="obd_test_confirm">Controllo del test OBD richiesto.\n\n
+        Il controllo del test OBD richiesto potrebbe generare:\n
+        - Movimento del veicolo\n
+        - Fumi di scarico\n
+        - Alta temperatura di scarico\n
+        - Rumore forte del motore\n
+        - Vapori di carburante\n
+        - ecc.\n\n
+        Conferma per eseguire questo controllo del test a tuo rischio in un ambiente di test sicuro!
+</string>
+    <string name="obd_test_progress">Controllo del test OBD in corso.\n
+        Controlla la reazione del veicolo.</string>
+    <string name="none_paired">Nessun Dispositivo Associato</string>
+
+    <string name="connectionlost">Connessione del dispositivo persa</string>
+    <string name="english">Inglese</string>
+    <string name="afrikaans_afrikaans">Afrikaans (Afrikaans)</string>
+    <string name="arabic">Arabo (عربي)</string>
+    <string name="chinese">Cinese (中国人)</string>
+    <string name="czech_e_tina">Ceco (čeština)</string>
+    <string name="danish_dansk">Danese (dansk)</string>
+    <string name="dutch_nederlands">Olandese (Nederlands)</string>
+    <string name="french_fran_ais">Francese (Français)</string>
+    <string name="german_deutsch">Tedesco (Deutsch)</string>
+    <string name="greek">Greco (ελληνικά)</string>
+    <string name="hindi">Hindi (हिंदी)</string>
+    <string name="indonesian_indonesia">Indonesiano (Indonesia)</string>
+    <string name="italian_italiano">Italiano (Italiano)</string>
+    <string name="japanese">Giapponese (日本語)</string>
+    <string name="korean">Coreano (한국인)</string>
+    <string name="malay_melayu">Malese (Melayu)</string>
+    <string name="norwegian_norsk">Norvegese (norsk)</string>
+    <string name="russian">Russo (Русский)</string>
+    <string name="portugues_portugu_s">Portoghese (Português)</string>
+    <string name="persian">Persiano (فارسی)</string>
+    <string name="spanish_espa_ol">Spagnolo (Español)</string>
+    <string name="thai">Thai (แบบไทย)</string>
+    <string name="turkish_t_rk_e">Turco (Türkçe)</string>
+    <string name="urdu">Urdu (اردو)</string>
+    <string name="vietnamese_ti_ng_vi_t">Vietnamita (Tiếng Việt)</string>
+    <string name="languages">Lingue</string>
+    <string name="language">Lingua</string>
+    <string name="faults">Errori</string>
+    <string name="help">Aiuto</string>
+    <string name="realtime">Tempo reale</string>
+    <string name="all_sensors">Tutti i sensori</string>
+
+
+</resources>

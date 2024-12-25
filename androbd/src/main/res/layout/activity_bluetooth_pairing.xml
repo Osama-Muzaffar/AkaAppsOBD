@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    tools:context=".Activity.ConnectionPairingActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:layout_marginHorizontal="10sp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backimg"
+            android:layout_width="24sp"
+            android:layout_height="24sp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/bluetooth_pairing"
+            android:textColor="@color/main_purple"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20sp"
+        android:layout_marginTop="10sp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <TextView
+            android:id="@+id/conntectiontypetxt"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/bluetooth"
+            android:textColor="@color/main_purple"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/connectingswitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:thumb="@drawable/custom_thumb"
+            android:track="@drawable/custom_track"
+            app:thumbTint="@color/main_purple" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/mainscroll"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_marginHorizontal="20sp"
+                android:layout_marginTop="10sp"
+                android:background="@drawable/line_gradient"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+            <TextView
+                android:id="@+id/pairedtxt"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/paired_devices"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/pairedrecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/bluetooth_item"
+                android:layout_marginHorizontal="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pairedtxt" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_marginHorizontal="20sp"
+                android:layout_marginTop="10sp"
+                android:background="@drawable/line_gradient"
+                app:layout_constraintTop_toBottomOf="@+id/pairedrecycler"/>
+
+            <TextView
+                android:id="@+id/availabletxt"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:layout_marginStart="20sp"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/available_devices"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="10sp"
+                android:layout_marginEnd="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2">
+                <TextView
+                    android:id="@+id/refreshtxt"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/refresh"
+                    android:textColor="@color/main_purple"
+                    android:textSize="16sp" />
+
+                <ProgressBar
+                    android:id="@+id/scanningprogress"
+                    android:layout_width="24sp"
+                    android:layout_height="24sp"
+                    android:visibility="gone"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/main_purple"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/avialablerecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="30sp"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/bluetooth_item"
+                android:layout_marginHorizontal="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/availabletxt" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/offbluetoothlinear"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bluetooth_is_off"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:fontFamily="@font/roboto_medium"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/turn_on_bluetooth_to_see_devices"
+            android:layout_marginTop="5sp"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:fontFamily="@font/roboto_medium"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

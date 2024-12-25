@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  AndrOBD -->
+    <string name="app_name" translatable="false">Car Doctor</string>
+    <string name="privacy_link" translatable="false">http://privacypolicyrangersaround.blogspot.com/2018/05/privacy-policy.html</string>
+    <string name="terms_link" translatable="false">https://zawajulshariaprivacypolicy.blogspot.com/2024/08/terms-of-use.html</string>
+
+    <string name="welcome_to">欢迎来到</string>
+    <string name="let_s_go">开始</string>
+    <string name="scan_diagnose_and_fix_issues">扫描、诊断和修复问题</string>
+    <string name="car_doctor">汽车医生</string>
+    <string name="bluetooth_pairing">蓝牙配对</string>
+
+    <string-array name="speedTestRangeValues">
+        <item>0</item>
+        <item>100</item>
+        <item>200</item>
+        <item>300</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>5000</item>
+    </string-array>
+
+    <string-array name="elmcomm_states" translatable="false">
+        <item>@string/UNDEFINED</item>
+        <item>@string/INITIALIZING</item>
+        <item>@string/INITIALIZED</item>
+        <item>@string/ECU_DETECT</item>
+        <item>@string/ECU_DETECTED</item>
+        <item>@string/CONNECTING</item>
+        <item>@string/CONNECTED</item>
+        <item>@string/NODATA</item>
+        <item>@string/STOPPED</item>
+        <item>@string/DISCONNECTED</item>
+        <item>@string/BUSERROR</item>
+        <item>@string/DATAERROR</item>
+        <item>@string/RXERROR</item>
+        <item>@string/ERROR</item>
+    </string-array>
+
+    <string-array name="measure_options" translatable="false">
+        <item>@string/metric</item>
+        <item>@string/imperial</item>
+    </string-array>
+    <string-array name="measure_option_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string name="title_pref_bluetooth" translatable="false">蓝牙</string>
+    <string name="title_pref_gps" translatable="false">GPS</string>
+    <string name="status_obd_no_support">不支持</string>
+    <string name="pref_bluetooth_title">启用蓝牙</string>
+    <string name="pref_bluetooth_summaryOff">开启蓝牙</string>
+    <string name="pref_bluetooth_summaryOn">关闭蓝牙</string>
+    <string name="pref_bluetooth_list_devices_summary">已配对蓝牙设备列表。</string>
+    <string name="pref_bluetooth_list_devices_title">蓝牙设备</string>
+    <string name="pref_gps_category_title">启用 GPS</string>
+    <string name="pref_gps_category_summaryOff">开启 GPS</string>
+    <string name="pref_gps_category_summaryOn">关闭 GPS</string>
+    <string name="pref_gps_update_period_title">更新周期（秒）</string>
+    <string name="pref_gps_update_period_summary">查询新位置的时间间隔（秒）</string>
+    <string name="pref_gps_distance_period_title">更新周期（米）</string>
+    <string name="pref_gps_distance_period_summary">位置更新之间的最小距离（米）</string>
+    <string name="default_dirname_full_logging">OBDReaderLogs</string>
+    <string name="text_noerrors">没有发现错误！</string>
+    <string name="pref_gps_category" translatable="false">gps_category</string>
+    <string name="base64key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq/BikXyTp4nSCT74OEPQXnOSJw6Sa4OozMB0vmQQBGsx4r/KGQ9J0V26ti5ObtTSUeyLWaytebpuxpv++kf8P9GDeLc+QvniNfXjFH6QEQJ+sz1tSZVJir3StfWbRKqwzG39vEb4mqPNh8VpMFI5MWoNXJFi8Bcxv/ad94Uz8jUiolrwCR6oWNCU5wrkZGUZAi0ToWbGOlN7FZ55ACJ5T3J2le25ydtpbRvRkoTMFwF30seuGn/C3ghvQTNVAe7Oh3QMJ/DcWjhxD090NaKVBdhtJPn5R2as5At7/a1jb+FUNbzrDBGcFnx5WJ3oEXoFZ1QX6KzA71z5ezT2kD7fvwIDAQAB</string>
+    <string name="Purchase_OK">成功</string>
+    <string name="Purchase_ERROR">错误</string>
+    <string name="Purchase_PENDING">购买待处理。请完成交易</string>
+    <string name="Purchase_INVALID">错误：无效的购买</string>
+    <string name="Purchase_UNKNOWN">购买状态未知</string>
+    <string name="Premium_User_Msg">恭喜！你是高级用户。</string>
+    <string name="Purchase_OK_Dialog_Msg">购买成功！</string>
+    <string name="Purchase_OK_Dialog_Msg_Detail">应用将重新启动，你将不再看到广告。</string>
+    <string name="exit_dialog_message">如果你觉得这个应用有用，请给我们评分或按“是”退出。</string>
+    <string name="dialog_loading_title">加载中…</string>
+    <string name="dialog_loading_body">加载应用视图，请稍候…</string>
+    <string name="text_bluetooth_nodevice">未选择蓝牙设备</string>
+    <string name="text_bluetooth_error_connecting">无法连接到蓝牙设备！</string>
+    <string name="text_obd_command_failure">OBD命令失败！</string>
+    <string name="text_dtc_no_data">没有存储DTC</string>
+    <string name="bluetooth">蓝牙</string>
+    <string name="paired_devices">已配对设备</string>
+    <string name="available_devices">可用设备</string>
+    <string name="turn_on_bluetooth_to_see_devices">打开蓝牙以查看设备</string>
+    <string name="bluetooth_is_off">蓝牙已关闭</string>
+    <string name="refresh">刷新</string>
+    <string name="code_details">代码详情</string>
+    <string name="code">代码：</string>
+    <string name="solution">解决方案：</string>
+    <string name="cause">原因：</string>
+    <string name="symptoms">症状：</string>
+    <string name="fault_codes">故障代码</string>
+    <string name="search">搜索</string>
+    <string name="obd_data">OBD数据</string>
+    <string name="no_data_found">未找到数据</string>
+    <string name="please_wait">请稍候…..</string>
+    <string name="go_to_premimum">前往高级版</string>
+    <string name="lifetime">终身</string>
+    <string name="unlimited_clear_mil">无限次清除MIL</string>
+    <string name="unlimited_car_diagnose">无限次汽车诊断</string>
+    <string name="unlimited_pro_features">无限次专业功能</string>
+    <string name="cancel_subscription_at_least_24_hours_before_renewal">请在续订前至少24小时取消订阅</string>
+    <string name="get_this_package">获取此套餐</string>
+    <string name="restore_purchases">恢复购买</string>
+    <string name="subscription_policy">订阅政策</string>
+    <string name="billing_begins_when_you_opt_for_a_subscription_user_can_cancel_subscription_within_24_hours_of_purchase_monthly_subscription_will_automatically_renews_until_user_cancel_it_user_can_cancel_any_time_in_google_account">计费在您选择订阅时开始，用户可以在购买后24小时内取消订阅，月度订阅将自动续订，直到用户取消。用户可以随时在Google账户中取消。</string>
+    <string name="privacy_policy">隐私政策</string>
+    <string name="terms_of_use">使用条款</string>
+    <string name="real_time">实时</string>
+    <string name="colent">冷却液</string>
+    <string name="air_intake_c">空气进气\'C\'</string>
+    <string name="engine_load">发动机负荷</string>
+    <string name="abs_load">ABS负荷</string>
+    <string name="throttle">节气门</string>
+    <string name="fuel_pressure">燃油压力</string>
+    <string name="mass_air_flow_g_s">空气流量 \'g/s\'</string>
+    <string name="air_fuel_ratio">空气/燃油比</string>
+    <string name="barometric_pressure_psi">气压 \'psi\'</string>
+    <string name="troubles">故障....</string>
+    <string name="clear">清除</string>
+    <string name="no_fault_found">未发现故障</string>
+    <string name="setting">设置</string>
+    <string name="adapter_type">适配器类型</string>
+    <string name="connect_via_bluetooth">通过蓝牙连接</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="connect_via_wi_fi">通过Wi-Fi连接</string>
+    <string name="theme">主题</string>
+    <string name="light_mode">明亮模式</string>
+    <string name="switch_to_light_mode">切换到明亮模式</string>
+    <string name="dark_mode">暗黑模式</string>
+    <string name="switch_to_dark_mode">切换到暗黑模式</string>
+    <string name="connectivity">连接性</string>
+    <string name="share">分享</string>
+    <string name="share_with_friends">与朋友分享</string>
+    <string name="rate">评分</string>
+    <string name="share_your_valuable_feedback">分享您的宝贵反馈</string>
+    <string name="more">更多</string>
+    <string name="see_more_apps">查看更多应用</string>
+    <string name="car_doctor_scanning_diagnosing_treatment">汽车医生 - 扫描|诊断|处理</string>
+    <string name="scanning">扫描中</string>
+    <string name="disconnect">断开连接</string>
+    <string name="connect">连接</string>
+    <string name="disconnected">已断开连接</string>
+    <string name="connecting">连接中…..</string>
+    <string name="saved_data">保存数据</string>
+    <string name="connected_to">已连接到</string>
+    <string name="unabletoconnect">无法连接</string>
+    <string name="UNDEFINED">未定义</string>
+    <string name="INITIALIZING">初始化中…</string>
+    <string name="INITIALIZED">已初始化</string>
+    <string name="ECU_DETECT">ECU检测中…</string>
+    <string name="ECU_DETECTED">检测到ECU</string>
+    <string name="CONNECTING">连接中…</string>
+    <string name="CONNECTED">已连接</string>
+    <string name="NODATA">无数据</string>
+    <string name="STOPPED">已停止</string>
+    <string name="DISCONNECTED">已断开连接</string>
+    <string name="BUSERROR">总线错误</string>
+    <string name="DATAERROR">数据错误</string>
+    <string name="RXERROR">接收错误</string>
+    <string name="ERROR">错误</string>
+    <string name="obd_error">OBD协议错误</string>
+    <string name="copied_to_clipboard">已复制到剪贴板</string>
+    <string name="select_ecu_addr">选择ECU地址 …</string>
+    <string name="none_found">未找到设备</string>
+    <string name="metric">公制</string>
+    <string name="imperial">英制</string>
+    <string name="demo_stopped">演示模式已停止</string>
+    <string name="demo_started">演示模式已开始</string>
+    <string name="demo">演示…</string>
+    <string name="title_connected_to">已连接 %s</string>
+    <string name="obd_clearcodes">清除故障代码</string>
+    <string name="obd_clear_info">这将重置MIL并清除所有与排放相关的诊断信息，包括：\n
+ - 诊断故障代码\n
+ - 冻结帧数据\n
+ - 氧传感器测试数据\n
+ - 系统监控测试状态\n
+ - 车载监控测试结果\n
+ - MIL激活时的行驶距离\n
+ - 自DTC清除以来的加热次数\n
+ - 自DTC清除以来的行驶距离\n
+ - MIL激活时的发动机运行时间\n
+ - 自DTC清除以来的时间\n\n
+其他特定于制造商的清除/重置操作可能会发生。\n
+数据丢失可能会导致车辆在短时间内运行不正常，直到ECU重新校准。</string>
+    <string name="obd_test_confirm">请求了OBD测试控制。\n\n
+        请求的OBD测试控制可能会产生：\n
+        - 车辆运动\n
+        - 排气烟雾\n
+        - 高排气温度\n
+        - 大声的发动机噪音\n
+        - 燃油蒸汽\n
+        - 等等。\n\n
+        请确认在安全的测试环境中自行承担风险执行此测试控制！</string>
+    <string name="obd_test_progress">OBD测试控制正在进行中。\n请检查车辆反应。</string>
+    <string name="none_paired">未配对设备</string>
+    <string name="connectionlost">设备连接丢失</string>
+    <string name="english">英语</string>
+    <string name="afrikaans_afrikaans">南非荷兰语 (Afrikaans)</string>
+    <string name="arabic">阿拉伯语 (عربي)</string>
+    <string name="chinese">中文 (中国人)</string>
+    <string name="czech_e_tina">捷克语 (čeština)</string>
+    <string name="danish_dansk">丹麦语 (dansk)</string>
+    <string name="dutch_nederlands">荷兰语 (Nederlands)</string>
+    <string name="french_fran_ais">法语 (Français)</string>
+    <string name="german_deutsch">德语 (Deutsch)</string>
+    <string name="greek">希腊语 (ελληνικά)</string>
+    <string name="hindi">印地语 (हिंदी)</string>
+    <string name="indonesian_indonesia">印尼语 (Indonesia)</string>
+    <string name="italian_italiano">意大利语 (Italiano)</string>
+    <string name="japanese">日语 (日本語)</string>
+    <string name="korean">韩语 (한국인)</string>
+    <string name="malay_melayu">马来语 (Melayu)</string>
+    <string name="norwegian_norsk">挪威语 (norsk)</string>
+    <string name="russian">俄语 (Русский)</string>
+    <string name="portugues_portugu_s">葡萄牙语 (Português)</string>
+    <string name="persian">波斯语 (فارسی)</string>
+    <string name="spanish_espa_ol">西班牙语 (Español)</string>
+    <string name="thai">泰语 (แบบไทย)</string>
+    <string name="turkish_t_rk_e">土耳其语 (Türkçe)</string>
+    <string name="urdu">乌尔都语 (اردو)</string>
+    <string name="vietnamese_ti_ng_vi_t">越南语 (Tiếng Việt)</string>
+    <string name="languages">语言</string>
+    <string name="language">语言</string>
+    <string name="faults">错误</string>
+    <string name="help">帮助</string>
+    <string name="realtime">实时</string>
+    <string name="all_sensors">所有传感器</string>
+</resources>

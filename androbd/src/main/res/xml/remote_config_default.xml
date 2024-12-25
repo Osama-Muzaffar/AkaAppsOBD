@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<defaultsMap>
+<!--    <entry>-->
+<!--        <key>main_native</key>-->
+<!--        <value>true</value>-->
+<!--    </entry>-->
+    <entry>
+        <key>setting_native</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>language_native</key>
+        <value>true</value>
+    </entry>
+</defaultsMap>
