@@ -32,6 +32,7 @@ class SelectLanguageActivity : AppCompatActivity() {
     lateinit var LanguageList: ArrayList<LanguageModel>
     var selectedLanguageModel= LanguageModel("GB","English","en",false)
     lateinit var prefs: SharedPreferencesHelper
+    lateinit var nativeBannerFull: NativeBannerFull
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 //        enableEdgeToEdge()
@@ -42,6 +43,10 @@ class SelectLanguageActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        binding.backrelative.setOnClickListener {
+            finish()
         }
         prefs= SharedPreferencesHelper(this)
         changeStatusBarColorFromResource(R.color.unchange_black)
@@ -62,9 +67,9 @@ class SelectLanguageActivity : AppCompatActivity() {
 
                 if(adsConfig !=null) {
                     if(adsConfig!!.language_native){
-                        val nativeBannerFull = findViewById<NativeBannerFull>(R.id.nativefull)
+                        nativeBannerFull = findViewById<NativeBannerFull>(R.id.nativefull)
                         nativeBannerFull.visibility=View.VISIBLE
-                        nativeBannerFull.loadNativeBannerAd(this@SelectLanguageActivity,BuildConfig.admob_native)
+                        nativeBannerFull.loadMultipleNativeAds(this@SelectLanguageActivity,BuildConfig.admob_native,3)
                     }
                     else if(adsConfig!!.language_banner_simple && adsConfig!!.language_banner_collapsible) {
                         val bannerview = findViewById<BannerAdView>(R.id.banneradsview)
@@ -116,9 +121,9 @@ class SelectLanguageActivity : AppCompatActivity() {
 
                 if(adsConfig !=null) {
                     if(adsConfig!!.language_native){
-                        val nativeBannerFull = findViewById<NativeBannerFull>(R.id.nativefull)
+                        nativeBannerFull = findViewById<NativeBannerFull>(R.id.nativefull)
                         nativeBannerFull.visibility=View.VISIBLE
-                        nativeBannerFull.loadNativeBannerAd(this@SelectLanguageActivity,BuildConfig.admob_native)
+                        nativeBannerFull.loadMultipleNativeAds(this@SelectLanguageActivity,BuildConfig.admob_native,3)
                     }
                     else if(adsConfig!!.language_banner_simple && adsConfig!!.language_banner_collapsible) {
                         val bannerview = findViewById<BannerAdView>(R.id.banneradsview)
@@ -200,12 +205,17 @@ class SelectLanguageActivity : AppCompatActivity() {
 
 
         var languageAdapter= LanguageAdapter(this, languageList = LanguageList){
-//            nativefull.loadNativeBannerAd(this,BuildConfig.admob_native)
+//            nativefull.loadNativeBannerAd(this,BuildConfig.admob_native){
+            adsConfig?.let {
+                if(it.language_native){
+                    nativeBannerFull.displayNextAd(this@SelectLanguageActivity)
+                }
+            }
             selectedLanguageModel=it
         }
         binding.recyclerView.adapter= languageAdapter
 
-        binding.saverelative.setOnClickListener {
+        binding.savecard.setOnClickListener {
             setLocale(this,selectedLanguageModel.lngCode)
         }
     }

@@ -8,6 +8,7 @@ data class AdsConfig(
     val splash_banner: Boolean = true,
     val main_banner_simple: Boolean = true,
     val main_banner_collapsible: Boolean = true,
+    val main_native: Boolean = true,
     val connect_intersitial: Boolean = true,
     val scanning_intersitial: Boolean = true,
     val realtime_intersitial: Boolean = true,

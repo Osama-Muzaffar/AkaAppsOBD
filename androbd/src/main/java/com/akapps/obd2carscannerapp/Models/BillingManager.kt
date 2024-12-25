@@ -512,7 +512,7 @@ class BillingManager(private val context: Context, private val purchaseListener:
 
             val purchaseparams = SkuDetailsParams.newBuilder()
                 .setSkusList(skupurchaseList)
-                .setType(BillingClient.SkuType.INAPP)  // For one-time purchases
+                .setType(BillingClient.ProductType.INAPP)  // For one-time purchases
                 .build()
 
             billingClient.querySkuDetailsAsync(purchaseparams) { billingResult, skuDetails ->
@@ -532,12 +532,13 @@ class BillingManager(private val context: Context, private val purchaseListener:
 
             val params = SkuDetailsParams.newBuilder()
                 .setSkusList(skuList)
-                .setType(BillingClient.SkuType.SUBS)  // For subscriptions
+                .setType(BillingClient.ProductType.SUBS)  // For subscriptions
                 .build()
 
             billingClient.querySkuDetailsAsync(params) { billingResult, skuDetails ->
                 Log.d("Billing_Manager", "querySubscriptionDetailsAsync: ${billingResult.debugMessage}")
                 if (billingResult.responseCode == BillingClient.BillingResponseCode.OK && skuDetails != null) {
+                    Log.d("Billing_Manager", "adding into list skuDetails of subscriptions size = ${skuDetails.size}")
                     skuDetailsList!!.addAll(skuDetails)
                 } else {
                     Log.e("Billing_Manager", "Subscription query failed: ${billingResult.debugMessage}")

@@ -32,6 +32,7 @@ android {
             buildConfigField "String", "admob_banner", "\"ca-app-pub-8011932915847069/8784259062\""
             buildConfigField "String", "admob_intersitial", "\"ca-app-pub-8011932915847069/4513841561\""
             buildConfigField "String", "admob_appopen", "\"ca-app-pub-8011932915847069/3570363350\""
+            buildConfigField "String", "admob_appopen_splash", "\"ca-app-pub-8011932915847069/4605680212\""
             buildConfigField "String", "admob_native", "\"ca-app-pub-8011932915847069/1887678226\""
 
             minifyEnabled= false
@@ -44,6 +45,7 @@ android {
             buildConfigField "String", "admob_banner", "\"ca-app-pub-3940256099942544/6300978111\""
             buildConfigField "String", "admob_intersitial", "\"ca-app-pub-3940256099942544/1033173712\""
             buildConfigField "String", "admob_appopen", "\"ca-app-pub-3940256099942544/9257395921\""
+            buildConfigField "String", "admob_appopen_splash", "\"ca-app-pub-3940256099942544/9257395921\""
             buildConfigField "String", "admob_native", "\"ca-app-pub-3940256099942544/2247696110\""
 
             debuggable = true
@@ -104,7 +106,7 @@ dependencies {
 //    implementation 'com.github.smarteist:autoimageslider:1.4.0'
     implementation 'com.github.denzcoskun:ImageSlideshow:0.1.2'
 
-    implementation ('com.android.billingclient:billing:7.0.0'){
+    implementation ('com.android.billingclient:billing:7.1.1'){
         exclude module: "javax.inject"
     }
     implementation 'com.airbnb.android:lottie:6.5.0'

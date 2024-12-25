@@ -72,7 +72,12 @@ class PurchaseActivity : AppCompatActivity() {
 
             }
         })
-        billingManager.startConnection(false,true)
+        if(from.equals("multi")) {
+            billingManager.startConnection(false, true)
+        }
+        else{
+            billingManager.startConnection(true, true)
+        }
         Log.d("Purchase Activity", "Billing Start Connection: ")
 
         binding.closeimg.setOnClickListener {
@@ -466,6 +471,21 @@ class PurchaseActivity : AppCompatActivity() {
                     } else {
                         Toast.makeText(this, "Product details not available", Toast.LENGTH_SHORT)
                             .show()
+                    }
+                }
+                else{
+                    if(list?.size!!>0) {
+                        var skuDetail = list?.get(0)
+                        if (skuDetail != null) {
+                            billingManager.launchBillingFlow(this, skuDetail!!)
+                        } else {
+                            Toast.makeText(
+                                this,
+                                "Product details not available",
+                                Toast.LENGTH_SHORT
+                            )
+                                .show()
+                        }
                     }
                 }
 

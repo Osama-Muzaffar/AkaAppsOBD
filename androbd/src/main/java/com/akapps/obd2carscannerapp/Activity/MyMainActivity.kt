@@ -25,6 +25,7 @@ import android.view.Window
 import android.view.WindowManager
 import android.widget.AbsListView
 import android.widget.AdapterView
+import android.widget.RelativeLayout
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -91,6 +92,7 @@ import com.akapps.obd2carscannerapp.databinding.ActivityMyMainBinding
 import com.akapps.pvs.PvChangeEvent
 import com.akapps.pvs.PvChangeListener
 import com.akapps.pvs.PvList
+import com.floor.planner.models.NativeBannerFull
 import com.quadsquad.savestatus.videodownloader.storysaver.statuskeeper.adsConfigs.adsConfig
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -807,16 +809,22 @@ class MyMainActivity : AppCompatActivity(), PvChangeListener, AdapterView.OnItem
             if (isshwoingad){
 
                 if(adsConfig !=null) {
-                    if(adsConfig!!.main_banner_simple && adsConfig!!.main_banner_collapsible) {
+                    if(adsConfig!!.main_native){
+                        val nativeBannerFull = findViewById<NativeBannerFull>(R.id.nativefull)
+                        nativeBannerFull.visibility=View.VISIBLE
+                        nativeBannerFull.loadNativeBannerAd(this@MyMainActivity,BuildConfig.admob_native)
+                    }
+                    else if(adsConfig!!.main_banner_simple && adsConfig!!.main_banner_collapsible) {
                         val bannerview = findViewById<BannerAdView>(R.id.banneradsview)
+                        bannerview.visibility=View.VISIBLE
                         bannerview.visibility = View.VISIBLE
-                        bannerview.loadCollapsibleBanner(
+                        bannerview.loadBanner(
                             this@MyMainActivity,
-                            BuildConfig.admob_banner,
-                            true
+                            BuildConfig.admob_banner
                         )
                     }
                     else if(adsConfig!!.main_banner_simple) {
+
                         val bannerview = findViewById<BannerAdView>(R.id.banneradsview)
                         bannerview.visibility = View.VISIBLE
                         bannerview.loadBanner(
@@ -834,49 +842,43 @@ class MyMainActivity : AppCompatActivity(), PvChangeListener, AdapterView.OnItem
                         )
                     }
                     else{
-                        val bannerview = findViewById<BannerAdView>(R.id.banneradsview)
-                        bannerview.visibility = View.GONE
+                        val adscontainer = findViewById<RelativeLayout>(R.id.ad_container)
+                        adscontainer.visibility = View.GONE
                     }
-
-                    AdManager.getInstance().loadInterstitialAd(this, BuildConfig.admob_intersitial,
-                        object : InterstitialAdLoadCallback() {
-                            override fun onAdFailedToLoad(p0: LoadAdError) {
-                                super.onAdFailedToLoad(p0)
-                                Log.d("Dashboard", "Failed to Load: " + p0.responseInfo)
-                            }
-
-                            override fun onAdLoaded(p0: InterstitialAd) {
-                                super.onAdLoaded(p0)
-                                Log.d("Dashboard", "Intersitial ad load successfully")
-                            }
-                        })
 
                 }
                 else {
                     Log.d("test_remote", "remote config is null")
-                    val bannerview = findViewById<BannerAdView>(R.id.banneradsview)
-                    bannerview.visibility = View.GONE
+                    val adscontainer = findViewById<RelativeLayout>(R.id.ad_container)
+                    adscontainer.visibility = View.GONE
                 }
             }
-            else{
-                val bannerview= findViewById<BannerAdView>(R.id.banneradsview)
-                bannerview.visibility=View.GONE
+            else {
+                Log.d("test_remote", "remote config is null")
+                val adscontainer = findViewById<RelativeLayout>(R.id.ad_container)
+                adscontainer.visibility = View.GONE
             }
         }
         else {
             runOnUiThread {
 
                 if(adsConfig !=null) {
-                    if(adsConfig!!.main_banner_simple && adsConfig!!.main_banner_collapsible) {
+                    if(adsConfig!!.main_native){
+                        val nativeBannerFull = findViewById<NativeBannerFull>(R.id.nativefull)
+                        nativeBannerFull.visibility=View.VISIBLE
+                        nativeBannerFull.loadNativeBannerAd(this@MyMainActivity,BuildConfig.admob_native)
+                    }
+                    else if(adsConfig!!.main_banner_simple && adsConfig!!.main_banner_collapsible) {
                         val bannerview = findViewById<BannerAdView>(R.id.banneradsview)
+                        bannerview.visibility=View.VISIBLE
                         bannerview.visibility = View.VISIBLE
-                        bannerview.loadCollapsibleBanner(
+                        bannerview.loadBanner(
                             this@MyMainActivity,
-                            BuildConfig.admob_banner,
-                            true
+                            BuildConfig.admob_banner
                         )
                     }
                     else if(adsConfig!!.main_banner_simple) {
+
                         val bannerview = findViewById<BannerAdView>(R.id.banneradsview)
                         bannerview.visibility = View.VISIBLE
                         bannerview.loadBanner(
@@ -894,89 +896,20 @@ class MyMainActivity : AppCompatActivity(), PvChangeListener, AdapterView.OnItem
                         )
                     }
                     else{
-                        val bannerview = findViewById<BannerAdView>(R.id.banneradsview)
-                        bannerview.visibility = View.GONE
+                        val adscontainer = findViewById<RelativeLayout>(R.id.ad_container)
+                        adscontainer.visibility = View.GONE
                     }
 
-                    AdManager.getInstance().loadInterstitialAd(this, BuildConfig.admob_intersitial,
-                        object : InterstitialAdLoadCallback() {
-                            override fun onAdFailedToLoad(p0: LoadAdError) {
-                                super.onAdFailedToLoad(p0)
-                                Log.d("Dashboard", "Failed to Load: " + p0.responseInfo)
-
-                            }
-
-                            override fun onAdLoaded(p0: InterstitialAd) {
-                                super.onAdLoaded(p0)
-                                Log.d("Dashboard", "Intersitial ad load successfully")
-                            }
-                        })
                 }
                 else {
                     Log.d("test_remote", "remote config is null")
-                    val bannerview = findViewById<BannerAdView>(R.id.banneradsview)
-                    bannerview.visibility = View.GONE
+                    val adscontainer = findViewById<RelativeLayout>(R.id.ad_container)
+                    adscontainer.visibility = View.GONE
                 }
             }
 
         }
-    /*    if (!AppPurchase.getInstance().isPurchased()) {
 
-            val bannerview = findViewById<BannerAdView>(R.id.bannerads)
-            bannerview.loadCollapsibleBanner(this, BuildConfig.admob_banner, true)
-
-
-            AdManager.getInstance().loadInterstitialAd(this, BuildConfig.admob_intersitial,
-                object : InterstitialAdLoadCallback() {
-                    override fun onAdFailedToLoad(p0: LoadAdError) {
-                        super.onAdFailedToLoad(p0)
-                        Log.d("Dashboard", "Intersitial ad load successfully")
-                    }
-
-                    override fun onAdLoaded(p0: InterstitialAd) {
-                        super.onAdLoaded(p0)
-                        Log.d("Dashboard", "Failed to Load: " + p0.responseInfo)
-                    }
-                })
-
-        }
-        else {
-            Log.d("Splash", "purchase true else is running ")
-            var isshwoingad = true
-            for (purchases in AppPurchase.getInstance().ownerIdInapps) {
-                if (purchases.equals("com.obd.inapp") || purchases.equals("com.obdblue.allpremium")) {
-                    isshwoingad = false
-                } else {
-                    isshwoingad = true
-                }
-            }
-            Log.d("Splash", "isshwoingad = $isshwoingad ")
-            if (isshwoingad) {
-
-                val bannerview = findViewById<BannerAdView>(R.id.bannerads)
-                bannerview.loadCollapsibleBanner(
-                    this,
-                    "ca-app-pub-3940256099942544/9214589741",
-                    true
-                )
-
-
-                AdManager.getInstance().loadInterstitialAd(this, BuildConfig.admob_intersitial,
-                    object : InterstitialAdLoadCallback() {
-                        override fun onAdFailedToLoad(p0: LoadAdError) {
-                            super.onAdFailedToLoad(p0)
-                            Log.d("Dashboard", "Intersitial ad load successfully")
-                        }
-
-                        override fun onAdLoaded(p0: InterstitialAd) {
-                            super.onAdLoaded(p0)
-                            Log.d("Dashboard", "Failed to Load: " + p0.responseInfo)
-                        }
-                    })
-
-            }
-        }
-*/
         makeMainItems()
         val prefrences= SharedPreferencesHelper(this)
 
@@ -2413,8 +2346,41 @@ class MyMainActivity : AppCompatActivity(), PvChangeListener, AdapterView.OnItem
         }
         else{
 
-            Log.d("enableBluetooth", "enableBluetooth: set mode to online")
-            setMode(MyMainActivity.MODE.ONLINE)
+            intersitialAdUtils++
+            Log.d("Track_main_intersitial", "intersitialAdUtils: "+intersitialAdUtils)
+            if (AdManager.getInstance().isReady() && intersitialAdUtils%2==0) {
+                Log.d("Track_main_intersitial", "Trying to show intersitial ad")
+                AdManager.getInstance()
+                    .forceShowInterstitial(this@MyMainActivity, object : AdManagerCallback() {
+                        override fun onNextAction() {
+                            super.onNextAction()
+                            Log.d("Dashboard", "Intersitial ad on Next Action")
+                            Log.d("enableBluetooth", "enableBluetooth: set mode to online")
+                            setMode(MyMainActivity.MODE.ONLINE)
+                        }
+
+                        override fun onFailedToLoad(error: AdError?) {
+                            super.onFailedToLoad(error)
+                            Log.d(
+                                "Dashboard",
+                                "Intersitial ad Failed ot load: ${error?.message}"
+                            )
+                            Log.d("enableBluetooth", "enableBluetooth: set mode to online")
+                            setMode(MyMainActivity.MODE.ONLINE)
+                        }
+
+                        override fun onAdLoaded() {
+                            super.onAdLoaded()
+                        }
+                    }, true)
+
+
+            }
+            else{
+                Log.d("enableBluetooth", "enableBluetooth: set mode to online")
+                setMode(MyMainActivity.MODE.ONLINE)
+
+            }
 
         }
     }

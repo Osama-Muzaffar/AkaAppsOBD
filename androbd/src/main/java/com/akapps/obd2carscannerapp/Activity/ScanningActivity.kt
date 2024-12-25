@@ -142,7 +142,7 @@ class ScanningActivity : AppCompatActivity(),
                 binding.nodatatxt.visibility = View.GONE
 //            }
 
-            if(PairedDeviceSharedPreference.getInstance(this).subsList.size>0){
+          /*  if(PairedDeviceSharedPreference.getInstance(this).subsList.size>0){
                 var isshwoingad= true
                 for(purchases in PairedDeviceSharedPreference.getInstance(this).subsList){
 //                    if (purchases.equals(getString(R.string.in_app_subscription_yearly_product_id))){
@@ -243,7 +243,7 @@ class ScanningActivity : AppCompatActivity(),
                     }
                 }
 
-            }
+            }*/
          /*   if(!AppPurchase.getInstance().isPurchased){
                 val banneradsview= findViewById<BannerAdView>(R.id.banneradsview)
                 banneradsview.loadBanner(this, BuildConfig.admob_banner)
@@ -314,7 +314,7 @@ class ScanningActivity : AppCompatActivity(),
                 else{
                     billingManager.clearPurchase(getString(R.string.in_app_purchase_clear_mil_for_one_time_product_id))
                     startActivity(Intent(this@ScanningActivity,PurchaseActivity::class.java)
-                        .putExtra("which","multi"))
+                        .putExtra("which","single"))
                 }
             }
             else{
@@ -329,7 +329,7 @@ class ScanningActivity : AppCompatActivity(),
                     Log.d("Clear_worker", "purchases list is empty")
                     billingManager.clearPurchase(getString(R.string.in_app_purchase_clear_mil_for_one_time_product_id))
                     startActivity(Intent(this@ScanningActivity,PurchaseActivity::class.java)
-                        .putExtra("which","multi"))
+                        .putExtra("which","single"))
                 }
 
             }

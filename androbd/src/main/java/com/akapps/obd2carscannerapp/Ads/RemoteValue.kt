@@ -1,30 +1,3 @@
 package com.quadsquad.savestatus.videodownloader.storysaver.statuskeeper.adsConfigs
 
 var adsConfig: AdsConfig?= null
-var val_splash_intersitial: Boolean = true
-var val_splash_banner: Boolean = true
-var val_main_banner_simple: Boolean = true
-var val_main_banner_collapsible: Boolean = true
-var val_connect_intersitial: Boolean = true
-var val_scanning_intersitial: Boolean = true
-var val_realtime_intersitial: Boolean = true
-var val_obddata_intersitial: Boolean = true
-var val_faultcode_intersitial: Boolean = true
-var faultcode_details_banner: Boolean = true
-var val_help_intersitial: Boolean = true
-var val_paired_banner_simple: Boolean = true
-var val_paired_banner_collapse: Boolean = true
-var val_scanning_banner_simple: Boolean = true
-var val_scanning_banner_collapse: Boolean = true
-var val_obddata_banner_simple: Boolean = true
-var val_obddata_banner_collapse: Boolean = true
-var val_faultcodes_banner_simple: Boolean = true
-var val_faultcodes_banner_collapse: Boolean = true
-var val_realtime_native: Boolean = true
-var val_realtime_banner: Boolean = true
-var val_language_native: Boolean = true
-var val_language_banner_simple: Boolean = true
-var val_language_banner_collapsible: Boolean = true
-var val_setting_banner_collapsible: Boolean = true
-var val_setting_banner: Boolean = true
-var val_setting_native: Boolean = true

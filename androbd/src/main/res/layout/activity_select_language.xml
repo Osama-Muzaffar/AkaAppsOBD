@@ -45,19 +45,37 @@
             android:textSize="18sp" />
 
 
-        <RelativeLayout
-            android:id="@+id/saverelative"
-            android:layout_width="35sp"
-            android:layout_height="35sp"
-            android:layout_gravity="center">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/savecard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/main_purple"
+            app:cardCornerRadius="20sp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:fontFamily="@font/roboto_bold"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="8dp"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"/>
+        </androidx.cardview.widget.CardView>
 
-            <ImageView
-                android:layout_width="24sp"
-                android:layout_height="24sp"
-                android:layout_centerInParent="true"
-                android:src="@drawable/baseline_check_24"
-                app:tint="@color/white" />
-        </RelativeLayout>
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/saverelative"-->
+<!--            android:layout_width="35sp"-->
+<!--            android:layout_height="35sp"-->
+<!--            android:layout_gravity="center">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="24sp"-->
+<!--                android:layout_height="24sp"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:src="@drawable/baseline_check_24"-->
+<!--                app:tint="@color/white" />-->
+<!--        </RelativeLayout>-->
 
 
     </LinearLayout>

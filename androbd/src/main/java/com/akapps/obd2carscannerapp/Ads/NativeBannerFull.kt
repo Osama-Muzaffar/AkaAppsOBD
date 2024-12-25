@@ -18,6 +18,7 @@ import com.google.android.gms.ads.nativead.NativeAdView
 import com.akapps.obd2carscannerapp.Ads.AdManagerCallback
 import com.akapps.obd2carscannerapp.R
 import com.akapps.obd2carscannerapp.databinding.LayoutNativeBannerFullPreviewBinding
+import kotlin.math.log
 
 class NativeBannerFull @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
@@ -33,6 +34,8 @@ class NativeBannerFull @JvmOverloads constructor(
     var callback: AdManagerCallback? = null
 
     var  ismediavisible= false
+    private var currentAdIndex = 0
+    private val nativeAdsList: MutableList<NativeAd> = mutableListOf()
 
     fun loadNativeBannerAd(activity: Activity, adNativeBanner: String) {
         this.adUnitId = adNativeBanner
@@ -145,4 +148,61 @@ class NativeBannerFull @JvmOverloads constructor(
         binding.root.visibility = VISIBLE
 
     }
+    fun loadMultipleNativeAds(activity: Activity, adNativeBanner: String, adCount: Int) {
+        this.adUnitId = adNativeBanner
+        val shimmerFrameLayout: ShimmerFrameLayout = binding.shimmerContainerNative
+        shimmerFrameLayout.visibility = VISIBLE
+
+        val adLoader = AdLoader.Builder(activity, adNativeBanner)
+            .forNativeAd { nativeAd ->
+                Log.d("NativeBanner", "nativeAd loaded")
+                nativeAdsList.add(nativeAd)
+                if (nativeAdsList.size == adCount) {
+                    shimmerFrameLayout.visibility = GONE
+                    displayNextAd(activity)
+                }
+            }
+            .withAdListener(object : AdListener() {
+                override fun onAdLoaded() {
+                    super.onAdLoaded()
+                    callback?.onAdLoaded()
+                }
+
+                override fun onAdFailedToLoad(adError: LoadAdError) {
+                    Log.d(TAG, "onAdFailedToLoad: NativeBannerMedium, Error: ${adError.message}")
+                    shimmerFrameLayout.visibility = GONE
+                    callback?.onFailedToLoad(adError)
+                }
+            })
+            .build()
+
+        adLoader.loadAds(AdRequest.Builder().build(), adCount)
+    }
+
+
+    public fun displayNextAd(activity: Activity) {
+        Log.d("NativeBanner", "displayNextAd: nativeAdsList size = "+nativeAdsList.size)
+        if (currentAdIndex >= nativeAdsList.size) {
+            currentAdIndex = 0
+        }
+        val nativeAd = nativeAdsList[currentAdIndex]
+        val adPlaceholder: FrameLayout = binding.flAdplaceholder
+        adPlaceholder.removeAllViews()
+
+        val nativeAdView = LayoutInflater.from(activity)
+            .inflate(R.layout.layout_native_banner_full, null) as NativeAdView
+        nativeAdView.headlineView = nativeAdView.findViewById(R.id.ad_headline)
+        nativeAdView.bodyView = nativeAdView.findViewById(R.id.ad_body)
+        nativeAdView.callToActionView = nativeAdView.findViewById(R.id.ad_call_to_action)
+        nativeAdView.iconView = nativeAdView.findViewById(R.id.ad_app_icon)
+        nativeAdView.mediaView = nativeAdView.findViewById(R.id.media_view)
+        nativeAdView.advertiserView = nativeAdView.findViewById(R.id.ad_advertiser)
+
+        populateNativeAdView(nativeAd, nativeAdView)
+        adPlaceholder.addView(nativeAdView)
+        adPlaceholder.visibility = VISIBLE
+
+        currentAdIndex++
+    }
+
 }

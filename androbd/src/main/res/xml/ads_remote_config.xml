@@ -7,6 +7,7 @@
         "splash_banner": true,
         "main_banner_simple": true,
         "main_banner_collapsible": true,
+        "main_native": true,
         "connect_intersitial": true,
         "scanning_intersitial": true,
         "realtime_intersitial": true,

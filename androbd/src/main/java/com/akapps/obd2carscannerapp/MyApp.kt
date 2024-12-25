@@ -36,7 +36,7 @@ class MyApp : Application() {
         MobileAds.setRequestConfiguration(configuration)
         MobileAds.initialize(this)
 
-        appOpenManager = AppOpenManager(this, BuildConfig.admob_appopen)
+        appOpenManager = AppOpenManager(this, BuildConfig.admob_appopen_splash)
     }
 
     override fun onCreate() {
