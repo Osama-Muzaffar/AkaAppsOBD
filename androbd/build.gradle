@@ -11,8 +11,8 @@ android {
         // SDK 25 to allow background service mechanism for plugins
         //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 35
-        versionCode 3
-        versionName "1.2"
+        versionCode 4
+        versionName "1.3"
         setProperty("archivesBaseName", "OBD_AK_New" + "-VERSION" + versionCode + "VNAME(" + versionName+ ")")
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
