@@ -127,7 +127,7 @@
     <string name="air_fuel_ratio">Air/Fuel Ratio</string>
     <string name="barometric_pressure_psi">Barometric Pressure \'psi\'</string>
     <string name="troubles">troubles....</string>
-    <string name="clear">Clear</string>
+    <string name="clear">Clear MIL</string>
     <string name="no_fault_found">No Fault Found</string>
     <string name="setting">Setting</string>
     <string name="adapter_type">Adapter Type</string>

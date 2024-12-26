@@ -185,24 +185,27 @@ class NativeBannerFull @JvmOverloads constructor(
         if (currentAdIndex >= nativeAdsList.size) {
             currentAdIndex = 0
         }
-        val nativeAd = nativeAdsList[currentAdIndex]
-        val adPlaceholder: FrameLayout = binding.flAdplaceholder
-        adPlaceholder.removeAllViews()
+        if(nativeAdsList.size>0) {
+            val nativeAd = nativeAdsList[currentAdIndex]
+            val adPlaceholder: FrameLayout = binding.flAdplaceholder
+            adPlaceholder.removeAllViews()
 
-        val nativeAdView = LayoutInflater.from(activity)
-            .inflate(R.layout.layout_native_banner_full, null) as NativeAdView
-        nativeAdView.headlineView = nativeAdView.findViewById(R.id.ad_headline)
-        nativeAdView.bodyView = nativeAdView.findViewById(R.id.ad_body)
-        nativeAdView.callToActionView = nativeAdView.findViewById(R.id.ad_call_to_action)
-        nativeAdView.iconView = nativeAdView.findViewById(R.id.ad_app_icon)
-        nativeAdView.mediaView = nativeAdView.findViewById(R.id.media_view)
-        nativeAdView.advertiserView = nativeAdView.findViewById(R.id.ad_advertiser)
+            val nativeAdView = LayoutInflater.from(activity)
+                .inflate(R.layout.layout_native_banner_full, null) as NativeAdView
+            nativeAdView.headlineView = nativeAdView.findViewById(R.id.ad_headline)
+            nativeAdView.bodyView = nativeAdView.findViewById(R.id.ad_body)
+            nativeAdView.callToActionView = nativeAdView.findViewById(R.id.ad_call_to_action)
+            nativeAdView.iconView = nativeAdView.findViewById(R.id.ad_app_icon)
+            nativeAdView.mediaView = nativeAdView.findViewById(R.id.media_view)
+            nativeAdView.advertiserView = nativeAdView.findViewById(R.id.ad_advertiser)
 
-        populateNativeAdView(nativeAd, nativeAdView)
-        adPlaceholder.addView(nativeAdView)
-        adPlaceholder.visibility = VISIBLE
+            populateNativeAdView(nativeAd, nativeAdView)
+            adPlaceholder.addView(nativeAdView)
+            adPlaceholder.visibility = VISIBLE
 
-        currentAdIndex++
+            currentAdIndex++
+
+        }
     }
 
 }

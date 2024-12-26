@@ -1,6 +1,7 @@
 package com.akapps.obd2carscannerapp.Adapter
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,10 +31,19 @@ class LanguageAdapter(val context: Context,val  languageList: ArrayList<Language
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+        val peflngtest = pref.getString(SharedPreferencesHelper.KEY_LANGUAGE, "en")
+        val currentcode = languageList.get(position).lngCode
+
+        Log.d("LanguageAdapter", "checkable: $checkable")
+        Log.d("LanguageAdapter", "peflngtest: $peflngtest")
+        Log.d("LanguageAdapter", "currentcode: $currentcode")
         if(checkable) {
             val peflng = pref.getString(SharedPreferencesHelper.KEY_LANGUAGE, "en")
             if (languageList.get(position).lngCode.equals(peflng)) {
                 languageList.get(position).isselect = true
+            }
+            else{
+                languageList.get(position).isselect = false
             }
         }
         if(languageList.get(position).isselect){

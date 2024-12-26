@@ -57,8 +57,8 @@ class SplashActivity : AppCompatActivity() {
     private lateinit var dbHelper: DatabaseHelper
 
     lateinit var binding: ActivitySplashBinding
-    val totalTime = 5000L // 5 seconds
-    val interval = 50L // Update every 50 milliseconds
+    val totalTime = 8000L // 7 seconds
+    val interval = 80L // Update every 50 milliseconds
     val steps = (totalTime / interval).toInt()
     val increment = 100 / steps
 
@@ -100,6 +100,7 @@ class SplashActivity : AppCompatActivity() {
                     currentprogress += increment
                     handler.postDelayed(this, interval)
                 } else {
+                    Log.d("TrackProgress", "moving with progress > 100 at default")
                     handler.removeCallbacks(this)
                     navigateToMainActivity()
                 }
@@ -112,54 +113,54 @@ class SplashActivity : AppCompatActivity() {
             inilizeRemoteConfig()
             Log.d("Restore_Purchase", "starting restoring purchases")
 
-            billingManager?.restorePurchases(object : BillingManager.BillingListner {
-                override fun onPurchaseFinished(purchase: Purchase, isSub: Boolean) {
-                    Log.d(
-                        "Restore_Purchase",
-                        "onPurchaseFinished: purchase = ${purchase.skus.first()}"
-                    )
-                    if (purchase.skus.first()
-                            .equals(getString(R.string.in_app_purchase_clear_mil_for_one_time_product_id))
-                    ) {
-                    } else {
-                        PairedDeviceSharedPreference.getInstance(this@SplashActivity)
-                            .addItemToList(purchase.skus.first())
-
-                    }
-                }
-
-                override fun onPurchaseFailed(messages: String) {
-                    Log.d("Restore_Purchase", "onPurchaseFailed: " + messages)
-                }
-
-            })
-
-
-            billingManager?.restoreSubscriptions(object : BillingManager.BillingListner {
-                override fun onPurchaseFinished(purchase: Purchase, isSub: Boolean) {
-                    Log.d(
-                        "Restore_Purchase",
-                        "onPurchaseFinished: subs = ${purchase.skus.first()}"
-                    )
-                    PairedDeviceSharedPreference.getInstance(this@SplashActivity)
-                        .addItemToSubsList(purchase.skus.first())
-
-
-                }
-
-                override fun onPurchaseFailed(messages: String) {
-                    Log.d("Restore_Purchase", "onPurchaseFailed: " + messages)
-                }
-
-            })
 
             Handler(Looper.getMainLooper()).postDelayed(Runnable {
+                billingManager?.restorePurchases(object : BillingManager.BillingListner {
+                    override fun onPurchaseFinished(purchase: Purchase, isSub: Boolean) {
+                        Log.d(
+                            "Restore_Purchase",
+                            "onPurchaseFinished: purchase = ${purchase.skus.first()}"
+                        )
+                        if (purchase.skus.first()
+                                .equals(getString(R.string.in_app_purchase_clear_mil_for_one_time_product_id))
+                        ) {
+                        } else {
+                            PairedDeviceSharedPreference.getInstance(this@SplashActivity)
+                                .addItemToList(purchase.skus.first())
+
+                        }
+                    }
+
+                    override fun onPurchaseFailed(messages: String) {
+                        Log.d("Restore_Purchase", "onPurchaseFailed: " + messages)
+                    }
+
+                })
+
+
+                billingManager?.restoreSubscriptions(object : BillingManager.BillingListner {
+                    override fun onPurchaseFinished(purchase: Purchase, isSub: Boolean) {
+                        Log.d(
+                            "Restore_Purchase",
+                            "onPurchaseFinished: subs = ${purchase.skus.first()}"
+                        )
+                        PairedDeviceSharedPreference.getInstance(this@SplashActivity)
+                            .addItemToSubsList(purchase.skus.first())
+
+
+                    }
+
+                    override fun onPurchaseFailed(messages: String) {
+                        Log.d("Restore_Purchase", "onPurchaseFailed: " + messages)
+                    }
+
+                })
 
                 Handler(Looper.getMainLooper()).postDelayed(Runnable {
 
                     checkPurchaseStatus()
                 },5000)
-            }, 1000)
+            }, 2000)
 
 
             /*  Handler(Looper.getMainLooper()).postDelayed(Runnable {
@@ -277,6 +278,7 @@ class SplashActivity : AppCompatActivity() {
                             currentprogress += increment
                             handler.postDelayed(this, interval)
                         } else {
+                            Log.d("TrackProgress", "moving with progress while internet is not available")
                             handler.removeCallbacks(this)
                             navigateToMainActivity()
 
@@ -495,10 +497,15 @@ class SplashActivity : AppCompatActivity() {
 
                 // Show app open ad if available
                 appOpenManager.showSplashAdIfAvailable(this) {
+                    Log.d("TrackProgress", "moving with open ad dissmissed")
                     navigateToMainActivity()
                 }
             }
             else{
+                runnable?.let {
+                    handler.removeCallbacks(it)
+                }
+                Log.d("TrackProgress", "moving with ad not want to load")
                 navigateToMainActivity()
             }
         }
@@ -510,133 +517,16 @@ class SplashActivity : AppCompatActivity() {
 
             // Show app open ad if available
             appOpenManager.showSplashAdIfAvailable(this) {
+                Log.d("TrackProgress", "moving with open ad dissmissed")
+                runnable?.let {
+                    handler.removeCallbacks(it)
+                    Log.d("TrackProgress", "handler removed")
+                }
                 navigateToMainActivity()
             }
         }
         Log.d("Splash_Checker", "checkPurchaseStatus: running")
-        // Check and restore purchases
-//        billingManager.checkAndRestorePurchases()
 
-    /*    // Simulate loading or processing time
-        Handler(Looper.getMainLooper()).postDelayed({
-            Log.d("Splash_Checker", "mAIN HAndler running")
-
-            Handler(Looper.getMainLooper()).postDelayed({
-                Log.d("Splash_Checker", "Inner HAndler running")
-//                binding.letsgocard.visibility= View.VISIBLE
-//                binding.progressbar.visibility= View.GONE
-                if (PairedDeviceSharedPreference.getInstance(this).subsList.size > 0) {
-                    var isshwoingad = true
-                    for (purchases in PairedDeviceSharedPreference.getInstance(this).subsList) {
-                        isshwoingad = false
-                    }
-                    if(isshwoingad){
-                        val appOpenManager = (application as MyApp).appOpenManager
-
-                        // Show app open ad if available
-                        appOpenManager.showSplashAdIfAvailable(this) {
-                            navigateToMainActivity()
-                        }
-                    }
-                    else{
-                        navigateToMainActivity()
-                    }
-                }
-                else{
-                    val appOpenManager = (application as MyApp).appOpenManager
-
-                    // Show app open ad if available
-                    appOpenManager.showSplashAdIfAvailable(this) {
-                        navigateToMainActivity()
-                    }
-                }
-             *//*   if (!AppPurchase.getInstance().isPurchased()) {
-                    Log.d("Splash_Checker", "Purchase is not")
-                    // Initialize AppOpenManager
-                    val appOpenManager = (application as MyApp).appOpenManager
-
-                    // Show app open ad if available
-                    appOpenManager.showSplashAdIfAvailable(this) {
-                        navigateToMainActivity()
-                    }
-                }
-                else {
-                    Log.d("Splash_Checker", "Purchase is true")
-                    var isshwoingad = true
-                    for (purchases in AppPurchase.getInstance().ownerIdInapps) {
-                        if (purchases.equals("com.obd.inapp") || purchases.equals("com.obdblue.allpremium")) {
-                            isshwoingad = false
-                        } else {
-                            isshwoingad = true
-                        }
-                    }
-                    if (isshwoingad) {
-                        Log.d("Splash_Checker", "isshwoingad = true")
-
-                        // Initialize AppOpenManager
-                        val appOpenManager = (application as MyApp).appOpenManager
-
-                        // Show app open ad if available
-                        appOpenManager.showSplashAdIfAvailable(this) {
-                            navigateToMainActivity()
-                        }
-                    } else {
-                        Log.d("Splash_Checker", "isshwoingad = false")
-                        navigateToMainActivity()
-                    }
-                }
-*//*
-            }, 5000)
-
-            if (!AppPurchase.getInstance().isPurchased()) {
-                val bannerad = findViewById<BannerAdView>(R.id.banneradsview)
-                bannerad.loadBanner(
-                    this@SplashActivity,
-                    BuildConfig.admob_banner,
-                    object : AdManagerCallback() {
-                        override fun onAdLoaded() {
-                            super.onAdLoaded()
-                            Log.d("Splash", "onAdLoaded: ")
-                        }
-
-                        override fun onFailedToLoad(error: AdError?) {
-                            super.onFailedToLoad(error)
-                            Log.d("Splash", "onFailedToLoad: ")
-                        }
-                    })
-            }
-            else {
-                Log.d("Splash", "purchase true else is running ")
-                var isshwoingad = true
-                for (purchases in AppPurchase.getInstance().ownerIdInapps) {
-                    if (purchases.equals("com.obd.inapp") || purchases.equals("com.obdblue.allpremium")) {
-                        isshwoingad = false
-                    } else {
-                        isshwoingad = true
-                    }
-                }
-                Log.d("Splash", "isshwoingad = $isshwoingad ")
-                if (isshwoingad) {
-                    val bannerad = findViewById<BannerAdView>(R.id.banneradsview)
-                    Log.d("Splash", "Trying to load Bnnaer ad where isshowing ad = $isshwoingad ")
-                    bannerad.loadBanner(
-                        this@SplashActivity,
-                        BuildConfig.admob_banner,
-                        object : AdManagerCallback() {
-                            override fun onAdLoaded() {
-                                super.onAdLoaded()
-                                Log.d("Splash", "onAdLoaded: ")
-                            }
-
-                            override fun onFailedToLoad(error: AdError?) {
-                                super.onFailedToLoad(error)
-                                Log.d("Splash", "onFailedToLoad: ")
-                            }
-                        })
-                }
-            }
-        }, 5000)
-    */
     }
 
     private fun navigateToNextActivity() {

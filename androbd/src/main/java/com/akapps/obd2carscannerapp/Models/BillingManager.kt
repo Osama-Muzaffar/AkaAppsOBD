@@ -15,8 +15,10 @@ import com.android.billingclient.api.BillingClientStateListener
 import com.android.billingclient.api.BillingFlowParams
 import com.android.billingclient.api.BillingResult
 import com.android.billingclient.api.ConsumeParams
+import com.android.billingclient.api.ProductDetails
 import com.android.billingclient.api.Purchase
 import com.android.billingclient.api.PurchasesUpdatedListener
+import com.android.billingclient.api.QueryProductDetailsParams
 import com.android.billingclient.api.QueryPurchasesParams
 import com.android.billingclient.api.SkuDetails
 import com.android.billingclient.api.SkuDetailsParams
@@ -306,7 +308,8 @@ class BillingManager(private val context: Context, private val purchaseListener:
         .enablePendingPurchases()
         .build()
 
-    private var skuDetailsList: MutableList<SkuDetails> = mutableListOf()
+//    private var skuDetailsList: MutableList<SkuDetails> = mutableListOf()
+    private var skuDetailsList: MutableList<ProductDetails> = mutableListOf()
 
     fun startConnection(single: Boolean,isSub: Boolean=false) {
         billingClient.startConnection(object : BillingClientStateListener {
@@ -340,40 +343,57 @@ class BillingManager(private val context: Context, private val purchaseListener:
 
     // Query one-time purchases (as before)
     fun querySkuDetails() {
-        val skuList = listOf(
-            context.getString(R.string.in_app_purchase_clear_mil_for_one_time_product_id)
+        val productList = listOf(
+            QueryProductDetailsParams.Product.newBuilder()
+                .setProductId(context.getString(R.string.in_app_purchase_clear_mil_for_one_time_product_id)) // Replace with your product ID
+                .setProductType(BillingClient.ProductType.INAPP) // For one-time purchases
+                .build()
         )
 
-        val params = SkuDetailsParams.newBuilder()
-            .setSkusList(skuList)
-            .setType(BillingClient.SkuType.INAPP)  // For one-time purchases
+        val paramstest = QueryProductDetailsParams.newBuilder()
+            .setProductList(productList)
             .build()
 
-        billingClient.querySkuDetailsAsync(params) { billingResult, skuDetails ->
-            Log.d("Billing_Manager", "querySkuDetailsAsync: ${billingResult.debugMessage}")
-            if (billingResult.responseCode == BillingClient.BillingResponseCode.OK && skuDetails != null) {
-                skuDetailsList = skuDetails as ArrayList<SkuDetails>
+        billingClient.queryProductDetailsAsync(paramstest) { billingResult, productDetailsList ->
+            if (billingResult.responseCode == BillingClient.BillingResponseCode.OK && productDetailsList.isNotEmpty()) {
+                productDetailsList.forEach { productDetails ->
+                    println("Product details: ${productDetails.title}")
+                }
+                skuDetailsList=productDetailsList
+
             } else {
-                Log.e("Billing_Manager", "skuDetails query failed: ${billingResult.debugMessage}")
+                println("Failed to fetch product details: ${billingResult.debugMessage}")
             }
         }
+
+
     }
 
     fun queryOneSkuDetails() {
 //        val skuList = listOf("mil.onetime.purchase") // Replace with actual product IDs
-        val skuList = listOf(context.getString(R.string.in_app_purchase_clear_mil_for_one_time_product_id)) // Replace with actual product IDs
-        val params = SkuDetailsParams.newBuilder()
-        params.setSkusList(skuList).setType(BillingClient.SkuType.INAPP)
+        val productList = listOf(
+            QueryProductDetailsParams.Product.newBuilder()
+                .setProductId(context.getString(R.string.in_app_purchase_clear_mil_for_one_time_product_id)) // Replace with your product ID
+                .setProductType(BillingClient.ProductType.INAPP) // For one-time purchases
+                .build()
+        )
 
-        billingClient.querySkuDetailsAsync(params.build()) { billingResult, skuDetails ->
-            Log.d("Billing_Manager", "querySkuDetailsAsync: ${billingResult.debugMessage}")
-            if (billingResult.responseCode == BillingClient.BillingResponseCode.OK && skuDetails != null) {
-                Log.d("Billing_Manager", "skuDetails size: ${skuDetails.size}")
-                skuDetailsList = skuDetails as ArrayList<SkuDetails>
+        val paramstest = QueryProductDetailsParams.newBuilder()
+            .setProductList(productList)
+            .build()
+
+        billingClient.queryProductDetailsAsync(paramstest) { billingResult, productDetailsList ->
+            if (billingResult.responseCode == BillingClient.BillingResponseCode.OK && productDetailsList.isNotEmpty()) {
+                productDetailsList.forEach { productDetails ->
+                    println("Product details: ${productDetails.title}")
+                }
+                skuDetailsList=productDetailsList
+
             } else {
-                Log.e("Billing_Manager", "skuDetails query failed: ${billingResult.debugMessage}")
+                println("Failed to fetch product details: ${billingResult.debugMessage}")
             }
         }
+
     }
     // Function to query SKUs synchronously
     private suspend fun querySkuDetails(skuList: List<String>, skuType: String): List<SkuDetails> =
@@ -476,96 +496,162 @@ class BillingManager(private val context: Context, private val purchaseListener:
     fun querySubscriptionDetails(single: Boolean) {
         if(single){
             CoroutineScope(Dispatchers.IO).launch {
-                val skupurchaseList = listOf(
-                    context.getString(R.string.in_app_purchase_clear_mil_for_one_time_product_id)
+
+                val productListpurchases = listOf(
+                    QueryProductDetailsParams.Product.newBuilder()
+                        .setProductId(context.getString(R.string.in_app_purchase_clear_mil_for_one_time_product_id)) // Replace with your product ID
+                        .setProductType(BillingClient.ProductType.INAPP) // For one-time purchases
+                        .build(),
                 )
 
-                val skuList = listOf(
-                    context.getString(R.string.in_app_subscription_monthly_product_id),
-                    context.getString(R.string.in_app_subscription_yearly_product_id)
-                )
+                val paramspurchase = QueryProductDetailsParams.newBuilder()
+                    .setProductList(productListpurchases)
+                    .build()
 
-                // Ensure skuDetailsList is cleared before adding items
-                skuDetailsList!!.clear()
+                billingClient.queryProductDetailsAsync(paramspurchase) { billingResult, productDetailsList ->
+                    if (billingResult.responseCode == BillingClient.BillingResponseCode.OK && productDetailsList.isNotEmpty()) {
+                        productDetailsList.forEach { productDetails ->
+                            println("Product details: ${productDetails.title}")
+                        }
+                        skuDetailsList.addAll(productDetailsList)
 
-                try {
-                    // Query one-time purchase SKUs first
-                    val inAppSkuDetails = querySkuDetails(skupurchaseList, BillingClient.SkuType.INAPP)
-                    skuDetailsList!!.addAll(inAppSkuDetails)
-
-                    // Query subscription SKUs second
-                    val subscriptionSkuDetails = querySkuDetails(skuList, BillingClient.SkuType.SUBS)
-                    skuDetailsList!!.addAll(subscriptionSkuDetails)
-
-                    Log.d("Billing_Manager", "Final skuDetailsList size = ${skuDetailsList!!.size}")
-
-                } catch (e: Exception) {
-                    Log.e("Billing_Manager", "Error querying SKU details: ${e.message}", e)
+                    } else {
+                        println("Failed to fetch product details: ${billingResult.debugMessage}")
+                    }
                 }
+
+
+
+
+                val productList = listOf(
+                    QueryProductDetailsParams.Product.newBuilder()
+                        .setProductId(context.getString(R.string.in_app_subscription_monthly_product_id)) // Replace with your product ID
+                        .setProductType(BillingClient.ProductType.SUBS) // For one-time purchases
+                        .build(),
+                    QueryProductDetailsParams.Product.newBuilder()
+                        .setProductId(context.getString(R.string.in_app_subscription_yearly_product_id)) // Replace with your product ID
+                        .setProductType(BillingClient.ProductType.SUBS) // For one-time purchases
+                        .build()
+                )
+
+                val paramstest = QueryProductDetailsParams.newBuilder()
+                    .setProductList(productList)
+                    .build()
+
+                billingClient.queryProductDetailsAsync(paramstest) { billingResult, productDetailsList ->
+                    if (billingResult.responseCode == BillingClient.BillingResponseCode.OK && productDetailsList.isNotEmpty()) {
+                        productDetailsList.forEach { productDetails ->
+                            println("Product details: ${productDetails.title}")
+                        }
+                        skuDetailsList.addAll(productDetailsList)
+
+                    } else {
+                        println("Failed to fetch product details: ${billingResult.debugMessage}")
+                    }
+                }
+
             }
 
         }
         else{
-            val skupurchaseList = listOf(
-                context.getString(R.string.in_app_subscription_lifetime_product_id)
+
+
+            val productListpurchases = listOf(
+                QueryProductDetailsParams.Product.newBuilder()
+                    .setProductId(context.getString(R.string.in_app_subscription_lifetime_product_id)) // Replace with your product ID
+                    .setProductType(BillingClient.ProductType.INAPP) // For one-time purchases
+                    .build(),
             )
 
-            val purchaseparams = SkuDetailsParams.newBuilder()
-                .setSkusList(skupurchaseList)
-                .setType(BillingClient.ProductType.INAPP)  // For one-time purchases
+            val paramspurchase = QueryProductDetailsParams.newBuilder()
+                .setProductList(productListpurchases)
                 .build()
 
-            billingClient.querySkuDetailsAsync(purchaseparams) { billingResult, skuDetails ->
-                Log.d("Billing_Manager", "querySkuDetailsAsync: ${billingResult.debugMessage}")
-                if (billingResult.responseCode == BillingClient.BillingResponseCode.OK && skuDetails != null) {
-                    Log.d("Billing_Manager", "adding into list skuDetails size = ${skuDetails.size}")
-                    skuDetailsList!!.addAll(skuDetails)
+            billingClient.queryProductDetailsAsync(paramspurchase) { billingResult, productDetailsList ->
+                if (billingResult.responseCode == BillingClient.BillingResponseCode.OK && productDetailsList.isNotEmpty()) {
+                    productDetailsList.forEach { productDetails ->
+                        println("Product details: ${productDetails.title}")
+                    }
+                    skuDetailsList.addAll(productDetailsList)
 
                 } else {
-                    Log.e("Billing_Manager", "skuDetails query failed: ${billingResult.debugMessage}")
+                    println("Failed to fetch product details: ${billingResult.debugMessage}")
                 }
             }
-            val skuList = listOf(
-                context.getString(R.string.in_app_subscription_monthly_product_id),
-                context.getString(R.string.in_app_subscription_yearly_product_id)
+
+
+            val productList = listOf(
+                QueryProductDetailsParams.Product.newBuilder()
+                    .setProductId(context.getString(R.string.in_app_subscription_monthly_product_id)) // Replace with your product ID
+                    .setProductType(BillingClient.ProductType.SUBS) // For one-time purchases
+                    .build(),
+                QueryProductDetailsParams.Product.newBuilder()
+                    .setProductId(context.getString(R.string.in_app_subscription_yearly_product_id)) // Replace with your product ID
+                    .setProductType(BillingClient.ProductType.SUBS) // For one-time purchases
+                    .build()
             )
 
-            val params = SkuDetailsParams.newBuilder()
-                .setSkusList(skuList)
-                .setType(BillingClient.ProductType.SUBS)  // For subscriptions
+            val paramstest = QueryProductDetailsParams.newBuilder()
+                .setProductList(productList)
                 .build()
 
-            billingClient.querySkuDetailsAsync(params) { billingResult, skuDetails ->
-                Log.d("Billing_Manager", "querySubscriptionDetailsAsync: ${billingResult.debugMessage}")
-                if (billingResult.responseCode == BillingClient.BillingResponseCode.OK && skuDetails != null) {
-                    Log.d("Billing_Manager", "adding into list skuDetails of subscriptions size = ${skuDetails.size}")
-                    skuDetailsList!!.addAll(skuDetails)
+            billingClient.queryProductDetailsAsync(paramstest) { billingResult, productDetailsList ->
+                if (billingResult.responseCode == BillingClient.BillingResponseCode.OK && productDetailsList.isNotEmpty()) {
+                    productDetailsList.forEach { productDetails ->
+                        println("Product details: ${productDetails.title}")
+                    }
+                    skuDetailsList.addAll(productDetailsList)
+
                 } else {
-                    Log.e("Billing_Manager", "Subscription query failed: ${billingResult.debugMessage}")
+                    println("Failed to fetch product details: ${billingResult.debugMessage}")
                 }
             }
         }
 
     }
 
-    fun getSkuDetailsList(): List<SkuDetails>? {
+    fun getSkuDetailsList(): List<ProductDetails>? {
         return skuDetailsList
     }
 
-    // Launch billing flow for purchase (one-time) or subscription
-    fun launchBillingFlow(activity: Activity, skuDetail: SkuDetails) {
-        val billingFlowParams = BillingFlowParams.newBuilder()
-            .setSkuDetails(skuDetail)
-            .build()
+    fun launchBillingFlow(activity: Activity, productDetails: ProductDetails) {
+        // Check if it's a subscription product
+        if (!productDetails.subscriptionOfferDetails.isNullOrEmpty()) {
+            val subscriptionOffer = productDetails.subscriptionOfferDetails!!.first() // Use the first offer or choose one based on logic
+            val offerToken = subscriptionOffer.offerToken // Extract offer token
 
-        billingClient.launchBillingFlow(activity, billingFlowParams)
+            // Set up ProductDetailsParams with offer token
+            val productDetailsParams = BillingFlowParams.ProductDetailsParams.newBuilder()
+                .setProductDetails(productDetails)
+                .setOfferToken(offerToken)
+                .build()
+
+            // Create BillingFlowParams
+            val billingFlowParams = BillingFlowParams.newBuilder()
+                .setProductDetailsParamsList(listOf(productDetailsParams))
+                .build()
+
+            // Launch Billing Flow
+            billingClient.launchBillingFlow(activity, billingFlowParams)
+        } else {
+            // Handle one-time purchase
+            val productDetailsParams = BillingFlowParams.ProductDetailsParams.newBuilder()
+                .setProductDetails(productDetails)
+                .build()
+
+            val billingFlowParams = BillingFlowParams.newBuilder()
+                .setProductDetailsParamsList(listOf(productDetailsParams))
+                .build()
+
+            billingClient.launchBillingFlow(activity, billingFlowParams)
+        }
     }
 
     // Restore purchases
     fun restorePurchases(purchaseListener: BillingListner?) {
         Log.d("Billing_Manager", "Trying to restore purchase")
         val params = QueryPurchasesParams.newBuilder()
-            .setProductType(BillingClient.SkuType.INAPP)
+            .setProductType(BillingClient.ProductType.INAPP)
             .build()
         billingClient.queryPurchasesAsync(params) { billingResult, purchases ->
 //        billingClient.queryPurchasesAsync(BillingClient.SkuType.INAPP) { billingResult, purchases ->

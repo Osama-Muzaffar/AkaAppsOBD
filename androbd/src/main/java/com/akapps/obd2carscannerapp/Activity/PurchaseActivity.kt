@@ -26,13 +26,14 @@ import com.akapps.obd2carscannerapp.Models.PurchaseModel
 import com.akapps.obd2carscannerapp.R
 import com.akapps.obd2carscannerapp.Trips.PairedDeviceSharedPreference
 import com.akapps.obd2carscannerapp.databinding.ActivityPurchaseBinding
+import com.android.billingclient.api.ProductDetails
 import com.android.billingclient.api.Purchase
 
 
 class PurchaseActivity : AppCompatActivity() {
     lateinit var binding: ActivityPurchaseBinding
     lateinit var billingManager: BillingManager
-    var list: List<SkuDetails>?= null
+    var list: List<ProductDetails>?= null
     var from = "multi"
     var adapter: PurchaseAdapter?= null
     var isYearlypurchased= false
@@ -109,11 +110,11 @@ class PurchaseActivity : AppCompatActivity() {
                     }
                 }
                 if(isYearlypurchased){
-                    var skuDetail: SkuDetails? = null
+                    var skuDetail: ProductDetails? = null
                     val skuDetailsList = billingManager.getSkuDetailsList() // Implement this to return actual SkuDetails
                     skuDetailsList?.let {
                         for (sku in skuDetailsList){
-                            if(sku.sku.equals(getString(R.string.in_app_subscription_yearly_product_id))){
+                            if(sku.productId.equals(getString(R.string.in_app_subscription_yearly_product_id))){
                                 skuDetail=sku
                                 break
                             }
@@ -122,8 +123,9 @@ class PurchaseActivity : AppCompatActivity() {
 
 
                     skuDetail?.let{
+                        val offerDetails = it.oneTimePurchaseOfferDetails
                         binding.purchasetitle.text= it.title
-                        binding.purchasecost.text= it.price
+                        binding.purchasecost.text= offerDetails?.formattedPrice + offerDetails?.priceCurrencyCode
                         binding.purchasedescription.text= it.description
                     }
                     binding.multisubrelative.visibility=View.GONE
@@ -140,44 +142,16 @@ class PurchaseActivity : AppCompatActivity() {
                         Log.d("Purchase Activity", "onCreate: list size: " + list!!.size)
                         if (list!!.size > 0) {
                             if (list?.size == 1) {
-                                Log.d("Purchase Activity", "onCreate: list size 1: " + list?.size)
-                                Log.d("Purchase Activity", "onCreate: Sku: " + list?.get(0)!!.sku)
-                                Log.d(
-                                    "Purchase Activity",
-                                    "onCreate: Description: " + list?.get(0)!!.description
-                                )
-                                Log.d(
-                                    "Purchase Activity",
-                                    "onCreate: freeTrialPeriod: " + list?.get(0)!!.freeTrialPeriod
-                                )
-                                Log.d("Purchase Activity", "onCreate: title: " + list?.get(0)!!.title)
-                                Log.d("Purchase Activity", "onCreate: price: " + list?.get(0)!!.price)
+                                val offerDetails = list!!.get(0).oneTimePurchaseOfferDetails
+
                                 binding.title.text = list!!.get(0).title
-                                binding.price.text = list!!.get(0).price
+                                binding.price.text = offerDetails?.formattedPrice
                                 binding.descriptiontxt.text = list!!.get(0).description
                                 binding.progressbar.visibility = View.GONE
                                 binding.singlesubrelative.visibility = View.VISIBLE
                                 binding.multisubrelative.visibility = View.GONE
                             } else {
                                 Log.d("Purchase Activity", "onCreate: list size > 1: " + list?.size)
-                                for (i in list!!) {
-                                    Log.d("Purchase Activity", "onCreate: Sku: " + i.sku)
-                                    Log.d(
-                                        "Purchase Activity",
-                                        "onCreate: Description: " + i.description
-                                    )
-                                    Log.d(
-                                        "Purchase Activity",
-                                        "onCreate: freeTrialPeriod: " + i.freeTrialPeriod
-                                    )
-                                    Log.d("Purchase Activity", "onCreate: title: " + i.title)
-                                    Log.d("Purchase Activity", "onCreate: price: " + i.price)
-                                    Log.d(
-                                        "Purchase Activity",
-                                        "onCreate: price: " + i.subscriptionPeriod
-                                    )
-                                    Log.d("Purchase Activity", "......................")
-                                }
 
                                 setAdapter(list!!)
                             }
@@ -210,11 +184,11 @@ class PurchaseActivity : AppCompatActivity() {
                 }
                 Log.d("Purchases__", "Purchase_checker:   isAllPremium; "+isAllPremium)
                 if(isAllPremium){
-                    var skuDetail: SkuDetails? = null
+                    var skuDetail: ProductDetails? = null
                     val skuDetailsList = billingManager.getSkuDetailsList() // Implement this to return actual SkuDetails
                     skuDetailsList?.let {
                         for (sku in skuDetailsList){
-                            if(sku.sku.equals(getString(R.string.in_app_subscription_lifetime_product_id))){
+                            if(sku.productId.equals(getString(R.string.in_app_subscription_lifetime_product_id))){
                                 skuDetail=sku
                                 break
                             }
@@ -223,8 +197,9 @@ class PurchaseActivity : AppCompatActivity() {
 
 
                     skuDetail?.let{
+                        val offerDetails = it.oneTimePurchaseOfferDetails
                         binding.purchasetitle.text= it.title
-                        binding.purchasecost.text= it.price
+                        binding.purchasecost.text= offerDetails?.formattedPrice+" "+offerDetails?.priceCurrencyCode
                         binding.purchasedescription.text= it.description
                     }
                     binding.getpkgcard.visibility=View.GONE
@@ -241,45 +216,16 @@ class PurchaseActivity : AppCompatActivity() {
                         Log.d("Purchase Activity", "onCreate: list size: " + list!!.size)
                         if (list!!.size > 0) {
                             if (list?.size == 1) {
-                                Log.d("Purchase Activity", "onCreate: list size 1: " + list?.size)
-                                Log.d("Purchase Activity", "onCreate: Sku: " + list?.get(0)!!.sku)
-                                Log.d(
-                                    "Purchase Activity",
-                                    "onCreate: Description: " + list?.get(0)!!.description
-                                )
-                                Log.d(
-                                    "Purchase Activity",
-                                    "onCreate: freeTrialPeriod: " + list?.get(0)!!.freeTrialPeriod
-                                )
-                                Log.d("Purchase Activity", "onCreate: title: " + list?.get(0)!!.title)
-                                Log.d("Purchase Activity", "onCreate: price: " + list?.get(0)!!.price)
+                                val offerDetails = list!!.get(0).oneTimePurchaseOfferDetails
+
                                 binding.title.text = list!!.get(0).title
-                                binding.price.text = list!!.get(0).price
+                                binding.price.text = offerDetails?.formattedPrice
                                 binding.descriptiontxt.text = list!!.get(0).description
                                 binding.progressbar.visibility = View.GONE
                                 binding.singlesubrelative.visibility = View.VISIBLE
                                 binding.multisubrelative.visibility = View.GONE
                             } else {
                                 Log.d("Purchase Activity", "onCreate: list size > 1: " + list?.size)
-                                for (i in list!!) {
-                                    Log.d("Purchase Activity", "onCreate: Sku: " + i.sku)
-                                    Log.d(
-                                        "Purchase Activity",
-                                        "onCreate: Description: " + i.description
-                                    )
-                                    Log.d(
-                                        "Purchase Activity",
-                                        "onCreate: freeTrialPeriod: " + i.freeTrialPeriod
-                                    )
-                                    Log.d("Purchase Activity", "onCreate: title: " + i.title)
-                                    Log.d("Purchase Activity", "onCreate: price: " + i.price)
-                                    Log.d(
-                                        "Purchase Activity",
-                                        "onCreate: price: " + i.subscriptionPeriod
-                                    )
-                                    Log.d("Purchase Activity", "......................")
-                                }
-
                                 setAdapter(list!!)
                             }
                         }
@@ -294,45 +240,16 @@ class PurchaseActivity : AppCompatActivity() {
                     Log.d("Purchase Activity", "onCreate: list size: " + list!!.size)
                     if (list!!.size > 0) {
                         if (list?.size == 1) {
-                            Log.d("Purchase Activity", "onCreate: list size 1: " + list?.size)
-                            Log.d("Purchase Activity", "onCreate: Sku: " + list?.get(0)!!.sku)
-                            Log.d(
-                                "Purchase Activity",
-                                "onCreate: Description: " + list?.get(0)!!.description
-                            )
-                            Log.d(
-                                "Purchase Activity",
-                                "onCreate: freeTrialPeriod: " + list?.get(0)!!.freeTrialPeriod
-                            )
-                            Log.d("Purchase Activity", "onCreate: title: " + list?.get(0)!!.title)
-                            Log.d("Purchase Activity", "onCreate: price: " + list?.get(0)!!.price)
+                            val offerDetails = list!!.get(0).oneTimePurchaseOfferDetails
+
                             binding.title.text = list!!.get(0).title
-                            binding.price.text = list!!.get(0).price
+                            binding.price.text = offerDetails?.formattedPrice
                             binding.descriptiontxt.text = list!!.get(0).description
                             binding.progressbar.visibility = View.GONE
                             binding.singlesubrelative.visibility = View.VISIBLE
                             binding.multisubrelative.visibility = View.GONE
                         } else {
                             Log.d("Purchase Activity", "onCreate: list size > 1: " + list?.size)
-                            for (i in list!!) {
-                                Log.d("Purchase Activity", "onCreate: Sku: " + i.sku)
-                                Log.d(
-                                    "Purchase Activity",
-                                    "onCreate: Description: " + i.description
-                                )
-                                Log.d(
-                                    "Purchase Activity",
-                                    "onCreate: freeTrialPeriod: " + i.freeTrialPeriod
-                                )
-                                Log.d("Purchase Activity", "onCreate: title: " + i.title)
-                                Log.d("Purchase Activity", "onCreate: price: " + i.price)
-                                Log.d(
-                                    "Purchase Activity",
-                                    "onCreate: price: " + i.subscriptionPeriod
-                                )
-                                Log.d("Purchase Activity", "......................")
-                            }
-
                             setAdapter(list!!)
                         }
                     }
@@ -457,7 +374,7 @@ class PurchaseActivity : AppCompatActivity() {
             else {
                 if (adapter != null) {
                     val skuDetailsList = adapter!!.getPurchaseList()
-                    var skuDetail: SkuDetails? = null
+                    var skuDetail: ProductDetails? = null
                     for (i in skuDetailsList) {
                         if (i.ischecked) {
                             skuDetail = i.skuDetails
@@ -549,7 +466,7 @@ class PurchaseActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    private fun setAdapter(list: List<SkuDetails>) {
+    private fun setAdapter(list: List<ProductDetails>) {
             var purchaselist: ArrayList<PurchaseModel> = ArrayList()
         for(i in 0 until  list.size){
             if (i==0){

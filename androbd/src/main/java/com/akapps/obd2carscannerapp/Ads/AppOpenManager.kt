@@ -104,6 +104,8 @@ class AppOpenManager(private val myApplication: Application, private var adUnitI
         skipNextAd = false
     }
     fun showSplashAdIfAvailable(activity: Activity,onAdDismissed: () -> Unit= {}) {
+        Log.e(LOG_TAG, "showSplashAdIfAvailable")
+
         if (currentActivity != null && excludedActivities.contains(currentActivity!!::class.java)) {
             Log.d(LOG_TAG, "Ad display is skipped for this activity.")
 //            fetchAd()
@@ -118,7 +120,7 @@ class AppOpenManager(private val myApplication: Application, private var adUnitI
                 override fun onAdDismissedFullScreenContent() {
                     appOpenAd = null
                     isShowingAd = false
-                    fetchAd()
+//                    fetchAd()
                     onAdDismissed()
                     Log.e(LOG_TAG, "Ad dimsissed")
                 }
@@ -132,7 +134,7 @@ class AppOpenManager(private val myApplication: Application, private var adUnitI
 //                    firebaseAnalytics.logEvent("ad_failed_to_load", params)
                     Log.e(LOG_TAG, "Failed to show : "+adError.message)
                     onAdDismissed()
-                    fetchAd()
+//                    fetchAd()
                 }
 
                 override fun onAdShowedFullScreenContent() {
@@ -167,7 +169,7 @@ class AppOpenManager(private val myApplication: Application, private var adUnitI
         }
         else {
             Log.d(LOG_TAG, "Cannot show ad.")
-            fetchAd()
+//            fetchAd()
             onAdDismissed()
         }
 

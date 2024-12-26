@@ -181,7 +181,7 @@ class SelectLanguageActivity : AppCompatActivity() {
         LanguageList.add(LanguageModel("SA", getString(R.string.arabic),"ar",false))
         LanguageList.add(LanguageModel("CN", getString(R.string.chinese),"zh",false))
         LanguageList.add(LanguageModel("CZ", getString(R.string.czech_e_tina),"cs",false))
-        LanguageList.add(LanguageModel("DK", getString(R.string.danish_dansk),"en",false))
+        LanguageList.add(LanguageModel("DK", getString(R.string.danish_dansk),"da",false))
         LanguageList.add(LanguageModel("NL", getString(R.string.dutch_nederlands),"nl",false))
         LanguageList.add(LanguageModel("FR", getString(R.string.french_fran_ais),"fr",false))
         LanguageList.add(LanguageModel("DE", getString(R.string.german_deutsch),"de",false))

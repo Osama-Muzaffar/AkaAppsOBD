@@ -38,7 +38,9 @@ class PurchaseAdapter(val context: Context, val list: List<PurchaseModel>,
 //        else{
 //            holder.binding.price.text= list.get(position).skuDetails.price+" / Per Month"
 //        }
-        holder.binding.price.text= list.get(position).skuDetails.price
+        val offerDetails = list.get(position).skuDetails.oneTimePurchaseOfferDetails
+
+        holder.binding.price.text= offerDetails?.formattedPrice
 
 
         holder.binding.description.text= list.get(position).skuDetails.description
@@ -61,7 +63,7 @@ class PurchaseAdapter(val context: Context, val list: List<PurchaseModel>,
 
                 if (position == i){
                     list.get(i).ischecked = true
-                    purchaseInteface.onPurchaseClick(list.get(i).skuDetails.sku)
+                    purchaseInteface.onPurchaseClick(list.get(i).skuDetails.productId)
 
                 }
                 else{
