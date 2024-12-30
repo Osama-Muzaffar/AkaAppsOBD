@@ -1,12 +1,14 @@
 package com.floor.planner.models
 import android.app.Activity
 import android.content.Context
+import android.graphics.drawable.BitmapDrawable
 import android.util.AttributeSet
 import android.util.Log
 import android.view.LayoutInflater
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.palette.graphics.Palette
 import com.facebook.shimmer.ShimmerFrameLayout
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdLoader
@@ -112,6 +114,7 @@ class NativeBannerFull @JvmOverloads constructor(
                 }
 
             }
+            setMediaViewBackground(nativeAdView,nativeAd)
 
         }
 //        if (!ismediavisible) {
@@ -207,5 +210,28 @@ class NativeBannerFull @JvmOverloads constructor(
 
         }
     }
+    fun setMediaViewBackground(nativeAdView: NativeAdView, nativeAd: NativeAd) {
+        val mediaView = nativeAdView.mediaView
+
+        // Get the main image from the native ad
+        val image = nativeAd.images.firstOrNull()?.drawable
+        if (image != null) {
+            // Convert the drawable to a Bitmap
+            val bitmap = (image as BitmapDrawable).bitmap
+
+            // Use Palette to extract the dominant color
+            Palette.from(bitmap).generate { palette ->
+                val dominantColor = palette?.getDominantColor(0xFFFFFFFF.toInt()) // Default to white if no color is found
+                dominantColor?.let {
+                    // Set the MediaView's background to the extracted color
+                    mediaView!!.setBackgroundColor(it)
+                }
+            }
+        } else {
+            // Fallback in case there's no image
+            mediaView!!.setBackgroundColor(0xFFFFFFFF.toInt()) // Default to white
+        }
+    }
+
 
 }

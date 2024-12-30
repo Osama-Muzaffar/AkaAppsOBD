@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.akapps.obd2carscannerapp.Models.PurchaseModel
+import com.akapps.obd2carscannerapp.Ads.billing.PurchaseModel
 import com.akapps.obd2carscannerapp.R
 import com.akapps.obd2carscannerapp.databinding.PurchaseItemBinding
 

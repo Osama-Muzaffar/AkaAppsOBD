@@ -10,10 +10,10 @@ import android.net.NetworkCapabilities
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
+import android.os.LocaleList
 import android.os.Looper
 import android.util.Log
 import android.view.View
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.os.LocaleListCompat
@@ -28,7 +28,7 @@ import com.akapps.obd2carscannerapp.Ads.billing.AppPurchase
 import com.akapps.obd2carscannerapp.Ads.ump.AdsConsentManager
 import com.akapps.obd2carscannerapp.BuildConfig
 import com.akapps.obd2carscannerapp.Database.DatabaseHelper
-import com.akapps.obd2carscannerapp.Models.BillingManager
+import com.akapps.obd2carscannerapp.Ads.billing.BillingManager
 import com.akapps.obd2carscannerapp.Models.SharedPreferencesHelper
 import com.akapps.obd2carscannerapp.MyApp
 import com.akapps.obd2carscannerapp.R
@@ -57,8 +57,8 @@ class SplashActivity : AppCompatActivity() {
     private lateinit var dbHelper: DatabaseHelper
 
     lateinit var binding: ActivitySplashBinding
-    val totalTime = 8000L // 7 seconds
-    val interval = 80L // Update every 50 milliseconds
+    val totalTime = 8000L // 8 seconds
+    val interval = 80L // Update every 80 milliseconds
     val steps = (totalTime / interval).toInt()
     val increment = 100 / steps
 
@@ -512,6 +512,7 @@ class SplashActivity : AppCompatActivity() {
         else{
             val appOpenManager = (application as MyApp).appOpenManager
             runnable?.let {
+                Log.d("TrackProgress", "handler removed before showing ad")
                 handler.removeCallbacks(it)
             }
 
@@ -520,7 +521,7 @@ class SplashActivity : AppCompatActivity() {
                 Log.d("TrackProgress", "moving with open ad dissmissed")
                 runnable?.let {
                     handler.removeCallbacks(it)
-                    Log.d("TrackProgress", "handler removed")
+                    Log.d("TrackProgress", "handler removed after dismissed ad")
                 }
                 navigateToMainActivity()
             }
@@ -578,14 +579,30 @@ class SplashActivity : AppCompatActivity() {
         billingManager.endConnection()
     }
 
-    fun setLocale(activity: Activity, langcode: String?) {
-        if (langcode != "") {
-            downloadSelectedLanguage(langcode)
-            val appLocale = LocaleListCompat.forLanguageTags(langcode)
-            AppCompatDelegate.setApplicationLocales(appLocale)
-        }
+//    fun setLocale(activity: Activity, langcode: String?) {
+//        if (langcode != "") {
+//            downloadSelectedLanguage(langcode)
+//            val appLocale = LocaleListCompat.forLanguageTags(langcode)
+//            AppCompatDelegate.setApplicationLocales(appLocale)
+//        }
+//
+//    }
 
+    fun setLocale(activity: Activity, langcode: String?) {
+        if (!langcode.isNullOrEmpty()) {
+            downloadSelectedLanguage(langcode)
+
+            val appLocale = Locale.forLanguageTag(langcode)
+            val resources = activity.resources
+            val config = resources.configuration
+            val newLocaleList = LocaleList(appLocale)
+            LocaleList.setDefault(newLocaleList)
+            config.setLocales(newLocaleList)
+
+            resources.updateConfiguration(config, resources.displayMetrics)
+        }
     }
+
 
 
     fun downloadSelectedLanguage(lan: String?) {

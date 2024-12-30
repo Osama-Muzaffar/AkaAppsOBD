@@ -19,10 +19,9 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.akapps.obd2carscannerapp.Activity.MyMainActivity.Constants.mCommService
 import com.akapps.obd2carscannerapp.Activity.MyMainActivity.Constants.mode
-import com.android.billingclient.api.SkuDetails
 import com.akapps.obd2carscannerapp.Adapter.PurchaseAdapter
-import com.akapps.obd2carscannerapp.Models.BillingManager
-import com.akapps.obd2carscannerapp.Models.PurchaseModel
+import com.akapps.obd2carscannerapp.Ads.billing.BillingManager
+import com.akapps.obd2carscannerapp.Ads.billing.PurchaseModel
 import com.akapps.obd2carscannerapp.R
 import com.akapps.obd2carscannerapp.Trips.PairedDeviceSharedPreference
 import com.akapps.obd2carscannerapp.databinding.ActivityPurchaseBinding

@@ -11,8 +11,8 @@ android {
         // SDK 25 to allow background service mechanism for plugins
         //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 35
-        versionCode 4
-        versionName "1.3"
+        versionCode 5
+        versionName "1.4"
         setProperty("archivesBaseName", "OBD_AK_New" + "-VERSION" + versionCode + "VNAME(" + versionName+ ")")
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -21,6 +21,8 @@ android {
             abortOnError false
         }
         android.buildFeatures.buildConfig true
+        resourceConfigurations += ["en", "af", "ar", "cs", "da", "de","el", "es", "fa", "fr", "hi", "in","it", "ja", "ko", "ms", "nl", "no","pt", "ru", "th", "tr", "ur", "vi","zh"]
+
     }
 
     applicationVariants.configureEach { variant ->
@@ -47,6 +49,7 @@ android {
             buildConfigField "String", "admob_appopen", "\"ca-app-pub-3940256099942544/9257395921\""
             buildConfigField "String", "admob_appopen_splash", "\"ca-app-pub-3940256099942544/9257395921\""
             buildConfigField "String", "admob_native", "\"ca-app-pub-3940256099942544/2247696110\""
+//            buildConfigField "String", "admob_native", "\"ca-app-pub-8011932915847069/1887678226\""
 
             debuggable = true
             signingConfig signingConfigs.debug
@@ -98,6 +101,7 @@ dependencies {
     implementation ('com.google.firebase:firebase-config:22.0.0'){
         exclude module: "javax.inject"
     }
+    implementation 'androidx.palette:palette-ktx:1.0.0'
     annotationProcessor("androidx.room:room-compiler:2.2.5")
     implementation "androidx.room:room-ktx:2.2.5"
 //    implementation ("in.unicodelabs.sorbh:kdgaugeview:1.0.0")

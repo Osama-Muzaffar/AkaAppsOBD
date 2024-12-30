@@ -67,5 +67,8 @@ class LanguageAdapter(val context: Context,val  languageList: ArrayList<Language
             onSelect(languageList.get(position))
             notifyDataSetChanged()
         }
+        holder.binding.radiobtn.setOnClickListener {
+            holder.binding.mainlinear.performClick()
+        }
     }
 }

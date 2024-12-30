@@ -34,6 +34,7 @@ class AppOpenManager(private val myApplication: Application, private var adUnitI
     companion object {
         private const val LOG_TAG = "isShowingAd"
         var isShowingAd = false
+        var isSplashAdShowing = false
         var isShownAd = false
     }
 
@@ -113,13 +114,13 @@ class AppOpenManager(private val myApplication: Application, private var adUnitI
             return
         }
 
-        if (!isShowingAd && isAdAvailable() && !skipNextAd) {
+        if (!isSplashAdShowing && !isShowingAd && isAdAvailable() && !skipNextAd) {
             Log.e(LOG_TAG, "Will show ad.")
 
             val fullScreenContentCallback = object : FullScreenContentCallback() {
                 override fun onAdDismissedFullScreenContent() {
                     appOpenAd = null
-                    isShowingAd = false
+                    isSplashAdShowing = true
 //                    fetchAd()
                     onAdDismissed()
                     Log.e(LOG_TAG, "Ad dimsissed")
@@ -139,6 +140,7 @@ class AppOpenManager(private val myApplication: Application, private var adUnitI
 
                 override fun onAdShowedFullScreenContent() {
                     isShowingAd = true
+                    isSplashAdShowing = true
                     isShownAd = true
 
                     // Log Firebase event for ad impression
@@ -169,8 +171,14 @@ class AppOpenManager(private val myApplication: Application, private var adUnitI
         }
         else {
             Log.d(LOG_TAG, "Cannot show ad.")
+            if(isSplashAdShowing){
+
+            }
+            else{
+                onAdDismissed()
+
+            }
 //            fetchAd()
-            onAdDismissed()
         }
 
         skipNextAd = false
