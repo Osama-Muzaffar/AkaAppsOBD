@@ -184,6 +184,62 @@ class AppOpenManager(private val myApplication: Application, private var adUnitI
         skipNextAd = false
     }
 
+    fun showSplashAdIfAvailable(onAdDismissed: () -> Unit= {}) {
+        // If the current activity is null, or excluded activities contains the current activity class, return immediately.
+        if (currentActivity == null || excludedActivities.contains(currentActivity!!::class.java)) {
+            Log.d(LOG_TAG, "Ad display is skipped for this activity.")
+            onAdDismissed()
+            return
+        }
+            // Check if the ad is ready after the delay
+            if (isAdAvailable() && !isShowingAd && !skipNextAd) {
+                Log.d(LOG_TAG, "Will show splash ad.")
+
+                val fullScreenContentCallback = object : FullScreenContentCallback() {
+                    override fun onAdDismissedFullScreenContent() {
+                        Log.d(LOG_TAG, "Ad dismissed. Proceeding to next screen.")
+                        appOpenAd = null
+                        isShowingAd = false
+                        fetchAd()
+                        onAdDismissed() // Proceed to the next screen after the ad is dismissed
+                    }
+
+                    override fun onAdFailedToShowFullScreenContent(adError: AdError) {
+                        Log.d(LOG_TAG, "Failed to show ad: ${adError.message}")
+                        onAdDismissed() // Proceed to the next screen if the ad fails to show
+                    }
+
+                    override fun onAdShowedFullScreenContent() {
+                        Log.d(LOG_TAG, "Ad showed successfully.")
+                        isShowingAd = true
+                        isShownAd = true
+                        // Optionally, log ad impression
+//                    logAdImpression()
+                    }
+                }
+
+                appOpenAd?.apply {
+                    setOnPaidEventListener { adValue ->
+                        // Log paid event if necessary
+                        val adValueInStandardUnits = adValue.valueMicros / 1_000_000.0
+                        // Optionally log the revenue event
+//                    logAdRevenue(adValueInStandardUnits, adValue.currencyCode)
+                    }
+                    setFullScreenContentCallback(fullScreenContentCallback)
+                    if (currentActivity != null) {
+                        show(currentActivity!!)
+                    }
+                }
+            } else {
+                Log.d(LOG_TAG, "Ad not available or unable to show.")
+                onAdDismissed() // Proceed to the next screen if the ad is not available
+            }
+
+            skipNextAd = false
+
+    }
+
+
     fun skipNextAd() {
         skipNextAd = true
     }

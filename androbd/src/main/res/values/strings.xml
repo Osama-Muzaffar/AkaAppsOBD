@@ -9,6 +9,8 @@
     <string name="in_app_subscription_monthly_product_id" translatable="false">com.ob.monthly</string>
     <string name="in_app_subscription_yearly_product_id" translatable="false">com.ob.yearly</string>
     <string name="in_app_subscription_lifetime_product_id" translatable="false">com.obsubscription.lifetime</string>
+<!--    <string name="dev_link" translatable="false">https://play.google.com/store/apps/developer?id=AK Apps &amp; Games</string>-->
+    <string name="dev_link" translatable="false">https://play.google.com/store/apps/developer?id=AK%20Apps%20%26%20Games</string>
     <string name="base64key" translatable="false">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq8PGoRR5urBinoEjgn3Hd4DCsAAVVNuXTuLjcpDCEnvai37gdghJMwdRUDQvz1VLudob8HfxzpQcXwRiIX9XYABZkq7UKbuju1HEDV11iJC/6RtuFm9o9+iNdJDD8LpLu51erOMhloqIuJEvgKusZIuCsfBnRFnZR6lgnKwSVUPKdvoDtWKBVcLvuUSFGReIesWgydAWzfiv/FbOuRYKV2L77WcKGe63BRuRFgO2FSD4QyEoJRAwPSPxqCby7ukozX4sI+HYFurai6td7C0P1ky63gEo7oeTQP3t5luIEsExkfdbbcrzSx7hGaYuwqKk679U6UtwhoWE4VS80dqNbwIDAQAB</string>
 
     <!--    <string name="ak_apps_games" translatable="false">AK Apps & Games</string>-->

@@ -34,7 +34,7 @@
         android:layout_height="30sp">
         <RadioButton
             android:id="@+id/radiobtn"
-            android:enabled="false"
+            android:enabled="true"
             android:buttonTint="@color/main_purple"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

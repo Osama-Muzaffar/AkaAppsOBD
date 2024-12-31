@@ -139,7 +139,7 @@ class SettingActivity : AppCompatActivity() {
 
     private fun showMoreApps() {
 //        val developerId = getString(R.string.ak_apps_games)
-        val moreAppsUrl = "https://play.google.com/store/apps/developer?id=AK Apps & Games"
+        val moreAppsUrl = getString(R.string.dev_link)
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(moreAppsUrl))
         startActivity(intent)
     }

@@ -38,6 +38,9 @@ import com.akapps.obd2carscannerapp.Utils.AppUtils.intersitialAdUtils
 import com.akapps.obd2carscannerapp.Utils.AppUtils.issplashOpening
 import com.akapps.obd2carscannerapp.databinding.ActivitySplashBinding
 import com.android.billingclient.api.Purchase
+import com.google.android.gms.ads.LoadAdError
+import com.google.android.gms.ads.interstitial.InterstitialAd
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import com.google.firebase.remoteconfig.ConfigUpdate
 import com.google.firebase.remoteconfig.ConfigUpdateListener
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
@@ -57,8 +60,8 @@ class SplashActivity : AppCompatActivity() {
     private lateinit var dbHelper: DatabaseHelper
 
     lateinit var binding: ActivitySplashBinding
-    val totalTime = 8000L // 8 seconds
-    val interval = 80L // Update every 80 milliseconds
+    val totalTime = 5000L // 8 seconds
+    val interval = 50L // Update every 80 milliseconds
     val steps = (totalTime / interval).toInt()
     val increment = 100 / steps
 
@@ -102,7 +105,9 @@ class SplashActivity : AppCompatActivity() {
                 } else {
                     Log.d("TrackProgress", "moving with progress > 100 at default")
                     handler.removeCallbacks(this)
-                    navigateToMainActivity()
+//                    navigateToMainActivity()
+                    binding.letsgocard.visibility=View.VISIBLE
+                    binding.horizontalprogressBar.visibility=View.GONE
                 }
             }
         }
@@ -157,119 +162,28 @@ class SplashActivity : AppCompatActivity() {
                 })
 
                 Handler(Looper.getMainLooper()).postDelayed(Runnable {
+                    AdManager.getInstance().loadInterstitialAd(this,BuildConfig.admob_intersitial,
+                        object : InterstitialAdLoadCallback(){
+                            override fun onAdFailedToLoad(p0: LoadAdError) {
+                                super.onAdFailedToLoad(p0)
+                                Log.d("Intersitial_ad", "onAdFailedToLoad: "+p0)
+                            }
 
-                    checkPurchaseStatus()
-                },5000)
+                            override fun onAdLoaded(p0: InterstitialAd) {
+                                super.onAdLoaded(p0)
+                                Log.d("Intersitial_ad", "onAd loaded successfully")
+                            }
+                        })
+
+//                    checkPurchaseStatus()
+//                    binding.letsgocard.visibility=View.VISIBLE
+//                    binding.horizontalprogressBar.visibility=View.GONE
+                },1000)
+
             }, 2000)
 
-
-            /*  Handler(Looper.getMainLooper()).postDelayed(Runnable {
-                  Log.d("remote", "test banner ad at splash")
-  //                if(PairedDeviceSharedPreference.getInstance(this@SplashActivity).list.size>0){
-  //                    Log.d("Purchases_Splash", "purchases list is greater than 0")
-  //                    var isshwoingad= true
-  //                    for(purchases in PairedDeviceSharedPreference.getInstance(this@SplashActivity).list){
-  //                        if (purchases.equals(getString(R.string.in_app_purchase_remove_ads_product_id)) ||
-  //                            purchases.equals(getString(R.string.in_app_purchase_unlock_all_features_product_id))){
-  //                            isshwoingad= false
-  //                        }
-  //                        else{
-  //                            isshwoingad= true
-  //                        }
-  //                    }
-  //                    Log.d("Purchases_Splash", "isshwoingad = $isshwoingad")
-  //
-  //                    if(isshwoingad) {
-  //                        AdManager.getInstance()
-  //                            .loadInterstitialAd(this@SplashActivity, BuildConfig.admob_intersitial)
-  //
-  //                        if (RemoteConfigManager.isSplashBannerEnable) {
-  //                            val bannerview = findViewById<BannerAdView>(R.id.bannerView)
-  //                            bannerview.visibility=View.VISIBLE
-  //                            bannerview.loadBanner(this@SplashActivity, BuildConfig.admob_banner)
-  //                        } else {
-  //                            val bannerview = findViewById<BannerAdView>(R.id.bannerView)
-  //                            bannerview.visibility = View.GONE
-  //                        }
-  //                    }
-  //                    else{
-  //                        val bannerview = findViewById<BannerAdView>(R.id.bannerView)
-  //                        bannerview.visibility= View.GONE
-  //                    }
-  //
-  //                }
-  //                else{
-                      if(PairedDeviceSharedPreference.getInstance(this).subsList.size>0){
-                          var isshwoingad= true
-                          for(purchases in PairedDeviceSharedPreference.getInstance(this).subsList){
-  //                    if (purchases.equals(getString(R.string.in_app_subscription_yearly_product_id))){
-  //                        isshwoingad= false
-  //                        break
-  //
-  //                    }
-  //                    else{
-                              isshwoingad= false
-  //                    }
-                          }
-                          if (isshwoingad){
-                              Log.d("Purchases_Splash", "purchases list is empty")
-                              AdManager.getInstance()
-                                  .loadInterstitialAd(this@SplashActivity, BuildConfig.admob_intersitial)
-
-                              if(adsConfig!=null) {
-                                      val bannerview = findViewById<BannerAdView>(R.id.banneradsview)
-                                      bannerview.visibility = View.VISIBLE
-                                      bannerview.loadBanner(
-                                          this@SplashActivity,
-                                          BuildConfig.admob_banner
-                                      )
-
-                              } else {
-                                  Log.d("test_remote", "remote config is null")
-                                  val bannerview = findViewById<BannerAdView>(R.id.banneradsview)
-                                  bannerview.visibility = View.GONE
-                              }
-                          }
-                          else{
-                              val bannerview= findViewById<BannerAdView>(R.id.banneradsview)
-                              bannerview.visibility=View.GONE
-                          }
-                      }
-                      else {
-                          Log.d("Purchases_Splash", "purchases list is empty")
-                          AdManager.getInstance()
-                              .loadInterstitialAd(this@SplashActivity, BuildConfig.admob_intersitial)
-
-                          if(adsConfig!=null) {
-                              if(adsConfig?.splash_banner!!) {
-                                  val bannerview = findViewById<BannerAdView>(R.id.banneradsview)
-                                  bannerview.visibility = View.VISIBLE
-                                  bannerview.loadBanner(
-                                      this@SplashActivity,
-                                      BuildConfig.admob_banner
-                                  )
-                              }
-                              else{
-                                  val bannerview = findViewById<BannerAdView>(R.id.banneradsview)
-                                  bannerview.visibility = View.GONE
-                              }
-
-                          } else {
-                              Log.d("test_remote", "remote config is null")
-
-                              val bannerview = findViewById<BannerAdView>(R.id.banneradsview)
-                              bannerview.visibility = View.VISIBLE
-                              bannerview.loadBanner(
-                                  this@SplashActivity,
-                                  BuildConfig.admob_banner
-                              )
-                          }
-                      }
-  //                }
-              },5000)
-  */
-
-        } else {
+        }
+        else {
             Handler(Looper.getMainLooper()).postDelayed(Runnable {
                 runnable = object : Runnable {
                     override fun run() {
@@ -280,15 +194,16 @@ class SplashActivity : AppCompatActivity() {
                         } else {
                             Log.d("TrackProgress", "moving with progress while internet is not available")
                             handler.removeCallbacks(this)
-                            navigateToMainActivity()
-
+//                            navigateToMainActivity()
+                            binding.letsgocard.visibility=View.VISIBLE
+                            binding.horizontalprogressBar.visibility=View.GONE
                         }
                     }
                 }
 
                 handler.post(runnable!!)
 
-            }, 4000)
+            }, 5000)
         }
 
         dbHelper = DatabaseHelper(this)
@@ -468,8 +383,27 @@ class SplashActivity : AppCompatActivity() {
                     }
                 }
                 else {
-                    Log.d("Splash_Tracking", "purchase is null")
-                    navigateToMainActivity()
+                    intersitialAdUtils++
+                    if (AdManager.getInstance().isReady() && intersitialAdUtils%2==0) {
+                        Log.d("Splash_Tracking", "ad is ready trying to show")
+                        AdManager.getInstance().forceShowInterstitial(this@SplashActivity,
+                            object : AdManagerCallback() {
+                                override fun onNextAction() {
+                                    super.onNextAction()
+                                    navigateToMainActivity()
+                                }
+
+                                override fun onFailedToLoad(error: AdError?) {
+                                    super.onFailedToLoad(error)
+                                    navigateToMainActivity()
+                                }
+                            },true)
+                    } else {
+                        Log.d("Splash_Tracking", "ad is not ready")
+                        navigateToMainActivity()
+                    }
+//                    Log.d("Splash_Tracking", "purchase is null")
+//                    navigateToMainActivity()
                 }
             }
 
@@ -496,7 +430,7 @@ class SplashActivity : AppCompatActivity() {
                 }
 
                 // Show app open ad if available
-                appOpenManager.showSplashAdIfAvailable(this) {
+                appOpenManager.showSplashAdIfAvailable() {
                     Log.d("TrackProgress", "moving with open ad dissmissed")
                     navigateToMainActivity()
                 }
@@ -517,7 +451,7 @@ class SplashActivity : AppCompatActivity() {
             }
 
             // Show app open ad if available
-            appOpenManager.showSplashAdIfAvailable(this) {
+            appOpenManager.showSplashAdIfAvailable() {
                 Log.d("TrackProgress", "moving with open ad dissmissed")
                 runnable?.let {
                     handler.removeCallbacks(it)

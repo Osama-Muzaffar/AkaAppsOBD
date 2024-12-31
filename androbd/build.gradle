@@ -11,8 +11,8 @@ android {
         // SDK 25 to allow background service mechanism for plugins
         //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 35
-        versionCode 5
-        versionName "1.4"
+        versionCode 6
+        versionName "1.5"
         setProperty("archivesBaseName", "OBD_AK_New" + "-VERSION" + versionCode + "VNAME(" + versionName+ ")")
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -73,6 +73,11 @@ android {
         viewBinding = true
     }
 
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
 
 
 }
