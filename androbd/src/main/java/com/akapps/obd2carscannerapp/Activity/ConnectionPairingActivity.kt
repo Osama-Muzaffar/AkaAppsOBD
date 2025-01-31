@@ -111,6 +111,7 @@ class ConnectionPairingActivity : AppCompatActivity() {
                             availableDevicesList!!.add(device)
                             scanneradapter!!.notifyDataSetChanged()
                         }
+
                     }
                 }
             }
@@ -159,6 +160,7 @@ class ConnectionPairingActivity : AppCompatActivity() {
                 }
             })
         }
+
 
         binding.connectingswitch.setOnCheckedChangeListener(object : CompoundButton.OnCheckedChangeListener {
             @SuppressLint("MissingPermission")

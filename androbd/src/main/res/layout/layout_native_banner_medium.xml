@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/native_ad_view"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="170dp">
 
     <RelativeLayout
         android:id="@+id/ad_unit_content"
@@ -51,10 +51,10 @@
 
                         android:orientation="horizontal">
 
-                        <TextView
+                        <com.google.android.gms.ads.nativead.MediaView
                             android:id="@+id/ad_advertiser"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="50dp"
                             android:layout_weight="1"
                             android:gravity="bottom"
                             android:lines="1"

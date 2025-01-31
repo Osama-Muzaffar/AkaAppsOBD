@@ -11,8 +11,8 @@ android {
         // SDK 25 to allow background service mechanism for plugins
         //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 35
-        versionCode 6
-        versionName "1.5"
+        versionCode 7
+        versionName "1.6"
         setProperty("archivesBaseName", "OBD_AK_New" + "-VERSION" + versionCode + "VNAME(" + versionName+ ")")
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -67,6 +67,9 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17" // Ensure this matches Java version
     }
 
     buildFeatures{

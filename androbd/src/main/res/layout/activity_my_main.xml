@@ -106,12 +106,12 @@
                 android:layout_marginTop="30sp"
                 android:visibility="gone"
                 android:orientation="horizontal">
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/scanningcard"
+                <RelativeLayout
+                    android:id="@+id/rl_scanningcard"
                     android:layout_width="0sp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/main_purple"
+                    android:background="@drawable/sound_not_select"
                     app:cardCornerRadius="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -128,16 +128,16 @@
                         android:text="Scan Car"
                         android:textColor="@color/white"
                         android:textSize="14sp" />
-                </androidx.cardview.widget.CardView>
+                </RelativeLayout>
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/disconnectcard"
+                <RelativeLayout
+                    android:id="@+id/rl_disconnectcard"
                     android:layout_width="0sp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/Red"
                     app:cardCornerRadius="20sp"
                     android:layout_marginStart="20sp"
+                    android:background="@drawable/red_bg_text"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView6">
@@ -153,16 +153,16 @@
                         android:text="@string/disconnect"
                         android:textColor="@color/white"
                         android:textSize="14sp" />
-                </androidx.cardview.widget.CardView>
+                </RelativeLayout>
             </LinearLayout>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/connectcard"
+            <RelativeLayout
+                android:id="@+id/rl_connectcard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30sp"
                 android:layout_centerInParent="true"
-                android:backgroundTint="@color/main_purple"
+                android:background="@drawable/sound_not_select"
                 app:cardCornerRadius="20sp">
 
                 <TextView
@@ -175,7 +175,7 @@
                     android:text="@string/connect"
                     android:textColor="@color/white"
                     android:textSize="18sp" />
-            </androidx.cardview.widget.CardView>
+            </RelativeLayout>
 
         </RelativeLayout>
 
@@ -196,15 +196,15 @@
             android:id="@+id/ad_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10sp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mainrv"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
             <com.floor.planner.models.NativeBannerFull
                 android:id="@+id/nativefull"
                 android:layout_centerInParent="true"
                 android:layout_width="match_parent"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_height="wrap_content"/>
 
             <com.akapps.obd2carscannerapp.Ads.BannerAdView

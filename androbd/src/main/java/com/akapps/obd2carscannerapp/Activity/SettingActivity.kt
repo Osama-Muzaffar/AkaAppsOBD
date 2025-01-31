@@ -68,6 +68,7 @@ class SettingActivity : AppCompatActivity() {
                 if(adsConfig !=null) {
 
                      if(adsConfig!!.setting_native) {
+                         Log.d("ad", "native ad showed")
                          val nativefull = findViewById<NativeBannerFull>(R.id.nativefull)
                          nativefull.loadNativeBannerAd(this, BuildConfig.admob_native)
                     }
@@ -94,6 +95,7 @@ class SettingActivity : AppCompatActivity() {
                 if(adsConfig !=null) {
 
                     if(adsConfig!!.setting_native) {
+                        Log.d("ad", "native ad showed")
                         val nativefull = findViewById<NativeBannerFull>(R.id.nativefull)
                         nativefull.loadNativeBannerAd(this, BuildConfig.admob_native)
                     }

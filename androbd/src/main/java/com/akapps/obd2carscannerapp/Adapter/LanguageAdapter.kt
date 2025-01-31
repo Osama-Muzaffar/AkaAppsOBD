@@ -14,7 +14,6 @@ import com.murgupluoglu.flagkit.FlagKit
 
 class LanguageAdapter(val context: Context,val  languageList: ArrayList<LanguageModel>,
                      val onSelect: (LanguageModel)-> Unit): RecyclerView.Adapter<LanguageAdapter.MyViewHolder>() {
-
                          val pref= SharedPreferencesHelper(context)
     var checkable = true
     class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {

@@ -16,6 +16,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.akapps.ecu.EcuCodeItem
 import com.akapps.ecu.prot.obd.ObdProt
+import com.akapps.obd2carscannerapp.Activity.MyMainActivity.Constants.currDataAdapter
 import com.akapps.obd2carscannerapp.Ads.BannerAdView
 import com.akapps.obd2carscannerapp.CommService
 import com.akapps.obd2carscannerapp.Ads.billing.BillingManager
@@ -61,6 +62,7 @@ class ScanningActivity : AppCompatActivity(),
             }
         })
         billingManager.startConnection(true)
+
 //        inAppPurchase = InAppPurchase.getInstance(
 //            this@ScanningActivity,
 //            getString(R.string.base64key)
@@ -101,6 +103,7 @@ class ScanningActivity : AppCompatActivity(),
         Handler().postDelayed(Runnable {
 
         if(MyMainActivity.Constants.currDataAdapter.getPvs().size>0) {
+            Log.d("ScanningActivity", "Scannig List: "+ currDataAdapter.getPvs().size)
 //            if(MainActivity.Constants.currDataAdapter.getPvs().size == 1){
 //                if((MainActivity.Constants.currDataAdapter.getPvs().get(0)as IndexedProcessVar).get(EcuCodeItem.FID_CODE).equals("P0000")){
 //                    binding.nodatatxt.visibility= View.VISIBLE

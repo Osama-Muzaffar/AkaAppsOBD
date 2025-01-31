@@ -45,6 +45,7 @@
 
 
     <ScrollView
+        android:id="@+id/scrollview"
         android:layout_width="match_parent"
         android:layout_height="0sp"
         android:layout_marginTop="20sp"
@@ -498,6 +499,8 @@
         android:id="@+id/ad_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" >
 
@@ -510,7 +513,7 @@
 
         <com.floor.planner.models.NativeBannerFull
             android:id="@+id/nativefull"
-            android:visibility="gone"
+            android:visibility="visible"
             android:layout_centerInParent="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>

@@ -94,6 +94,13 @@ class SplashActivity : AppCompatActivity() {
             }
         })
 
+
+
+        val appOpenManager = (application as MyApp).appOpenManager
+
+        // disable ad for this activity
+        appOpenManager.disableAppOpenWithActivity(SplashActivity::class.java)
+
         // Start billing client connection
         billingManager.startConnection(single = false)
         runnable = object : Runnable {
@@ -106,7 +113,7 @@ class SplashActivity : AppCompatActivity() {
                     Log.d("TrackProgress", "moving with progress > 100 at default")
                     handler.removeCallbacks(this)
 //                    navigateToMainActivity()
-                    binding.letsgocard.visibility=View.VISIBLE
+                    binding.rlLetsgocard.visibility=View.VISIBLE
                     binding.horizontalprogressBar.visibility=View.GONE
                 }
             }
@@ -195,7 +202,7 @@ class SplashActivity : AppCompatActivity() {
                             Log.d("TrackProgress", "moving with progress while internet is not available")
                             handler.removeCallbacks(this)
 //                            navigateToMainActivity()
-                            binding.letsgocard.visibility=View.VISIBLE
+                            binding.rlLetsgocard.visibility=View.VISIBLE
                             binding.horizontalprogressBar.visibility=View.GONE
                         }
                     }
@@ -297,7 +304,7 @@ class SplashActivity : AppCompatActivity() {
                     window.statusBarColor = ContextCompat.getColor(this,R.color.black)
                 }*/
 
-        binding.letsgocard.setOnClickListener {
+        binding.rlLetsgocard.setOnClickListener {
 
 
             if (PairedDeviceSharedPreference.getInstance(this).subsList.size > 0) {
@@ -486,7 +493,7 @@ class SplashActivity : AppCompatActivity() {
         setLocale(this, preflng)
         val firstime = prefs.getBoolean(SharedPreferencesHelper.KEY_FIRSTTIME, true)
         if (firstime) {
-            val intent = Intent(this, SelectLanguageActivity::class.java)
+            val intent = Intent(this, MyMainActivity::class.java)
             startActivity(intent)
             finish()
         } else {
@@ -578,6 +585,7 @@ class SplashActivity : AppCompatActivity() {
                 val adsJsonConfig = Gson().fromJson(jsonConfig, AdsConfig::class.java)
                 if (adsJsonConfig != null) {
                     adsConfig = adsJsonConfig
+                    Log.e("remote", adsConfig.toString())
                     if (PairedDeviceSharedPreference.getInstance(this).subsList.size > 0) {
                         var isshwoingad = true
                         for (purchases in PairedDeviceSharedPreference.getInstance(this).subsList) {

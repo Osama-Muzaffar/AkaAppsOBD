@@ -374,7 +374,7 @@ class MyMainActivity : AppCompatActivity(), PvChangeListener, AdapterView.OnItem
                         mainAdapter?.setEnableItems()
                         mConnectedDeviceName = msg.data.getString(DEVICE_NAME)
                         val address = msg.data.getString(DEVICE_ADDRESS)
-                        binding.connectcard.visibility= View.GONE
+                        binding.rlConnectcard.visibility= View.GONE
                         binding.connectedlinear.visibility= View.VISIBLE
                         binding.statustxt.text = getString(R.string.connected_to) + mConnectedDeviceName
                         val colorStateList =
@@ -603,7 +603,7 @@ class MyMainActivity : AppCompatActivity(), PvChangeListener, AdapterView.OnItem
         setContentView(binding.root)
 
 
-        findViewById<View>(R.id.connectcard).setOnClickListener {
+        findViewById<View>(R.id.rl_connectcard).setOnClickListener {
 //            if (getMode()== MODE.DEMO){
 //                setObdService(ObdProt.OBD_SVC_READ_CODES, "")
 //                startActivity(Intent(this@MainActivity,ScanningActivity::class.java))
@@ -621,7 +621,7 @@ class MyMainActivity : AppCompatActivity(), PvChangeListener, AdapterView.OnItem
         }
 
 
-        binding.scanningcard.setOnClickListener {
+        binding.rlScanningcard.setOnClickListener {
             if(PairedDeviceSharedPreference.getInstance(this).subsList.size>0){
                 var isshwoingad= true
                 for(purchases in PairedDeviceSharedPreference.getInstance(this).subsList){
@@ -735,7 +735,7 @@ class MyMainActivity : AppCompatActivity(), PvChangeListener, AdapterView.OnItem
 
         }
 
-        binding.disconnectcard.setOnClickListener {
+        binding.rlDisconnectcard.setOnClickListener {
             if (mCommService != null) {
                 mCommService!!.stop()
             }
@@ -1120,7 +1120,7 @@ class MyMainActivity : AppCompatActivity(), PvChangeListener, AdapterView.OnItem
     private fun onDisconnect() {
         // handle further initialisations
         setMode(MyMainActivity.MODE.OFFLINE)
-        binding.connectcard.visibility= View.VISIBLE
+        binding.rlConnectcard.visibility= View.VISIBLE
         binding.connectedlinear.visibility= View.GONE
         binding.statustxt.text = getString(R.string.disconnected)
         val colorStateList =
@@ -1406,7 +1406,7 @@ class MyMainActivity : AppCompatActivity(), PvChangeListener, AdapterView.OnItem
     private fun stopDemoService() {
         if (getMode() == MyMainActivity.MODE.DEMO) {
             ElmProt.runDemo = false
-            binding.connectcard.visibility= View.VISIBLE
+            binding.rlConnectcard.visibility= View.VISIBLE
             binding.connectedlinear.visibility= View.GONE
             binding.statustxt.text = getString(R.string.disconnected)
             val colorStateList =
@@ -1425,7 +1425,7 @@ class MyMainActivity : AppCompatActivity(), PvChangeListener, AdapterView.OnItem
      */
     private fun startDemoService() {
         if (getMode() != MyMainActivity.MODE.DEMO) {
-            binding.connectcard.visibility= View.GONE
+            binding.rlConnectcard.visibility= View.GONE
             binding.connectedlinear.visibility= View.VISIBLE
             binding.statustxt.text = getString(R.string.connected_to)+ " " + getString(R.string.demo)
             val colorStateList =
@@ -2051,7 +2051,7 @@ class MyMainActivity : AppCompatActivity(), PvChangeListener, AdapterView.OnItem
     /**
      * Filter display items to just the selected ones
      */
-    private fun setFiltered(filtered: Boolean) {
+    /*private fun setFiltered(filtered: Boolean) {
         if (filtered) {
             val selPids = TreeSet<Int>()
             val selectedPositions = getSelectedPositions()
@@ -2082,7 +2082,7 @@ class MyMainActivity : AppCompatActivity(), PvChangeListener, AdapterView.OnItem
                 MyMainActivity.Constants.mPluginPvs
             )
         }
-    }
+    }*/
 
     private fun confirmObdTestControl(testControlName: String, service: Int, tid: Int) {
         

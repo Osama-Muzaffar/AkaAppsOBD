@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/welcome_to"
-        android:textSize="22sp"
+        android:textSize="52sp"
         android:fontFamily="@font/roboto_bold"
         android:textColor="@color/main_purple"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
@@ -44,7 +44,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20sp"
+        android:layout_marginBottom="40sp"
         android:text="@string/scan_diagnose_and_fix_issues"
         android:textColor="@color/white"
         android:textSize="14sp"
@@ -57,6 +57,7 @@
         android:id="@+id/container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/banneradsview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -70,38 +71,31 @@
             android:max="100"
             android:progress="0"
             android:progressDrawable="@drawable/custom_progress_bar" />
-<!--        <ProgressBar-->
-<!--            android:id="@+id/progressbar"-->
-<!--            android:layout_width="30sp"-->
-<!--            android:layout_height="30sp"-->
-<!--            android:indeterminate="true"-->
-<!--            android:layout_centerInParent="true"-->
-<!--            android:indeterminateTint="@color/main_purple"-->
-<!--            android:layout_marginBottom="30sp"/>-->
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/letsgocard"
+        <RelativeLayout
+            android:id="@+id/rl_letsgocard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:cardCornerRadius="20sp"
             android:visibility="invisible"
             android:layout_centerInParent="true"
-            android:backgroundTint="@color/main_purple"
+            android:background="@drawable/sound_not_select"
             android:layout_marginBottom="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_bold"
                 android:paddingHorizontal="40sp"
                 android:paddingVertical="10sp"
+                android:gravity="center"
                 android:text="@string/let_s_go"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
-        </androidx.cardview.widget.CardView>
+        </RelativeLayout>
 
 
     </RelativeLayout>
@@ -119,3 +113,12 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--        <ProgressBar-->
+    <!--            android:id="@+id/progressbar"-->
+    <!--            android:layout_width="30sp"-->
+    <!--            android:layout_height="30sp"-->
+    <!--            android:indeterminate="true"-->
+    <!--            android:layout_centerInParent="true"-->
+    <!--            android:indeterminateTint="@color/main_purple"-->
+    <!--            android:layout_marginBottom="30sp"/>-->
